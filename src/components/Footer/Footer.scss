@@ -1,0 +1,156 @@
+.Footer {
+    width:100%;
+    // height:320px;
+    background:#f7f7f7;
+    .FooterSection {
+        border-bottom:3px solid #fff;
+    }
+    .FooterContent_1 {
+        margin:auto;
+        // max-width:1200px;
+        box-sizing:border-box;
+        padding:40px;
+        overflow:hidden;
+        color:#555;
+        display:flex;
+        flex-direction:row;
+        gap:40px;
+        font-size:13px;
+        @media only screen and (min-width:999px) {
+            display:flex;
+            flex-direction:row;
+            gap:40px;
+            
+        }
+        @media only screen and (max-width:999px) {
+            display:flex;
+            flex-direction:column;
+            gap:40px;
+        }
+        .department_info {
+            @media only screen and (min-width:999px) { }
+            @media only screen and (max-width:999px) { }
+            position:relative;
+            padding-left:54px; padding-top:16px;
+            
+            svg {
+                display:block;
+                position:absolute;
+                top:0; left:0; 
+            }
+            p{
+                display:block;
+                font-size:1em;
+                line-height:1.3em;
+                margin:0 0 6px 0;
+                
+            }
+        }
+        p.small {
+            font-size:0.9em;
+        }
+
+        .shortcuts {
+            flex:1 0 auto;
+            padding:10px 0 0px 20px;
+            vertical-align: top;
+            // width:800px;
+            max-width: 100%;
+            color:#707070;
+            @media only screen and (min-width:999px) { text-align:right; }
+            @media only screen and (max-width:999px) { text-align:left; }
+            .column {
+                display:inline-block;
+                vertical-align: top;
+                text-align:left;
+                width:100px;
+                margin-left:40px;
+                .L1 {
+                    display:block;
+                    box-sizing: border-box;
+                    margin:0 0 5px 0;
+                    color:inherit;
+                    font-weight:600;
+                    text-decoration:none;
+                }
+                .L2 {
+                    display:block;
+                    font-weight:400;
+                    padding-bottom:2px;
+                    text-decoration:none;
+                    color:inherit;
+                }
+                .L1:hover {color:#333;}
+                .L2:hover {color:#333;}
+            }
+            
+        }
+
+        
+    }
+    .FooterContent_2 {
+        margin:auto;
+        // max-width:1200px;
+        box-sizing:border-box;
+        padding:40px;
+        overflow:hidden;
+        color:#555;
+        display:flex;
+        flex-direction:row;
+        gap:40px;
+        font-size:13px;
+        display:flex;
+        flex-direction:row;
+        gap:40px;
+    
+        .department_info {
+            @media only screen and (min-width:999px) { }
+            @media only screen and (max-width:999px) { }
+            position:relative;
+            padding-left:54px; padding-top:16px;
+            
+            svg {
+                display:block;
+                position:absolute;
+                top:0; left:0; 
+            }
+            p{
+                display:block;
+                font-size:1em;
+                line-height:1.3em;
+                margin:0 0 6px 0;
+                
+            }
+        }
+        .left_column {
+            flex:1 1 auto;
+            
+        }
+        .right_column {
+            flex:0 0 auto;
+            text-align:right;
+            .languageSelector {
+                display:inline-block;
+                padding:10px 10px;
+                margin-right:20px;
+                background-color: black;
+                color:white;
+                cursor: pointer;
+                text-transform: uppercase;
+                vertical-align: bottom;
+            }
+            .languageSelector:hover {
+                background-color: #444;
+            }
+            .kaist_logo {
+                display:inline-block;
+                margin-right:40px;
+                img {
+                    height:30px;
+                }
+            }
+        }
+    }
+    
+    
+}

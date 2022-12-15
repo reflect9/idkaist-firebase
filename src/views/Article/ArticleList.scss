@@ -1,0 +1,209 @@
+.ArticleList {
+    .PageContentWrapper {
+        display:flex;
+        flex-direction: row;
+        gap:60px;
+        position:relative;
+        margin: 40px auto 0;
+        // padding-bottom:220px;
+        max-width: 1100px;
+        line-height: 1.5em;
+        font-size: 14px;
+        color: #707070;
+        font-weight:400;
+        .filterUI {
+            flex:0 0 140px;
+            width:140px;
+            ul {
+                margin: 86px 0; padding:0;
+                a {
+                    text-decoration: none;
+                    li{
+                        margin:0 0 2px 0;
+                        background:#efefef;
+                        list-style-type: none;
+                        padding:10px 16px;
+                        font-family: 'Courier New', Courier, monospace;
+                        color:black;
+                        font-size:14px;
+                        text-transform: uppercase;
+                    }
+                }
+                a:hover {
+                li{
+                background-color:black; color:white;}
+                }
+                a.active {
+                    vertical-align: middle;
+                    li {
+                        background:#f9f9f9;   
+                        padding:10px 0;
+                    }
+                    li::before {
+                        display:inline-block;
+                        content:"";
+                        width:22px;
+                        height:3px;
+                        margin-right:10px;
+                        background:red;
+                        vertical-align: middle;
+                    }
+                    li:hover {background-color:black; color:white;}
+                }
+                
+            }
+        }
+        .articleContainer {
+            flex:1 0 auto;
+            max-width:920px;
+            overflow: hidden;
+            .topbar {
+                display:flex;
+                flex-direction: row; align-items: center;
+                width:100%;
+                h2 {
+                    flex:1 0 auto;
+                    font-size: 32px;
+                    color:#000;
+                    font-weight: 300;
+                }
+                .new_article {
+                    margin-right:12px;
+                }
+                .searchUI {
+                    display:inline-block;
+                    background: white;
+                    position: relative;
+                    width:200px;
+                    input {
+                        width: 100%;
+                        padding: 12px 60px 12px 12px;
+                        font-family: 'Courier New', Courier, monospace;
+                        font-style:italic;
+                        display: block;
+                        box-sizing:border-box;
+                        font-size:15px;
+                        border:none;
+                        background-color: #efefef;
+        
+                    }
+                    button {
+                        background: transparent;
+                        border: none;
+                        cursor: pointer;
+                        display: inline-block;
+                        font-size: 20px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding: 8px 12px;
+                        color:#707070;
+                        z-index: 2;
+                        svg {
+                            vertical-align: middle;
+                        }
+                    }
+        
+                }
+            }
+            
+            ul {
+                margin:12px 0; padding:0;
+                li {
+                    width:100%;
+                    display:flex;
+                    flex-direction: row;
+                    border-top: 1px solid #ddd;
+                    align-items:center;
+                    color:#444;
+                    cursor:pointer;
+                    a{
+                        flex:1 1 auto;
+                        display:inline;
+                        color:inherit;
+                        text-decoration: none;
+                        overflow: hidden;
+                        margin:0; 
+                        padding:12px 0px;
+                        font-size:18px;
+                        font-weight:700;
+                        height:100%; 
+                    }
+                    .title.invisible {
+                        text-decoration: line-through;
+                    }
+                    .type {
+                        flex:0 0 50px;
+                        margin-right:12px; 
+                        font-weight:400;
+                        text-transform: uppercase;
+                        font-size:12px;
+                        width:50px;
+                        padding: 0 4px;
+                        text-align:right;
+                        // background-color: #ddd;;
+                    }
+                    .datetime {
+                        flex:0 0 100px;
+                        padding:16px 0px; 
+                        text-align:right;
+                        font-family: 'Courier New', Courier, monospace;
+                        color:black;
+                    }
+                    .featured_mark {
+                        font-weight:600;
+                        font-size:10px;
+                        margin-left:8px;
+                        color:white;
+                        background:#F40019;
+                        border-radius: 4px;
+                        padding:2px 5px;
+                        vertical-align: bottom;
+                    }
+                    .tools {
+                        white-space: nowrap;
+                        svg {
+                            margin-left: 6px;
+                        }
+                    }
+                }
+                li:last-of-type {
+                    border-bottom: 1px solid #ddd;
+                }
+                li:hover {
+                    color:#666;
+                    .title {
+                        
+                    }
+                }
+            }
+
+            ul.pagination {
+                margin:20px auto 40px; padding:0;
+                text-align:center;
+                li {
+                    display:inline-block;
+                    width:30px; height:30px; 
+                    margin:0 12px;
+                    border:none;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size:16px;
+                    line-height:31px;
+                    svg {
+                        vertical-align: sub;
+                    }
+                }
+                li.active {
+                    border-radius:100%;
+                    background:black;
+                    font-weight:600;
+                    color:white;
+                }
+            }
+
+        }
+
+        
+    }
+
+}

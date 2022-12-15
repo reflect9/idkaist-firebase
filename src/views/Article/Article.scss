@@ -1,0 +1,105 @@
+.Article {
+    .PageContentWrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        position: relative;
+        margin: 40px auto 0;
+        // padding-bottom:220px;
+        max-width: 1100px;
+        line-height: 1.5em;
+        font-size: 14px;
+        color: #707070;
+        font-weight: 400;
+
+        .filterUI {
+            flex: 0 0 140px;
+            width: 140px;
+
+            ul {
+                margin: 86px 0;
+                padding: 0;
+
+                a {
+                    text-decoration: none;
+
+                    li {
+                        margin: 0 0 2px 0;
+                        background: #eee;
+                        list-style-type: none;
+                        padding: 10px 16px;
+                        font-family: 'Courier New', Courier, monospace;
+                        color: black;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                a.active {
+                    vertical-align: middle;
+
+                    li {
+                        background:#f9f9f9; 
+                        padding: 10px 0;
+                    }
+
+                    li::before {
+                        display: inline-block;
+                        content: "";
+                        width: 21px;
+                        height: 3px;
+                        margin-right: 6px;
+                        background: red;
+                        vertical-align: middle;
+                    }
+                }
+
+            }
+        }
+
+        .articleContainer {
+            flex: 1 0 auto;
+            max-width: 920px;
+            .coverImage {
+                img { 
+                    display:block;
+                    margin:0 auto 20px;
+                    width:100%;
+                }
+            }
+            .datetime {
+                display:block;
+                font-size:14px; 
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .title {
+                margin:4px 0;
+                font-size:28px;
+                font-weight:700; 
+                line-height: 1.4em;
+                color:black;
+            }
+            
+            
+            .content {
+            img { 
+                width: 920px;  height: auto; 
+                min-height:50px; 
+                object-fit:cover;
+            }
+            p {
+                display:block;
+                font-size:16px;
+                line-height:1.7em;
+                text-align: justify;
+            }
+            margin-bottom: 100px;
+             
+            }
+
+
+        }
+
+
+    }
+}

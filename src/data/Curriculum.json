@@ -1,0 +1,323 @@
+{
+    "Undergraduate": {
+        "1": {
+            "year_en": "Freshman",
+            "year_kr": "1학년",
+            "year_role_en": "Foundation",
+            "year_role_kr": "기초",
+            "description_en": "Students take foundational classes in the areas of science, engineering, the humanities, and design.",
+            "description_kr": "과학, 공학, 인문사회 분야의 기초 과목을 수강함과 동시에 디자인에 대한 이해를 돕고 디자인 입문을 위한 창의적 사고 능력을 기르게 됩니다. 산업디자인학과 전공 희망자는 학부 1학년 과정 동안 디자인 기초 교과목을 수강하는 것을 추천합니다.",
+            "semesters": {
+                "spring": [
+                    {
+                        "code": "ID201",
+                        "title_en": "Introduction to Design",
+                        "title_kr": "디자인개론",
+                        "type": "Basic Elective",
+                        "description_kr": "본 과목은 디자인의 전반적 개요를 생활 속의 문화와 기술적 맥락에서 소개함으로써 디자인을 전공하려는자나 디자인 비전공자로서 디자인에 대한 기초를 이해하도록 돕는 기초 과목이다. 본 과목에서는 디자인의발전적 흐름, 디자인의 기본 속성 및 원칙, 디자인과 인간, 기술, 문화 등과의 제 관계에 대한 기본적인 이론 강의와 이들을 응용해 보는 간단한 실습 강의를 병행한다."
+                    }
+                ],
+                "fall": [
+                    {
+                        "title_en": "Idea & Expression",
+                        "title_kr": "발상과 표현",
+                        "code": "ID202",
+                        "type": "Basic Elective",
+                        "description_kr": "디자이너에게 요구되는 창의성은 상상력과 유연한 사고에 바탕을 둔 창조적 사고와 이를 표현하는 과정에서아이디어를 구체화하는 통합적 능력을 필요로 한다. 따라서 본 교과목에서는 창의적 아이디어의 개발과정에 활용될 수 있는 발상기법과 이를 발전, 구현시키는 다양한 표현방법의 학급 목표로 학생들의 시각적 사고능력을 개발한다."
+                    }
+                ]
+            }
+        },
+        "2": {
+            "year_en": "Sophomore",
+            "year_kr": "2학년",
+            "year_role_en": "Introductory",
+            "year_role_kr": "입문",
+            "description_en": "Students learn about form principles and visual language. They explore the history and present state of design and learn various communication and presentation skills. They also extend their engineering knowledge and study the basic elements of product design.",
+            "description_kr": "조형원리와 시각언어를 배워 다양한 표현 능력을 함양하며, 디자인의 역사와 현황을 이해하고 공학적 지식을 심화시켜, 제품 디자인의 기초적 내용을 학습하게 됩니다.",
+            "semesters": {
+                "spring": [
+                    {
+                        "title_en": "Basic Design",
+                        "title_kr": "기초디자인",
+                        "code": "ID212",
+                        "type": "Major Required",
+                        "description_kr": "입체적인 조형능력을 함양하는데 필요한 기초적인 디자인 이론과 입체적 형태 및 기능에 관한 조형언어를교수하는 과목이다. 공간과 입체를 구성하는 기초적인 조형요소와 조형원리에 대한 강의와 형태, 기능, 미를창조하는 실천적 방법론으로 구성된다. 이 과정에서 다양한 재료와 공간 구성의 특성을 풍부하게 경험하여,산업 디자이너로서의 기초 능력을 함양한다."
+                    },
+                    {
+                        "title_en": "Presentation Technique",
+                        "title_kr": "표현기법",
+                        "code": "ID217",
+                        "type": "Major Elective",
+                        "description_kr": "디자인 문제해결과 관련되는 아이디어 및 해결안을 시각화하여 전달하는 표현기법과 미디어 활용능력을 교수하는 과목이다. 평면 및 입체, 형태와 공간을 표현하기 위한 투시도법, 재질감의 표현, 다양한 미디어를이용한 렌더링(Rendering) 및 컴퓨터 그래픽 표현 능력 향상을 통해 디자인 문제해결의 과정으로써 디자인컨셉트를 시각적으로 표현 제시할 수 있는 능력을 함양하게 된다."
+                    },
+                    {
+                        "title_en": "Computer-aided Design",
+                        "title_kr": "컴퓨터 응용 디자인",
+                        "code": "ID219",
+                        "type": "Major Elective",
+                        "description_kr": "NA"
+                    },
+                    {
+                        "title_en": "Graphic Design",
+                        "title_kr": "그래픽디자인",
+                        "code": "ID211",
+                        "type": "Major Elective",
+                        "description_kr": "조형 능력을 함양하는데 필요한 기초적인 디자인 이론 및 조형언어(Visual language)를 교수하는 과목으로,기본적인 조형 요소, 원리에 관한 강의와 색체를 이용한 다양한 실기를 포함한다. 특히 색채의 시각적, 심리적, 기능적 속성에 대한 폭 넓은 이해를 바탕으로 평면 디자인과 색채를 통한 조형의 미적 감각을 함양한다."
+                    }
+                ],
+                "fall": [
+                    {
+                        "title_en": "Product Design",
+                        "title_kr": "제품 디자인",
+                        "code": "ID213",
+                        "type": "Major Required",
+                        "description_kr": "제품디자인의 입문과정으로써 새로운 제품의 아이디어 개발에서부터 최종 생산단계까지 발전시켜 가는 일련의 디자인 문제해결 과정과 방법을 교수하는 과목이다. 기초적인 기술제품(Low-Tech-Product)을 개발하는 실기를 통하여 기존의 한계에서 벗어나 미래지향적인 개념을 창조해내는 내용을 중심으로 제품의 형태와기능을 유기적으로 재구성하고 최적화하는 능력을 실천적으로 함양하게 된다. (선수과목: ID211, ID212)"
+                    },
+                    {
+                        "title_en": "Interaction Prototyping",
+                        "title_kr": "인터랙션 프로토타이핑",
+                        "code": "ID220",
+                        "type": "Major Elective",
+                        "description_kr": "NA"
+                    },
+                    {
+                        "title_en": "Photo Techniques",
+                        "title_kr": "사진 기법",
+                        "code": "ID218",
+                        "type": "Major Elective",
+                        "description_kr": "사진에 관한 기초이론과 기법을 교수하는 과목이다. 야외촬영, 스튜디어촬영, 특수촬영 등 사진촬영의 이론과 실제는 물론 필름의 현상, 인화 등에 관한 실기를 통해 사진매체에 의한 창의적인 디자인표현능력을 함양하게 된다."
+                    },
+                    {
+                        "title_en": "Design Engineering",
+                        "title_kr": "디자인 공학",
+                        "code": "ID216",
+                        "type": "Major Elective",
+                        "description_kr": "공학적인 제품디자인의 입문과정으로써 제품의 혁신적 개념 도출에서 생산기술적인 최적화에 이르는 공학에기초한 일련의 디자인 문제해결 방법을 교수하는 과목이다. 기초공학, 요소설계론, 공학설계론 등 디자인 과정에 필수적으로 수반되는 공학이론 및 실험을 통하여 공학자들과의 협업과정에서 생산기술에 부합하는 제품디자인을 주도해 나갈 수 있는 능력을 함양하게 된다."
+                    },
+                    {
+                        "title_en": "Information Design",
+                        "title_kr": "정보 디자인",
+                        "code": "ID221",
+                        "type": "Major Elective",
+                        "description_kr": "NA"
+                    }
+                ]
+            }
+        },
+        "3": {
+            "year_en": "Junior",
+            "year_kr": "3학년",
+            "year_role_en": "Development",
+            "year_role_kr": "발전",
+            "description_en": "Students acquire the ability to accomplish design projects focused on marketing and production, and build their comprehension of modern industrial systems.",
+            "description_kr": "현대 산업시스템에 대한 이해를 바탕으로 마케팅과 생산에 중점을 둔 디자인 프로젝트를 수행할 수 있는 능력을 함양하게 됩니다.",
+            "semesters": {
+                "spring": [
+                    {
+                        "title_en": "Interactive Product Design",
+                        "title_kr": "인터랙티브 제품 디자인",
+                        "code": "ID301",
+                        "type": "Major Required",
+                        "description_kr": "제품혁신의 기본요소, 생산공정 및 기술, 재료별 특성 및 디자인상의 고려조건 등 제품의 디자인과 관련되는생산측면의 제반사항에 중점을 두어 제품디자인의 실제를 교수하는 과목이다. 이 과목에서는 복합기능을 갖는 제품컨셉트의 창출 또는 기존제품의 디자인 개선 등의 실기를 통하여 대량 생산 시스템에 부합되는 제품의 디자인 능력을 함양하게 된다. (선수과목: ID213)"
+                    },
+                    {
+                        "title_en": "Design Methods",
+                        "title_kr": "디자인 방법",
+                        "code": "ID303",
+                        "type": "Major Elective",
+                        "description_kr": "디자인의 조사, 분석, 종합 및 평가의 각 과정에서 파생되는 제반 문제를 효율적이며 체계적으로 해결하는방법을 교수하는 과목이다. 이 과목에서는 디자인 문제의 분석, 창조적 아이디어의 창출, 데이터의 수집과활용, 문제해결 및 의사결정 등에 관련되는 다양한 디자인 방법론을 학습하게 된다."
+                    },
+                    {
+                        "title_en": "Software Prototyping",
+                        "title_kr": "소프트웨어 프로토타이핑",
+                        "code": "ID311",
+                        "type": "Major Elective",
+                        "description_kr": "NA"
+                    },
+                    {
+                        "title_en": "Moving Image Design",
+                        "title_kr": "영상 디자인",
+                        "code": "ID314",
+                        "type": "Major Elective",
+                        "description_kr": "NA"
+                    }
+                ],
+                "fall": [
+                    {
+                        "title_en": "User Experience Design",
+                        "title_kr": "사용자 경험 디자인",
+                        "code": "ID304",
+                        "type": "Major Required",
+                        "description_kr": "제품의 라이프 사이클, 제품시장의 분류, 소비자의 구매동기 등 제품 디자인과 관련되는 시장연구에 관한 제반사항에 중점을 두어 제품 디자인 실제를 교수하는 과목이다. 이 과목에서는 시장조사를 위한 기본 통계기법, 설문기법, 문화인류학적 접근법, 시나리오 기반 디자인 등을 학습하여 소비자를 만족시킬 수 있도록 하는 능력을 함양하게 된다. (선수과목: ID301)"
+                    },
+                    {
+                        "title_en": "Human Factors for Design",
+                        "title_kr": "디자인 인간요소",
+                        "code": "ID312",
+                        "type": "Major Elective",
+                        "description_kr": "이 교과목은 인간-기계 시스템에서 인간의 신체적 특성, 생체역학적 특성, 정보처리특성, 감각특성 등에 대한 개괄적인 인간공학적 지식을 교수한다. 또한 실제적인 디자인 사례를 분석해봄으로써 인간공학 지식을신제품 개발에 적용하기 위한 방법론을 체득하도록 한다."
+                    },
+                    {
+                        "title_en": "Interface Design",
+                        "title_kr": "인터페이스 디자인",
+                        "code": "ID307",
+                        "type": "Major Elective",
+                        "description_kr": "정보가전 기기 디자인 등과 같은 물리적 사용자 인터페이스 디자인에 관한 이론을 연구하여 실제적인 사용자 인터페이스를 디자인하는 과목이다. 이 과목에서는 사용자 중심 디자인의 본질을 이해하고 이에 활용되는 다양한 디자인 방법을 실제 사례와 함께 학습하게 된다. 특히 제품의 사용자 인터페이스의 디자인과 이의 사용 편의성 평가에 중점을 두어 교수하게 된다."
+                    },
+                    {
+                        "title_en": "Moving Image Design",
+                        "title_kr": "영상 디자인",
+                        "code": "ID314",
+                        "type": "Major Elective",
+                        "description_kr": "NA"
+                    }
+                ]
+            }
+        },
+        "4": {
+            "year_en": "Senior",
+            "year_kr": "4학년",
+            "year_role_en": "Integration",
+            "year_role_kr": "종합",
+            "description_en": "Students learn to use design philosophy and ethics as professional designers, and they acquire the ability to accomplish complex design projects.",
+            "description_kr": "디자인 철학과 윤리관을 갖춘 전문 디자이너로서 복합적인 디자인 프로젝트의 수행능력을 함양하게 됩니다.",
+            "semesters": {
+                "spring": [
+                    {
+                        "title_en": "System Design",
+                        "title_kr": "시스템 디자인",
+                        "code": "ID403",
+                        "type": "Major Required",
+                        "description_kr": "제품디자인의 종합과정으로서 제품의 복합적 기능과 요소를 시스템적으로 발전시켜 하드웨어와 소프트웨어가 통합된 디자인을 연구하는 교과목이다. 복합적인 제품시스템의 디자인 문제를 체계적으로 해결하기 위하여 여러 디자인 이론의 적용을 통한 최적화 디자인 결과물이 도출과정을 실증적으로 연구한다.(선수과목: ID304)"
+                    },
+                    {
+                        "title_en": "Graduation Design Studio I",
+                        "title_kr": "졸업연구 디자인 스튜디오 I",
+                        "code": "ID409",
+                        "type": "Major Elective",
+                        "description_kr": "본 과목은 디자인 리서치와 실무를 통합하여 학부과정의 디자인 프로젝트 수행에 필요한 소양을 완성하는과목이다. 본 강좌는 졸업 연구에 필요한 기본 단계를 훈련한다. 아이디어발상(Ideation), 디자인연구(Design Research), 컨셉전개(concept development), 현 디자인 동향분석, 디자인 진행 일정 및 관리 등의디자인 단계 단계별 기법을 체계적으로 학습하여 디자인에 필요한 소양을 함양한다."
+                    },
+                    {
+                        "title_en": "Portfolio & Exhibition Design",
+                        "title_kr": "포트폴리오 및 전시디자인",
+                        "code": "ID416",
+                        "type": "Major Elective",
+                        "description_kr": "NA"
+                    }
+                ],
+                "fall": [
+                    {
+                        "title_en": "Graduation Design Studio II",
+                        "title_kr": "졸업연구 디자인 스튜디오 II",
+                        "code": "ID414",
+                        "type": "Major Elective",
+                        "description_kr": "본 교과목은 산업디자인을 전공하는 학생들에게 고급 캡스톤 프로젝트를 경험할 수 있는 기회를 제공한다.교과목을 수강하는 학생들은 전공에서 학습한 다양한 지식과 스킬을 기반으로 신제품 개발을 효과적으로 수행할 수 있는 방법을 익히게 되고 자신들의 혁신적인 아이디어를 현재 또는 근미래 상품화 가능할 정도의디자인 모형으로 구체화하게 된다. 본 수업에서는 피지컬 컴퓨팅, 프로토타이핑, 생산공정, 디자인 소재 등에대한 고급이론을 강의하고 이를 고급 캡스톤 프로젝트 수행에 응용할 수 있는 기회를 제공한다."
+                    },
+                    {
+                        "title_en": "Design Entrepreneurship",
+                        "title_kr": "디자인 창업",
+                        "code": "ID402",
+                        "type": "Major Elective",
+                        "description_kr": "디자인 비즈니스 시스템의 구성인자, 상호작용 및 전문적이 디자인 실무의 유형별 특성을 교수하는 과목이다. 이 과목을 통하여 학생들은 디자인 실무의 본질을 폭넓게 이해하고 이력서 작성 및 인터뷰 요령, 디자인료 산정, 디지인 계약, 특허출원 방법들에 대하여 실증적인 체험을 하게 된다."
+                    },
+                    {
+                        "title_en": "Undergraduate CFT Seminar",
+                        "title_kr": "학부 세미나",
+                        "code": "",
+                        "type": "Major Elective",
+                        "description_kr": "NA"
+                    },
+                    {
+                        "title_en": "Interactive Software Design",
+                        "title_kr": "인터랙티브 소프트웨어 디자인",
+                        "code": "",
+                        "type": "Major Elective",
+                        "description_kr": "NA"
+                    }
+                ]
+            }
+        }
+    },
+    "Master": {
+        "1": {
+            "year_en": "First Year",
+            "year_kr": "1년차",
+            "year_role_en": "Exploration of the design discipline",
+            "year_role_kr": "",
+            "description_en": "Students explore the design discipline and study advanced topics on new technologies.",
+            "description_kr": "디자인 원칙과 새로운 기술에 대해 탐구합니다.",
+            "semesters": {
+                "spring": [
+                    {
+                        "code": "ID503",
+                        "title_en": "Design Project I",
+                        "title_kr": "디자인프로젝트1",
+                        "type": "Major Required",
+                        "description_kr": ""
+                    },
+                    {
+                        "code": "ID508",
+                        "title_en": "User-Centered Design Methodology",
+                        "title_kr": "사용자 중심 디자인 방법론",
+                        "type": "Major Elective",
+                        "description_kr": ""
+                    },
+                    {
+                        "code": "ID966",
+                        "title_en": "Seminar",
+                        "title_kr": "세미나(석사)",
+                        "type": "Major Elective",
+                        "description_kr": ""
+                    }
+                ],
+                "fall": [
+                    {
+                        "title_en": "Research Methodology",
+                        "title_kr": "연구방법론",
+                        "code": "ID502",
+                        "type": "Major Required",
+                        "description_kr": ""
+                    },
+                    {
+                        "title_en": "Media Interaction Design",
+                        "title_kr": "미디어 인터랙션 디자인",
+                        "code": "ID506",
+                        "type": "Major Elective",
+                        "description_kr": ""
+                    },
+                    {
+                        "title_en": "Design Issues",
+                        "title_kr": "디자인연구이슈",
+                        "code": "ID701",
+                        "type": "Major Elective",
+                        "description_kr": ""
+                    }
+                ]
+            }
+        },
+        "2": {
+            "year_en": "Second Year",
+            "year_kr": "2년차",
+            "year_role_en": "High-level Studies",
+            "year_role_kr": "",
+            "description_en": "Students study high-level theories and practical applications of design. They also conduct individual research projects (master’s theses). Their research addresses practical design or research issues in the design discipline.",
+            "description_kr": "디자인 심화 이론과 실제 적용을 공부하면서 석사 학위 논문을 위한 개별 연구를 수행합니다.",
+            "semesters": {
+                "spring": [
+                    {
+                        "code": "ID830",
+                        "title_en": "Theory of Design Management",
+                        "title_kr": "디자인 혁신 매니지먼트",
+                        "type": "Basic Elective",
+                        "description_kr": "본 과목은 디자인의 전반적 개요를 생활 속의 문화와 기술적 맥락에서 소개함으로써 디자인을 전공하려는자나 디자인 비전공자로서 디자인에 대한 기초를 이해하도록 돕는 기초 과목이다. 본 과목에서는 디자인의발전적 흐름, 디자인의 기본 속성 및 원칙, 디자인과 인간, 기술, 문화 등과의 제 관계에 대한 기본적인 이론 강의와 이들을 응용해 보는 간단한 실습 강의를 병행한다."
+                    }
+                ]
+            }
+        }
+    },
+    "PhD": {
+        "semesters": {
+        }  
+    }
+}

@@ -1,0 +1,46 @@
+.EducationContent {
+    p {
+        font-weight:400;
+        font-size:0.9em;
+        color:#444;
+        margin: 0 20px 10px 0px;
+        line-height:1.6em;
+    }
+    ul {
+        list-style-type: none;
+        li {
+            margin:10px 0 10px 0;
+            font-weight:400;
+            font-size:0.9em;
+            color:#444;
+            line-height:1.3em;
+        }
+    }
+    ul.disc {
+        list-style-type: disc;
+    }
+    ol {
+        li {
+            margin:10px 0 10px 0;
+            font-weight:400;
+            font-size:0.9em;
+            color:#444;
+            line-height:1.3em;
+        }
+    }
+    
+    pre {
+        background-color: rgba(220, 220, 220, 0.4);
+        padding: 16px;
+        border-radius: 3px;
+        width:100%;
+        white-space: pre-wrap;       /* Since CSS 2.1 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    
+    }
+    
+
+}

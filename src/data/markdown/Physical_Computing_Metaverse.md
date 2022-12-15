@@ -1,0 +1,8 @@
+The COVID-19 pandemic has impacted education, especially in the STEAM subjects, such as Interaction Prototyping (a course involving physical computing), where physical practice is crucial. There have been studies to introduce virtual environments in STEAM education before the pandemic. However, the non-face-to-face education paradigm that emerged after the outbreak of the epidemic further increased this necessity. In this paper, we propose virtual reality applications for interaction prototyping remote education that provide an intuitive and safe practice environment for students. First, we summarize the flow of the interaction prototyping class and explore the difficulties in the class before and after COVID-19 through expert interviews. Based on this, we derive design considerations when converting the background of the interaction prototyping class from offline to the virtual environment. Finally, we propose four possible interaction scenarios that can provide students with an immersive experience: realistic theory class, 3D library, circuit assembly, and mixed reality practice.
+
+This project was in collaboration with the [KAIST Global Strategy Institute](http://gsi.kaist.ac.kr/kr/).
+
+## References
+Hye-Young Jo, Wooje Chang, Hoonjin Jung, Andrea Bianchi. 2022. Design of Virtual Reality Application for Interaction Prototyping Remote Education. In HCI Korea 2022 (2022.02.09 - 02.11).
+
+[paper](https://makinteract.kaist.ac.kr/files/2022/Cho_PcompMetaverse_KHCI22.pdf)   

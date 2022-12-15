@@ -1,0 +1,264 @@
+.People {
+            @media only screen and (max-width:999px) {
+                position: relative;
+            }
+    h2 {
+        padding-top: 30px;
+        margin-top: 40px;
+    }
+    .tabNav {
+        position:sticky; top:0;
+        background: #f7f7f7;
+        width:100%;
+        width:auto;
+        z-index:1;
+        border-top: 1px solid #eaeaea;
+        ul {
+            display:flex;
+            flex-direction:row;
+            align-items: center;
+            justify-content: center;
+            @media only screen and (min-width:800px) {  gap:60px;  }
+            @media only screen and (max-width:800px) {  gap:30px;  }
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0;
+            li {
+                flex:0 0 auto;
+                padding: 12px 4px;
+                font-family: 'Courier New', Courier, monospace;
+                font-size:14px;
+                text-transform: uppercase;
+                border-top:3px solid transparent;
+                color:#707070;
+                cursor:pointer;
+                a,
+                button {
+                    border: none;
+                    background: none;
+                    color: #3a3a3a;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+            li:hover {
+                border-top:3px solid #F40019;
+            }
+            li.active {
+                color:#000;
+                font-weight:600;
+                border-top:3px solid #F40019;
+            }
+            
+        }
+    }
+    .PageContentWrapper {
+        margin: 100px auto;
+        max-width: 1100px;
+        .PageTitle {
+            height: 54px;
+            width: 100%;
+            font-size: 32px;
+            font-weight: 800;
+        }
+        .PageContent{
+            font-size:60px;
+        }
+    }
+
+    .PeopleViewer {
+        width:100%;
+        display:grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        justify-content:center;
+        box-sizing: border-box;
+        // grid-gap:20px;
+        padding:0 20px;
+        @media only screen and (min-width:1000px) {  gap:73px; }
+        @media only screen and (max-width:1000px) {  gap:40px; }
+        .person {
+            flex: 0 0 auto;
+        }
+    }
+    
+    .person {
+        @media only screen and (min-width:1000px) { 
+            width:200px; // height:370px;
+            font-size:20px;
+        }
+        @media only screen and (max-width:1000px) { 
+            width:200px; // height:370px;
+            font-size:20px;
+        }
+        
+        font-size:15px;
+        // font-family: "Work sans", sans-serif;
+        .photo {
+            width:100%;
+            overflow:hidden;
+            img {
+                width:100%; 
+                aspect-ratio: 1;
+                object-fit: cover;
+                filter:saturate(0);
+                transition: filter .5s;
+            }
+            img:hover {
+                filter:none;
+            }
+        }
+        .name_and_lab {
+            display:block;
+            .name {
+                display:inline-block;
+                font-size:1em;
+                margin-top:5px;
+                font-weight:600;
+            }
+            
+        }
+        .position {
+            margin:5px 0 5px;
+            font-size:0.8em;
+            color: #9a9a9a;
+            .lab {
+                display:inline-block;
+                font-size: 1.4em;
+                color:#ccc;
+                line-height: 0.9em;
+                svg {
+                font-size:19px;
+                    vertical-align: bottom;
+                }
+            }
+            .lab:hover {
+                color:#F40019;
+            }
+        }
+        .contact {
+            font-size:0.7em;
+            font-weight:500;
+            color:#707070;
+        }
+    }
+
+    /*
+    .PeopleViewer {
+        .L_1x4 {
+            display:block;
+            width:100%; 
+            margin-bottom:40px;
+            .person {
+                display:inline-block;
+                margin:0px 73px 0px 0px;
+                box-sizing:border-box;
+            }
+            .person:nth-child(4n) {
+                margin:0px 0px 0px 0;
+            }
+        }
+        .L_2x2 {
+            display:inline-block;
+            width:50%; 
+            vertical-align: top;
+            .person:nth-child(odd) {
+                display:inline-block;
+                margin:0px 73px 40px 0;
+                box-sizing:border-box;
+            }
+            .person:nth-child(even) {
+                display:inline-block;
+                margin:0px 0px 40px 0;
+                box-sizing:border-box;
+            }
+            
+        }
+        .L_2x2_right {
+            display:inline-flex;
+            box-sizing: border-box;
+            width:50%; 
+            vertical-align: top;
+            margin-bottom:40px;
+            overflow:hidden;
+            // padding-left:50px;
+            img.banner {
+                height:630px;
+                margin-left:50px;
+                width:100%;
+                box-sizing: border-box;
+                background-color: #eeeeee;
+                object-fit: cover;
+            }
+        }
+        .L_2x4 {
+            display:block;
+            width:100%; 
+            margin-bottom:40px;
+            img.banner {
+                width:100%;
+                margin-bottom:40px;
+                height:300px;
+                object-fit: cover;
+                background-color: #eeeeee;
+            }
+        }
+
+
+        .person {
+            width:220px; height:370px;
+            font-size:15px;
+            // font-family: "Work sans", sans-serif;
+            .photo {
+                width:100%;
+                overflow:hidden;
+                img {
+                    width:100%; 
+                    aspect-ratio: 1;
+                    object-fit: cover;
+                    filter:saturate(0);
+                    transition: filter .5s;
+                }
+                img:hover {
+                    filter:none;
+                }
+            }
+            .name_and_lab {
+                display:block;
+                .name {
+                    display:inline-block;
+                    font-size:20px;
+                    margin-top:5px;
+                    font-weight:600;
+                }
+                .lab {
+                    display:inline-block;
+                    margin-left:5px;
+                    font-size: 1.4em;
+                    color:#ccc;
+                    line-height: 1em;
+                    svg {
+                    font-size:19px;
+                        vertical-align: bottom;
+                    }
+                }
+                .lab:hover {
+                    color:#F40019;
+                }
+            }
+            .position {
+                margin:5px 0 5px;
+                font-size:14px;
+                color: #9a9a9a;
+            }
+            .contact {
+                font-size:15.5px;
+                font-weight:500;
+                color:#707070;
+            }
+        }
+    }
+    */
+    
+}

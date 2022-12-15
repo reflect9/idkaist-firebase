@@ -1,0 +1,35 @@
+{
+    "virtualwire": {
+        "title": "VirtualWire: Supporting Rapid Prototyping with Instant Reconfigurations of Wires in Breadboarded Circuits",
+        "datetime": "2021-01-01",
+        "lab": "MAKinteract",
+        "labcode": "andreabianchi",
+        "YouTube_URL": "https://www.youtube.com/embed/vWRRjfUocuw",
+        "description": "virtualwire.md"
+    },
+    "Physical_Computing_Metaverse": {
+        "title": "Physical Computing Metaverse: Enabling electronics education in VR",
+        "datetime": "2022-02-09",
+        "lab": "MAKinteract",
+        "labcode": "andreabianchi",
+        "YouTube_URL": "https://www.youtube.com/embed/PzI8_2K_itY",
+        "description": "Physical_Computing_Metaverse.md"
+    },
+    "aline": {
+        "title": "이상수 교수팀, 세계 양대 디자인 어워드 석권​",
+        "datetime": "2022-01-05",
+        "lab": "Next Interface Lab",
+        "labcode": "sangsoolee",
+        "description": "aline.md"
+    },
+    "chungkyungwon":{
+        "title": "The World Design Organization Interviews Professor Emeritus Chung Kyung-won",
+        "datetime": "2022-01-06",
+        "description": "chungkyungwon.md"
+    },
+    "dis2021_outstanding":{
+        "title": "Outstanding Paper Award on the DSUS Spring 2021",
+        "datetime": "2021-06-29",
+        "description": "dis2021_outstanding.md"
+    }   
+}

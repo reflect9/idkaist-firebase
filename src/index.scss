@@ -1,0 +1,17 @@
+html { height:100%; }
+body { height:100%; }
+#root { height:100%; }
+.App { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Work sans", "Noto Sans kr", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:#444;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
