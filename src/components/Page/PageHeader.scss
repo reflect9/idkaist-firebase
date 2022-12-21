@@ -7,7 +7,10 @@
 .PageHeader {
     margin:auto;
     // max-width: 1200px;
-    height: 75px;
+    @media only screen and (max-width:500px) { height: 50px; }
+    @media only screen and (min-width:500px) { height: 75px; }
+    @media only screen and (min-width:1000px) { height: 75px; }
+    
     background: #fff;
     display: flex;
     position:relative;
@@ -35,9 +38,14 @@
     .HeaderLeft {
         flex: 0 0 auto;
         font-size: 24px;
-        padding: 10px 0 0 24px;
+        padding-top:10px;
+        @media only screen and (max-width:500px) { padding-left:12px; }
+        @media only screen and (min-width:500px) { padding-left:20px;  }
+        @media only screen and (min-width:1000px) { padding-left:24px;  }
         svg {
-            height:48px;
+            @media only screen and (max-width:500px) { height:32px; }
+            @media only screen and (min-width:500px) { height:45px; margin-top:4px; }
+            @media only screen and (min-width:1000px) { height:45px; margin-top:4px; }
         }
     }
     .HeaderCenter:hover {
@@ -150,19 +158,23 @@
     }
     .HeaderRight {
         flex: 0 0 auto;
-        line-height:82px;
-        // flex: 0 0 auto;
+        @media only screen and (max-width:500px) { line-height:60px; padding-right:12px;}
+        @media only screen and (min-width:500px) { line-height:82px; padding-right:24px;}
+        @media only screen and (min-width:1000px) { line-height:82px; padding-right:36px;}
         font-size: 24px;
-        padding: 0 36px 0 8px;
-        .KAIST_Logo {
-            @media only screen and (min-width:1000px) { display: inline;}
-            @media only screen and (max-width:1000px) { display: none;}
-        
-            margin-right:20px;
-            height:24px;
-            // filter: saturate(0%) contrast(0%);
-            // opacity:0.8;
+        a {
+            vertical-align: middle;
+            .KAIST_Logo {
+                @media only screen and (min-width:1000px) { display: inline;}
+                @media only screen and (max-width:1000px) { display: none;}
+                
+                margin-right:20px;
+                height:24px;
+                // filter: saturate(0%) contrast(0%);
+                opacity:0.7;
+            }
         }
+        
         // .LanguageSelector {
         //     display: inline-block;
         //     vertical-align: top;

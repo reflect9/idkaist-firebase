@@ -1,13 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, setDoc, doc, updateDoc } from "firebase/firestore";
-import firebaseConfig from "./auth";
+import { db } from "./auth";
 
 
 function UpdateArticle(articleID, propertiesToUpdate, callback) {
     // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
+    // const app = initializeApp(firebaseConfig);
     // Initialize Cloud Firestore and get a reference to the service
-    const db = getFirestore(app);
+    // const db = getFirestore(app);
     const docRef = doc(db, "articles", articleID); // Creating reference to the new/existing document
     // UPDATING SINGLE ARTICLE
     (async () => {

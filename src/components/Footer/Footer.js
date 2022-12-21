@@ -25,12 +25,9 @@ function Footer() {
                     <p>
                         Department of Industrial Design, KAIST<br/>
                         한국과학기술원 산업디자인학과<br/>
-                    </p>
-                    <p>
                         {t("About.Address")}<br />
                         Tel. +82-42-350-4502~3 / Fax +82-42-350-4510<br />
                     </p>
-
                 </div>
                 <div className="shortcuts">
                     <div className="column">
@@ -61,18 +58,10 @@ function Footer() {
         </div>
         <div className="FooterSection">
             <div className="FooterContent_2" >
-                <div className="left_column">
-                    <p className='small'>© IDKAIST. All Rights Reserved.</p>
+                <div className="copyright">
+                    © IDKAIST. All Rights Reserved
                 </div>
-                <div className="right_column">
-                    <div className="languageSelector" onClick={toggleLanguage}>
-                        {i18n.language}
-                    </div>
-                    <div className="kaist_logo">
-                        <a href='https://kaist.ac.kr'><img src={KAISTLogo} className="KAIST_Logo" /></a>
-                    </div>
-                </div>
-                
+                <a href='https://kaist.ac.kr'><img src={KAISTLogo} className="KAIST_Logo" /></a>
             </div>
             
         </div>    

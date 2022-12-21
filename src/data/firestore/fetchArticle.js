@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc, getDoc, doc, deleteDoc, where } from "firebase/firestore";
-import firebaseConfig from "./auth";
+import { db } from "./auth";
 
 function FetchArticle(docID, callback) {
     // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
+    // const app = initializeApp(firebaseConfig);
     // Initialize Cloud Firestore and get a reference to the service
-    const db = getFirestore(app);
+    // const db = getFirestore(app);
     const docRef = doc(db, "articles", docID);
     // READ SINGLE ARTICLE
     (async () => {

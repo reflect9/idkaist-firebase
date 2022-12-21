@@ -7,7 +7,7 @@ import formatDate from '../../utils/FormatDate';
 import { BiSearch } from "react-icons/bi";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
-// import { initializeApp } from "firebase/app";
+import { auth } from "../../data/firestore/auth";
 // import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc } from "firebase/firestore";
 
 import RetrieveArticles from "../../data/firestore/retrieveArticles";
@@ -58,7 +58,9 @@ const ArticleList = () => {
                 </div>
                 <div className="articleContainer">
                     <div className="topbar">
-                        <h2>{articleType}</h2>
+                        <h2>{articleType}
+                            {(auth && auth.currentUser)? <Link to={"/ArticleListEditor/"+articleType}>Admin Mode</Link> :""}
+                        </h2>
                         <div className="searchUI">
                             <input type="text" className="input" placeholder="Search" disabled/>
                             <button type="submit">

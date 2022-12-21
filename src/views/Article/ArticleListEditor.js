@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
+import { v4 } from 'uuid';
 import { useParams } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
@@ -12,6 +13,7 @@ import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 
 import RetrieveArticles from "../../data/firestore/retrieveArticles";
 import UpdateArticle from "../../data/firestore/updateArticle";
+import {auth} from "../../data/firestore/auth";
 import "./ArticleList.scss";
 
 const ArticleListEditor = () => {
@@ -51,9 +53,9 @@ const ArticleListEditor = () => {
         );
     }
     const typeLinks = atypes.map( (at) => {
-        return (<Link className={articleType == at ? "active" : ""} key={at}
+        return (<Link className={articleType == at ? "active" : ""} key={v4()}
             to={'/articleListEditor/'+at}>
-            <li key={at}>{t("ArticleList.Type."+at)}</li></Link>);
+            <li key={v4()}>{t("ArticleList.Type."+at)}</li></Link>);
     });                 
     return (
         <div className="ArticleList">
@@ -65,7 +67,9 @@ const ArticleListEditor = () => {
                 </div>
                 <div className="articleContainer">
                     <div className="topbar">
-                        <h2>{articleType}</h2>
+                        <h2>{articleType}
+                        <Link to={"/ArticleList/"+articleType}>View Mode</Link>
+                        </h2>
                         <Link to="/articleEditor"><button className="new_article">새 글 쓰기</button></Link>
                         <div className="searchUI">    
                             <input type="text" className="input" placeholder="Search" disabled/>
@@ -80,7 +84,7 @@ const ArticleListEditor = () => {
                         .slice(pageNum*articlesPerPage,((pageNum+1)*articlesPerPage))
                         .map((art) => {
                             // console.log(art.data());
-                            return (<li key={art.id}>
+                            return (<li key={v4()}>
                                 <div className="type">{art.data().type}</div>
                                 <Link to={'/article/'+art.id}>
                                     <div className={art.data().isVisible ? "title":"title invisible"}>{art.data().title} 
@@ -102,18 +106,18 @@ const ArticleListEditor = () => {
                     </ul>
 
                     <ul className="pagination">
-                        <li onClick={()=>{ 
+                        <li key={v4()} onClick={()=>{ 
                             const prevStartPageNum = Math.max(startPageNum-pagesPerPagelist, 0);
                             setPageNum(prevStartPageNum);
                             setStartPageNum(prevStartPageNum);
                         }}> <FiChevronLeft/> </li>
                         { _.range(startPageNum, Math.min(startPageNum+pagesPerPagelist,totalPages)).map((p)=>{
-                            return (<li 
+                            return (<li key={v4()} 
                                 className={p==pageNum?"active":""}
                                 onClick={()=>{setPageNum(p);}}
                             >{p+1}</li>);
                         })}
-                        <li onClick={()=>{ 
+                        <li key={v4()} onClick={()=>{ 
                             const nextStartPageNum = Math.min(startPageNum+pagesPerPagelist, Math.max(0, totalPages-pagesPerPagelist));
                             setPageNum(nextStartPageNum);
                             setStartPageNum(nextStartPageNum);

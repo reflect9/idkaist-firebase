@@ -13,8 +13,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import { initializeApp } from "firebase/app";
-import firebaseConfig from "../../data/firestore/auth";
-import { ref, getStorage, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { app, firebaseConfig, storage } from "../../data/firestore/auth";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { Timestamp } from "firebase/firestore";
 import FetchArticle from "../../data/firestore/fetchArticle";
 import UploadArticle from "../../data/firestore/uploadArticle";
@@ -70,8 +70,8 @@ function ArticleEditor() {
     
     const uploadImage = () => {
         if (imageUpload == null) return;
-        const app = initializeApp(firebaseConfig);
-        const storage = getStorage();
+        // const app = initializeApp(firebaseConfig);
+        // const storage = getStorage();
         const filePath = "images/" + imageUpload.name + v4();
         const imageRef = ref(storage, filePath);
         const uploadTask = uploadBytesResumable(imageRef, imageUpload);
@@ -120,7 +120,7 @@ function ArticleEditor() {
     return (<div className="ArticleEditor">
         <div className="PageContentWrapper">
             <div className="markdownUI">
-                <Link to="/articleListEditor">Back to Article List</Link> &nbsp;&nbsp;
+                <Link to="/articleListEditor/All">Back to Article List</Link> &nbsp;&nbsp;
                 <Link to={"/article/"+articleIDparam}>Back to Article</Link>
 
                 <label>Article Type</label>

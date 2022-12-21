@@ -1,9 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="177.496" height="47.799" viewBox="0 0 177.496 47.799">
-  <defs>
-    <clipPath id="clip-path">
-      <rect id="Rectangle_26" data-name="Rectangle 26" width="38.486" height="44.758" fill="none"/>
-    </clipPath>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="47.799" viewBox="0 0 40 47.799">
+  
   <g id="Group_424" data-name="Group 424" transform="translate(-38.504 -16.201)">
     <g id="Group_6" data-name="Group 6" transform="translate(38.504 16.201)">
       <path id="Path_2" data-name="Path 2" d="M30.574,117.716v1.167h2.871v17.047H30.574v1.279h10.31v-1.279H38.224V117.716Z" transform="translate(-24.052 -92.606)" fill="#1a1311"/>

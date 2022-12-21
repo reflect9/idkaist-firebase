@@ -13,6 +13,7 @@ import Article from './views/Article/Article.js';
 import ArticleList from './views/Article/ArticleList.js';
 import ArticleListEditor from './views/Article/ArticleListEditor.js';
 import ArticleEditor from './views/Article/ArticleEditor.js';
+import LogIn from "./views/LogIn/LogIn.js";
 
 import UploadImageS3 from './data/firestore/UploadImageS3.js';
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/people/*" element={<PageHeader toggleIsMenuActive={toggleIsMenuActive} Section="People"/>} />
           <Route path="/about/*" element={<PageHeader toggleIsMenuActive={toggleIsMenuActive} Section="About"/>} />
           <Route path="/articleList/*" element={<PageHeader toggleIsMenuActive={toggleIsMenuActive} Section=""/>} />
+          <Route path="/articleListEditor/*" element={<PageHeader toggleIsMenuActive={toggleIsMenuActive} Section=""/>} />
           <Route path="/article/*" element={<PageHeader toggleIsMenuActive={toggleIsMenuActive} Section=""/>} />
           <Route path="/articleEditor/*" element={<PageHeader toggleIsMenuActive={toggleIsMenuActive} Section=""/>} />
           <Route path="*" element={<div></div>} />
@@ -84,6 +86,8 @@ function App() {
           {/* Add more routes here */}
 
           <Route path="/uploadS3" element={<UploadImageS3/>} />
+
+          <Route path="/login" element={<LogIn/>} />
         </Routes>
 
         {/* Routes for rendering footer (or skip for some pages) */}

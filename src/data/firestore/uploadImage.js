@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 // import { getStorage } from "firebase/firestore";
 import {ref, getStorage, uploadBytes} from "firebase/storage";
-import firebaseConfig from "data/firestore/auth";
+import {db} from "data/firestore/auth";
 
 function handleUpload() {
     if (!file) {
@@ -10,7 +10,7 @@ function handleUpload() {
 }
 
 function UploadImage(file, callback) {
-    const app = initializeApp(firebaseConfig);
+    // const app = initializeApp(firebaseConfig);
     // 화일업로드 (https://firebase.google.com/docs/storage/web/upload-files)
     const storage = getStorage();
     const imageRef = ref(storage, "image");

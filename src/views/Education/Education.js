@@ -37,10 +37,10 @@ function Education({course}) {
       </div>
       <div className="tabNav">
           <ul>
-            <Link to="/education/Undergraduate"><li className={course == "Undergraduate" ? 'active' : null} > {t("Menu.Undergraduate")} </li></Link>
-            <Link to="/education/Master"><li className={course == "Master" ? 'active' : null} > {t("Menu.Master")} </li></Link>
-            <Link to="/education/PhD"><li className={course == "PhD" ? 'active' : null} > {t("Menu.PhD")} </li></Link>
-            <Link to="/education/International"><li className={course == "International" ? 'active' : null} > {t("Menu.International")}</li></Link>
+            <Link key='a' to="/education/Undergraduate"><li className={course == "Undergraduate" ? 'active' : null} > {t("Menu.Undergraduate")} </li></Link>
+            <Link key='b' to="/education/Master"><li className={course == "Master" ? 'active' : null} > {t("Menu.Master")} </li></Link>
+            <Link key='c' to="/education/PhD"><li className={course == "PhD" ? 'active' : null} > {t("Menu.PhD")} </li></Link>
+            <Link key='d' to="/education/International"><li className={course == "International" ? 'active' : null} > {t("Menu.International")}</li></Link>
           </ul>
       </div>
       <div className="PageContentWrapper">

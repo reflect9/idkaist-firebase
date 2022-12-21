@@ -9,6 +9,8 @@
     "@uiw/react-md-editor": "^3.19.8",
     "aws-sdk": "^2.1275.0",
     "firebase": "^9.15.0",
+    "firebaseui": "^6.0.2",
+    "gcip-iap": "^1.0.0",
     "i18next": "^22.4.5",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.1.0",

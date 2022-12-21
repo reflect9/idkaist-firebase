@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc, orderBy, Direction, query, getDocs, doc, limit, deleteDoc, where} from "firebase/firestore";
-import firebaseConfig from "../../data/firestore/auth";
+import { db } from "../../data/firestore/auth";
 
 function RetrieveArticles(allowedArticleTypes, isFeatured, doclimit, callback) {
     // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
+    // const app = initializeApp(firebaseConfig);
     // Initialize Cloud Firestore and get a reference to the service
-    const db = getFirestore(app);
+    // const db = getFirestore(app);
     // READ ARTICLES MATCHING WITH articleType
     (async () => {
         const articlesRef = collection(db, "articles");

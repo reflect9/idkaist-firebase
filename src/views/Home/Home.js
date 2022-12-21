@@ -105,7 +105,7 @@ let Home = ({ }) => {
 						<span className="highlight">{article.text}
 						</span>
 					</div>
-					<a class="read_more" href="">{t("General.read_more")}</a>
+					<a class="read_more" href={"/article/"+article.id}>{t("General.read_more")}</a>
 				</div>
 			</li>);
 		});
@@ -206,7 +206,7 @@ let Home = ({ }) => {
 								<li><Link to='/'>{t("Shortcuts.Notice")}</Link></li>
 							</ul>
 							<div className="upcoming">
-								<label>Upcoming</label>
+								<label>{t("Home.Upcoming")}</label>
 								<div className="event_title">Apply for the ID graduate program by April 9th</div>
 								<a className="learn_more">{t("General.learn_more")}</a>
 							</div>

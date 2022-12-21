@@ -18,10 +18,10 @@ function Master() {
                 // Rendering courses
                 const row = (
                     <tr key={semester + "_" + courseIdx}>
-                        <th>{t("General." + semester)}</th>
-                        <td> {courseData.code}  </td>
-                        <td className="expandable"> {i18n.language == "en" ? courseData.title_en : courseData.title_kr} </td>
-                        <td className="rightAlign"><FiArrowUpRight /></td>
+                        <th key={semester + "_" + courseIdx + "_a"}>{t("General." + semester)}</th>
+                        <td key={semester + "_" + courseIdx + "_b"}> {courseData.code}  </td>
+                        <td key={semester + "_" + courseIdx + "_c"} className="expandable"> {i18n.language == "en" ? courseData.title_en : courseData.title_kr} </td>
+                        <td key={semester + "_" + courseIdx + "_d"} className="rightAlign"><FiArrowUpRight /></td>
                     </tr>
                 );
                 rows.push(row);
@@ -57,10 +57,12 @@ function Master() {
                 </div>
                 <table className="courses">
                     <thead>
-                        <th>Semester</th>
-                        <td>Course</td>
-                        <td>Title</td>
-                        <td className="rightAlign">Portfolio</td>
+                        <tr>
+                            <td>Semester</td>
+                            <td>Course</td>
+                            <td>Title</td>
+                            <td className="rightAlign">Portfolio</td>
+                        </tr>
                     </thead>
                     <tbody>
                         {rows}

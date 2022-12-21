@@ -31,6 +31,9 @@
         "People": "People",
         "About": "About"
     },
+    "Home": {
+        "Upcoming": "Upcoming"
+      },
     "Education": {
         "Undergraduate": {
             "summary": "In the undergraduate course, students acquire the basic qualities of designers necessary for design practice. Students learn the history and the present state of design, including formative principles and visual language. They also cultivate various expression abilities. Based on understanding modern industrial systems, students can carry out product design and digital media design projects focusing on marketing and production. Students develop creative problem-solving abilities and design practical skills through completing various products.",

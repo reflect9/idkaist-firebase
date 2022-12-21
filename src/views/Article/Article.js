@@ -5,8 +5,10 @@ import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
 import formatDate from '../../utils/FormatDate';
 
+import { checkAdmin, auth } from "../../data/firestore/auth";
 import FetchArticle from "../../data/firestore/fetchArticle";
 import "./Article.scss";
+import { AutoScaling } from 'aws-sdk';
 
 function Article() {
     const { articleID } = useParams();
@@ -33,7 +35,9 @@ function Article() {
                         </ul>
                     </div>
                     <div className="articleContainer">
-                        <div className="datetime">{formatDate(art.datetime)}</div>
+                        <div className="datetime">{formatDate(art.datetime)}
+                            {(auth && auth.currentUser)? <Link to={"/articleEditor/"+articleID}>EDIT</Link>: ""}
+                        </div>
                         <div className="title">{art.title}</div>
                         <div className="coverImage">
                             <img src={art.coverImage}

@@ -1,12 +1,19 @@
 import _ from "lodash";
 import React, { useEffect, useState, useRef } from 'react';
 import ReactDOM from 'react-dom';
+import {v4} from 'uuid';
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { VscBook } from "react-icons/vsc";
 import { GrClose } from "react-icons/gr";
 import { BiSearch } from "react-icons/bi";
+import { GrUserAdmin } from "react-icons/gr";
 import { AiFillCaretRight, AiFillCaretDown } from "react-icons/ai";
+
+// import { signInWithPopup, GoogleAuthProvider, auth } from 'firebase/auth';
+import { signInWithPopup, GoogleAuthProvider, signOut, signInWithEmailAndPassword } from "firebase/auth";
+import { auth, provider } from '../../data/firestore/auth';
+
 import "./Menu.scss";
 
 import Labs from "../../data/Labs";
@@ -14,10 +21,34 @@ import Labs from "../../data/Labs";
 function Menu({ setIsMenuActive }) {
   const { t, i18n, ready } = useTranslation();
   const [isResearchOpen, setIsResearchOpen] = useState(false);
+  const [loginResponse, setLoginResponse] = useState("");
   const changeLanguage = (m) => {
     i18n.changeLanguage(m);
     // setLanguage(m);
   }
+//   const googleHandler = async () => {
+//     provider.setCustomParameters({ prompt: 'select_account' });
+//     signInWithPopup(auth, provider)
+//         .then((result) => {
+//             // This gives you a Google Access Token. You can use it to access the Google API.
+//             const credential = GoogleAuthProvider.credentialFromResult(result);
+//             const token = credential.accessToken;
+//             // The signed-in user info.
+//             const user = result.user;
+//             // redux action? --> dispatch({ type: SET_USER, user });
+//         })
+//         .catch((error) => {
+//             // Handle Errors here.
+//             const errorCode = error.code;
+//             const errorMessage = error.message;
+//             // The email of the user's account used.
+//             const email = error.email;
+//             // The AuthCredential type that was used.
+//             const credential = GoogleAuthProvider.credentialFromError(error);
+//             // ...
+//         });
+// };
+
   useEffect(()=>{
     document.querySelector(".Menu").classList.remove("small");
   }, []);
@@ -30,9 +61,12 @@ function Menu({ setIsMenuActive }) {
   }
   return (
     <div className="Menu small">
-      <div className="MenuCloseButton" onClick={closeMenu}>
-        <GrClose />
+      <div className="menuTopBar">
+        <div className="MenuCloseButton" onClick={closeMenu}>
+          <GrClose />
+        </div>
       </div>
+      
       <div className="menuToolBar">
         <div className="searchUI">
           <input type="text" className="input" placeholder="Search: Not Implemented Yet"/>
@@ -70,7 +104,7 @@ function Menu({ setIsMenuActive }) {
           <div className="L2">
             {isResearchOpen && _.map(Labs, (labData,labID)=>{
               return (
-                <Link to={"/research/"+labID} key={labID}>{labData.lab_long}</Link> 
+                <Link to={"/research/"+labID} key={v4()}>{labData.lab_long}</Link> 
               );
             })}
           </div>
@@ -90,6 +124,50 @@ function Menu({ setIsMenuActive }) {
           <div className="L2">
           </div>
         </div>
+      </div>
+      <div className="AuthUI">
+        <label>Admin Login</label>
+          {(auth && auth.currentUser) ? (
+          <p>
+            <span>{auth.currentUser.email}</span>
+            <button className="signOutLink" onClick={()=>{
+              signOut(auth).then(()=>{
+                closeMenu();
+              });
+            }}>Sign Out</button>
+          </p>
+          ) 
+            : (<div className="auth">
+              <p>Email: <input type="text" id="email"></input></p>
+              <p>Password: <input type="password" id="password"></input></p>
+              <p>
+              <button className="authEmail" onClick={()=>{
+                const email = document.querySelector("#email").value;
+                const password = document.querySelector("#password").value;
+                signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential)=>{
+                  setLoginResponse(userCredential.toString());
+                }).catch((err)=>{
+                  setLoginResponse(err.toString());
+                });
+              }}> 
+                via Email
+              </button>
+              <span className="login_response">{loginResponse}</span>
+              </p>
+              <p>
+                <button className="authGoogle" onClick={()=>{
+                  signInWithPopup(auth, provider)
+                  .then((result) => {
+                      // This gives you a Google Access Token. You can use it to access the Google API.
+                      const credential = GoogleAuthProvider.credentialFromResult(result);
+                      closeMenu();
+                  });
+                }}>Sign In via Google</button>
+              </p>
+              
+            </div>
+            )}
       </div>
     </div>
   );
