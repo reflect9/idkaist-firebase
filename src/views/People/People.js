@@ -19,7 +19,7 @@ function People({filter}) {
   // console.log(LabPeopleData);
   // method for rendering individual
   const renderPerson = (p)=>{
-    return (<div className="person">
+    return (<div className="person" key={p.name_en}>
         <div className="photo">
           <img src={"/images/people/"+p.thumbnail}/>
         </div>
@@ -53,9 +53,9 @@ function People({filter}) {
     <div className="People stretching">
       <div className="tabNav">
           <ul>
-            <li className={filter == "All" ? 'active' : null} > <Link to="/people/All">{t("People.role.All")}</Link> </li>
+            <li className={filter == "All" ? 'active' : null} > <Link to="/people/All" onClick={()=>{document.querySelector(".App").scrollTo(0,0);}}>{t("People.role.All")}</Link> </li>
             {roles.map(r => (
-              <li className={filter == r ? 'active' : null}>  <Link to={"/people/"+r}>{t("People.role."+r)}</Link> </li>
+              <li className={filter == r ? 'active' : null}>  <Link to={"/people/"+r} onClick={()=>{document.querySelector(".App").scrollTo(0,0);}}>{t("People.role."+r)}</Link> </li>
             ))}
           </ul>
       </div>

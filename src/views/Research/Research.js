@@ -18,7 +18,10 @@ function Research({labID}) {
     pageContent = (
       <div className="PageContentWrapper">
         <h2>{t("Research.title")}</h2>
-        {t("Research.overview")}
+        <div className="overview">
+          {t("Research.overview")}
+        </div>
+        
       </div>
     );
   } else {

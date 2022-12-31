@@ -13,8 +13,8 @@ function LabList({ currentLab }) {
     const listBox = useRef(null);
     const Labs_LI = _.map(Labs, (labData, labCode) => {
         const img = require("../../assets/labs/logo/" + labData.lab_logo);
-        return <li className={(currentLab == labCode) ? "active" : ""} key={labCode}>
-            <Link to={(currentLab==labCode)?"/research":"/research/"+labCode}>
+        return <li className={(currentLab == labCode) ? "active" : ""} key={labCode} onClick={()=>{document.querySelector(".App").scrollTo(0,0);}}>
+            <Link to={(currentLab==labCode)?"/research":"/research/"+labCode} >
                 <div className="thumbnail">
                     <img src={img} />
                 </div>

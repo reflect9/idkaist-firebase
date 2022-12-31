@@ -37,10 +37,10 @@ function Education({course}) {
       </div>
       <div className="tabNav">
           <ul>
-            <Link key='a' to="/education/Undergraduate"><li className={course == "Undergraduate" ? 'active' : null} > {t("Menu.Undergraduate")} </li></Link>
-            <Link key='b' to="/education/Master"><li className={course == "Master" ? 'active' : null} > {t("Menu.Master")} </li></Link>
-            <Link key='c' to="/education/PhD"><li className={course == "PhD" ? 'active' : null} > {t("Menu.PhD")} </li></Link>
-            <Link key='d' to="/education/International"><li className={course == "International" ? 'active' : null} > {t("Menu.International")}</li></Link>
+            <Link key='a' to="/education/Undergraduate" onClick={()=>{document.querySelector(".App").scrollTo(0,0);}}><li className={course == "Undergraduate" ? 'active' : null} > {t("Menu.Undergraduate")} </li></Link>
+            <Link key='b' to="/education/Master" onClick={()=>{document.querySelector(".App").scrollTo(0,0);}}><li className={course == "Master" ? 'active' : null} > {t("Menu.Master")} </li></Link>
+            <Link key='c' to="/education/PhD" onClick={()=>{document.querySelector(".App").scrollTo(0,0);}}><li className={course == "PhD" ? 'active' : null} > {t("Menu.PhD")} </li></Link>
+            <Link key='d' to="/education/International" onClick={()=>{document.querySelector(".App").scrollTo(0,0);}}><li className={course == "International" ? 'active' : null} > {t("Menu.International")}</li></Link>
           </ul>
       </div>
       <div className="PageContentWrapper">

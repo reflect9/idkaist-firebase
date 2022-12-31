@@ -71,9 +71,12 @@ function About() {
             <div className="content">
               <div className="title"><em>Shape the Future:</em> <br/>Design for a Better Life</div>
               <div className="description">
-              · Cultivate designers active in the front end of innovation<br/>
-              · Generate integrated design knowledge<br/>
-              · Become a leading research-oriented design education program<br/>
+                <ul>
+                  <li>Cultivate designers active in the front end of innovation</li>
+                  <li>Generate integrated design knowledge</li>
+                  <li>Become a leading research-oriented design education program</li>
+                </ul>
+                
               </div>
             </div>
           </div>
@@ -131,22 +134,14 @@ function About() {
           <div className="contentArea">
             <div className="title">History</div>
             <p>Focusing on humans, technology, and business for the past 25 years, ID KAIST has been recognized as being among the top 30 design schools in the world. Over the next 15 years, we will pursue design-driven convergence between education and research to establish a world-leading design school with a new paradigm of design and the human life.</p>
-            <ul className="historyTable">
-              <li><span className="year">1971</span> KAIST Extablished</li>
-              <li><span className="year">1986</span> ID KAIST Extablished</li>
-              <li><span className="year">1990</span> First BSID Graduation</li>
-              <li><span className="year">1991</span> Post-graduate Program Launched</li>
-              <li><span className="year">2002</span> Doctoral Program Launched</li>
-              <li><span className="year">2006</span> Leaping toward globalization
-                {/* <ul className="smallTable">
-                  <li>Participation in BK21 program</li>
-                  <li>Participation in the WCU (World Class University) program</li>
-                  <li>Selected as one of BusinessWeek's 60 best design programs</li>
-                  <li>Organizing 'Catch the Future' workshop</li>
-                  <li>Selected as one of BusinessWeek's 30 best design programs</li>
-                </ul> */}
-              </li>
-            </ul>
+            <table className="historyTable"><tbody>
+              <tr><td className="year">1971</td> <td>KAIST Extablished</td></tr>
+              <tr><td className="year">1986</td> <td>ID KAIST Extablished</td></tr>
+              <tr><td className="year">1990</td> <td>First BSID Graduation</td></tr>
+              <tr><td className="year">1991</td> <td>Post-graduate Program Launched</td></tr>
+              <tr><td className="year">2002</td> <td>Doctoral Program Launched</td></tr>
+              <tr><td className="year">2006</td> <td>Leaping toward globalization</td></tr>
+              </tbody></table>
           </div>
         </div>
         <div className="rightHalf">

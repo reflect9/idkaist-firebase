@@ -16,16 +16,16 @@
         ul {
             display:flex;
             flex-direction:row;
+            flex-wrap:wrap;
             align-items: center;
             justify-content: center;
-            @media only screen and (min-width:800px) {  gap:60px;  }
-            @media only screen and (max-width:800px) {  gap:30px;  }
             list-style-type: none;
             margin: 0 auto;
             padding: 0;
             li {
                 flex:0 0 auto;
                 padding: 12px 4px;
+                margin: 0 18px;
                 font-family: 'Courier New', Courier, monospace;
                 font-size:14px;
                 text-transform: uppercase;
@@ -53,7 +53,9 @@
         }
     }
     .PageContentWrapper {
-        margin: 100px auto;
+        @media only screen and (min-width:1000px) { margin: 80px auto;}
+        @media only screen and (max-width:999px) { margin: 24px auto; }
+        
         max-width: 1100px;
         .PageTitle {
             height: 54px;
@@ -69,15 +71,22 @@
     .PeopleViewer {
         width:100%;
         display:grid;
-        grid-template-columns: repeat(auto-fill, 200px);
+        @media only screen and (min-width:1000px) { 
+            grid-template-columns: repeat(auto-fill, 200px);
+        }
+        @media only screen and (max-width:1000px) { 
+            grid-template-columns: repeat(auto-fill, 35vw);
+        }
+        
         // flex-direction: row;
         // flex-wrap: wrap;
         justify-content:center;
         box-sizing: border-box;
         // grid-gap:20px;
         padding:0 20px;
-        @media only screen and (min-width:1000px) {  gap:73px; }
-        @media only screen and (max-width:1000px) {  gap:40px; }
+        gap:40px;
+        // @media only screen and (min-width:1000px) {  gap:73px; }
+        // @media only screen and (max-width:1000px) {  gap:40px; }
         .person {
             flex: 0 0 auto;
         }
@@ -89,8 +98,8 @@
             font-size:20px;
         }
         @media only screen and (max-width:1000px) { 
-            width:200px; // height:370px;
-            font-size:20px;
+            width:35vw; // height:370px;
+            font-size:17px;
         }
         
         font-size:15px;

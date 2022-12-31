@@ -5,6 +5,7 @@ import "./Lab.scss";
 import Labs from "../../data/Labs";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 import { AiOutlineCloseCircle } from "react-icons/ai";
+
 function Lab({ labID }) {
     const { t, i18n, ready } = useTranslation();
     const [imageNum, setImageNum] = useState();
@@ -49,21 +50,21 @@ function Lab({ labID }) {
             </div>
 
             <div className="rightPanel">
-                <h4>{t("Research.principal_investigator")}</h4>
+                <label>{t("Research.principal_investigator")}</label>
                 <div className="LabPI">
                     {i18n.language == "kr" ? LabData.name_kr : LabData.name_en}
                 </div>
                 <div className="email">
                     {LabData.email}
                 </div>
-                <h4>{t("Research.research_areas")}</h4>
+                <label>{t("Research.research_areas")}</label>
                 <div className="LabKeywords">
                     <ul>
                         {labKeywords}
                     </ul>
                 </div>
 
-                <h4>{t("Research.homepage")}</h4>
+                <label>{t("Research.homepage")}</label>
                 <div className="LabLink">
                     <a href={LabData.lab_url} target="IDKAIST_LAB">{LabData.lab_url}</a>&nbsp;&nbsp;
                 </div>

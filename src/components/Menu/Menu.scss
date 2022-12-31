@@ -1,5 +1,5 @@
 .Menu.small {
-    right: -50%;
+    right: -100%;
 }
 .Menu {
     position: fixed;
@@ -7,9 +7,16 @@
     top: 0;
     right: 0;
     height: 100%;
-    width: 50%;
+    @media only screen and (min-width:1000px) { 
+        width:50%; 
+        padding:23px 38px 0 60px;
+    }
+    @media only screen and (max-width:999px) { 
+        width:80%; 
+        padding:10px 24px;
+    }
     z-index: 100001;
-    padding:23px 38px 0 60px;
+    
     overflow-y:scroll;
     background-color: #fff;
     box-shadow:-4px 0px 0px 1px rgba(0,0,0,0.05);
@@ -36,15 +43,17 @@
     .menuToolBar {
         display: flex;
         flex-direction: row;
-        margin-top:16px;
-        gap:60px;
+        @media only screen and (min-width:1000px) {  margin-top:12px;   gap:60px;}
+        @media only screen and (max-width:999px) {  margin-top:4px;  gap:20px; }
+        
         .searchUI {
             flex:1 1 auto;
             background: white;
             position: relative;
             input {
                 width: 100%;
-                padding: 20px 60px 20px 20px;
+                @media only screen and (min-width:1000px) {  padding: 20px 60px 20px 20px; }
+                @media only screen and (max-width:999px) {  padding: 16px;}
                 display: block;
                 box-sizing:border-box;
                 font-size:16px;
@@ -61,7 +70,9 @@
                 position: absolute;
                 top: 0;
                 right: 0;
-                padding: 18px 20px;
+                @media only screen and (min-width:1000px) {  padding: 18px 20px 20px 20px; }
+                @media only screen and (max-width:999px) {  padding: 12px 10px; }
+                // padding: 18px 20px;
                 z-index: 2;
                 svg {
                     vertical-align: middle;
@@ -74,7 +85,8 @@
             flex:0 0 auto;
             font-size: 13px;
             background: black;
-            padding: 20px 20px;
+            @media only screen and (min-width:1000px) {  padding: 20px 20px; }
+            @media only screen and (max-width:999px) {  padding: 14px 14px; }
             text-align: center;
             cursor: pointer;
     
@@ -95,44 +107,53 @@
     }
 
     .MenuItems {
-        margin: 60px 0;
-        
+        margin: 32px 0 18px;
         .L1 {
-            margin-top: 32px;
-            font-weight:800;
-            font-size: 1.4vw;
-            letter-spacing: 0.05rem;
-            border-top: solid 1px #d7d7d7;
+            margin-top: 12px; padding-top:12px;
+            font-weight:700;
+            @media only screen and (min-width:1000px) {  font-size:24px; }
+            @media only screen and (max-width:999px) {  font-size: 21px; }
+            //border-top: solid 1px #d7d7d7;
             a {
                 color: #333;
                 font-weight: 800;
                 text-decoration: none;
                 line-height: 1.8em;
-                margin-right:4px;
             }
             a:hover {
             color: #555;
             }
+            svg {
+                vertical-align: text-top;
+            }
 
             .L2 {
-            font-size: 1.38vw;
-            letter-spacing: 0rem;
+            font-size: 0.95em;
+            padding-left:0.5em;
                 a {
                     display: block;
                     font-weight: 400;
-                    line-height: 1.6em;
+                    line-height: normal;
+                    margin-top:16px; 
+            
                 }
             }
         }
     }
     .AuthUI {
+        margin-top:42px;
         border-top:1px solid #d7d7d7;
+        // border-radius:14px;
         padding:20px 0;
         label {
-            margin-top: 32px;
-            font-weight:800;
-            font-size: 1.4vw;
+            margin-top: 14px;
+            font-weight:600;
+            font-size: 18px;
             letter-spacing: 0.05rem;
+        }
+        p {
+            margin-left:12px;
+            font-size:18px;
         }
         button.signOutLink, button.auth {
             margin-left:8px; 

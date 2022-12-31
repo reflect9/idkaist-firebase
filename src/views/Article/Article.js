@@ -34,6 +34,9 @@ function Article() {
                             })}
                         </ul>
                     </div>
+                    {/* <div className="toList">
+                        <Link to={'articleList/'+art.type.toLowerCase()}>{t("ArticleList.Type."+art.type)}</Link>
+                    </div> */}
                     <div className="articleContainer">
                         <div className="datetime">{formatDate(art.datetime)}
                             {(auth && auth.currentUser)? <Link to={"/articleEditor/"+articleID}>EDIT</Link>: ""}

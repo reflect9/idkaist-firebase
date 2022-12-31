@@ -19,10 +19,8 @@
     }
     li {
         list-style-type: none;
-        
-        margin:10px;
-        height:200px; width:200px;
-        // border:1px solid #ddd;
+        @media only screen and (min-width:1000px) { height:200px; width:200px; margin:10px;}
+        @media only screen and (max-width:999px) { height:25vw; width:25vw; margin:4px;}
         vertical-align: middle;
         transition: transform 0.2s;
         .title {
@@ -40,9 +38,6 @@
             }
         }
     }
-    li:hover {
-        transform:translateY(-10px);
-    }
 }
 
 .LabList.small {
@@ -58,7 +53,9 @@
     // }
     .leftArrow, .rightArrow {
         display:block;
-        position:absolute; top:30%;
+        position:absolute; 
+        @media only screen and (min-width:1000px) { top:30%;}
+        @media only screen and (max-width:999px) { top:20%;}
         padding:25px;
         font-size:25px;
         color:white;
@@ -88,7 +85,10 @@
     }
     li {
         display:inline-block;
-        height:150px; width:150px;
+        @media only screen and (min-width:1000px) { height:150px; width:150px;}
+        @media only screen and (max-width:999px) { height:90px; width:90px;}
+        
+        
         margin:0; padding:15px;
         .thumbnail{
             display:flex;
