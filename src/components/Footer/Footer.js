@@ -32,7 +32,7 @@ function Footer() {
                 <div className="shortcuts">
                     <div className="column">
                         <Link to="/home" className="L1">{t("Menu.Home")}</Link>
-                        <Link to="/articleList" className="L1">{t("Menu.ArticleList")}</Link>
+                        <Link to="/articleList/All" className="L1">{t("Menu.ArticleList")}</Link>
                     </div>
                     <div className="column">
                         <Link to="/education" className="L1">{t("Menu.Education")}</Link>

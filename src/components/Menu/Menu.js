@@ -64,6 +64,9 @@ function Menu({ setIsMenuActive }) {
           <Link to="/home">{t("Menu.Home")}</Link>
         </div>
         <div className="L1">
+          <Link to="/ArticleList/All">{t("Menu.ArticleList")}</Link>
+        </div>
+        <div className="L1">
           <Link to="/education">{t("Menu.Education")}</Link>
           <div className="L2">
             <Link to="/education/Undergraduate">{t("Menu.Undergraduate")}</Link>

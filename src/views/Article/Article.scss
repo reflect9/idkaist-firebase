@@ -12,11 +12,12 @@
             font-size: 14px;
             color: #707070;
             font-weight: 400;
-
+            .dropdownUI {
+                display:none;
+            }
             .filterUI {
                 flex: 0 0 140px;
                 width: 140px;
-
                 ul {
                     margin: 86px 0;
                     padding: 0;
@@ -131,48 +132,91 @@
             font-size: 14px;
             color: #707070;
             font-weight:400;
-
-            .filterUI {
-                width:100%;
-                ul {
-                    margin: 0; padding:0 8px; background:#efefef;
-                    display:flex; flex-direction:row;
-                    flex-wrap:wrap;
-                    justify-content: space-around;
-                    a {
-                        text-decoration: none;
-                        li{
-                            display:inline-block;
-                            margin:0;
-                            // width:30%;
-                            list-style-type: none;
-                            padding:5px 12px;
-                            font-family: 'Courier New', Courier, monospace;
-                            color:black;
-                            font-size:14px;
-                            text-transform: uppercase;
-                        }
+            .dropdownUI {
+                position:relative;
+                font-family: 'Courier New', Courier, monospace;
+                font-size:18px;
+                -moz-user-select: none;
+                 user-select: none;
+                .dd-header {
+                    width:100%;
+                    padding:8px 8px;
+                    position:relative;
+                    background:#F7F7F7;
+                    .dd-header-title {
+                        padding:6px 10px;
+                        color:black;
+                    }
+                    .dd-header-arrow {
+                        position:absolute;
+                        top:15px; right:25px;
+                        color:red;
+                    }
+                    cursor:pointer;
+                }
+                ul.dd-list {
+                    position:absolute; z-index:100;
+                    left:0px; right:0px;
+                    background:#fff;
+                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.08);
+                    margin:0px; padding:8px 0; list-style-type: none;
+                    a{
+                        text-decoration: none;      
+                        color:black;
+                        li {
+                            padding:6px 24px;
+                        }   
                     }
                     a:hover {
-                    li{
-                    background-color:black; color:white;}
-                    }
-                    a.active {
-                        vertical-align: middle;
+                        color:#F40019;
                         li {
-                            background:#fff;   
-                            color:black;
-                            box-shadow:inset 0px 2px 0px 0px red;
+                            background:#eee;
                         }
-                        // li:hover {background-color:black; color:white;}
                     }
-                    
                 }
+            }
+            .filterUI {
+                display:none;
+                // width:100%;
+                // ul {
+                //     margin: 0; padding:0 8px; background:#efefef;
+                //     display:flex; flex-direction:row;
+                //     flex-wrap:wrap;
+                //     justify-content: space-around;
+                //     a {
+                //         text-decoration: none;
+                //         li{
+                //             display:inline-block;
+                //             margin:0;
+                //             // width:30%;
+                //             list-style-type: none;
+                //             padding:5px 12px;
+                //             font-family: 'Courier New', Courier, monospace;
+                //             color:black;
+                //             font-size:14px;
+                //             text-transform: uppercase;
+                //         }
+                //     }
+                //     a:hover {
+                //     li{
+                //     background-color:black; color:white;}
+                //     }
+                //     a.active {
+                //         vertical-align: middle;
+                //         li {
+                //             background:#fff;   
+                //             color:black;
+                //             box-shadow:inset 0px 2px 0px 0px red;
+                //         }
+                //         // li:hover {background-color:black; color:white;}
+                //     }
+                    
+                // }
             }
 
             .articleContainer {
                 flex: 1 0 auto;
-                padding:30px;
+                padding:14px 18px;
                 .coverImage {
                     img {
                         display: block;

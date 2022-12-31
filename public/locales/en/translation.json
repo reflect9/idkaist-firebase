@@ -20,7 +20,7 @@
     },
     "Menu": {
         "Home": "Home",
-        "ArticleList": "All News",
+        "ArticleList": "Articles",
         "Highlights": "Highlights",
         "Education": "Education",
         "Undergraduate": "Undergraduate",
@@ -113,6 +113,6 @@
             "Notice":"Notice",
             "Banner": "Banner"
         },
-        "NoArticleMsg": "Loading... Or, there is no article of the type"
+        "NoArticleMsg": "LOADING...  Or there is no article in this category yet"
     }
 }

@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
 import formatDate from '../../utils/FormatDate';
+import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
 
 import { checkAdmin, auth } from "../../data/firestore/auth";
 import FetchArticle from "../../data/firestore/fetchArticle";
@@ -13,6 +14,7 @@ import { AutoScaling } from 'aws-sdk';
 function Article() {
     const { articleID } = useParams();
     const [ art, setArticle ] = useState();
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const { t } = useTranslation();
     const atypes = ["All", "Award", "Event", "News", "Notice", "Banner"];
 
@@ -24,6 +26,26 @@ function Article() {
         return (
             <div className="Article">
                 <div className="PageContentWrapper">
+                    <div className="dropdownUI">
+                        <div className="dd-header"  onClick={()=>{setIsDropdownOpen(!isDropdownOpen);}}>
+                            <div className="dd-header-title">
+                                {art.type}
+                            </div>
+                            <div className="dd-header-arrow">
+                                {isDropdownOpen?<AiOutlineDown/>:<AiOutlineRight/>}
+                            </div>
+                        </div>
+                        {isDropdownOpen
+                            && (<ul className="dd-list">
+                                {atypes.map((at)=>{
+                                    return (<Link className={(art && (art.type.toLowerCase() === at.toLowerCase())) ? "active" : ""} 
+                                        to={'/articleList/'+at}
+                                        key={at}>
+                                        <li>{t("ArticleList.Type."+at)}</li></Link>);
+                                 })}
+                            </ul>)
+                        }
+                    </div>
                     <div className="filterUI">
                         <ul>
                             {atypes.map((at)=>{

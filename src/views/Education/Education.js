@@ -9,8 +9,10 @@ import Undergraduate from './Undergraduate.js';
 import Master from './Master.js';
 import PhD from './PhD.js';
 import International from './International.js';
+import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
 
 function Education({course}) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { t } = useTranslation();
   let courseContent;
   if (course == "Undergraduate") {
@@ -34,6 +36,24 @@ function Education({course}) {
     <div className="Education stretching">
       <div className="coverImage">
         <img src="/images/department/students_prototyping.png" />
+      </div>
+      <div className="dropdownUI">
+          <div className="dd-header" onClick={()=>{setIsDropdownOpen(!isDropdownOpen);}}>
+              <div className="dd-header-title" >
+                  {course}
+              </div>
+              <div className="dd-header-arrow">
+                  {isDropdownOpen?<AiOutlineDown/>:<AiOutlineRight/>}
+              </div>
+          </div>
+          {isDropdownOpen
+              && (<ul className="dd-list">
+                  <li key="Undergraduate"><Link to="/education/Undergraduate"  onClick={()=>{setIsDropdownOpen(!isDropdownOpen);}}>{t("Menu.Undergraduate")}</Link></li>
+                  <li key="Master"><Link to="/education/Master"  onClick={()=>{setIsDropdownOpen(!isDropdownOpen);}}>{t("Menu.Master")}</Link></li>
+                  <li key="PhD"><Link to="/education/PhD"  onClick={()=>{setIsDropdownOpen(!isDropdownOpen);}}>{t("Menu.PhD")}</Link></li>
+                  <li key="International"><Link to="/education/International"  onClick={()=>{setIsDropdownOpen(!isDropdownOpen);}}>{t("Menu.International")}</Link></li>
+              </ul>)
+          }
       </div>
       <div className="tabNav">
           <ul>

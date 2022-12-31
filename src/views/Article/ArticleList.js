@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import formatDate from '../../utils/FormatDate';
 import { BiSearch } from "react-icons/bi";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
 
 import { auth } from "../../data/firestore/auth";
 // import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc } from "firebase/firestore";
@@ -16,6 +17,7 @@ import "./ArticleList.scss";
 const ArticleList = () => {
     const { articleType } = useParams();
     const { t, i18n, ready } = useTranslation();
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [articles, setArticles] = useState([]);
     const [startPageNum, setStartPageNum] = useState(0);
     const [pageNum, setPageNum] = useState(0);
@@ -44,6 +46,7 @@ const ArticleList = () => {
 
     const typeLinks = atypes.map( (at) => {
         return (<Link className={articleType == at ? "active" : ""} 
+            onClick={()=>{setIsDropdownOpen(false);}}
             to={'/articleList/'+at}>
             <li >{t("ArticleList.Type."+at)}</li></Link>);
     });    
@@ -51,6 +54,21 @@ const ArticleList = () => {
     return (
         <div className="ArticleList">
             <div className="PageContentWrapper">
+                <div className="dropdownUI">
+                    <div className="dd-header"  onClick={()=>{setIsDropdownOpen(!isDropdownOpen);}}>
+                        <div className="dd-header-title">
+                            {articleType}
+                        </div>
+                        <div className="dd-header-arrow">
+                            {isDropdownOpen?<AiOutlineDown/>:<AiOutlineRight/>}
+                        </div>
+                    </div>
+                    {isDropdownOpen
+                        && (<ul className="dd-list">
+                            {typeLinks}
+                        </ul>)
+                    }
+                </div>
                 <div className="filterUI">
                     <ul>
                         {typeLinks}
@@ -68,14 +86,13 @@ const ArticleList = () => {
                             </button>
                         </div>
                     </div>
-
                     <ul>
                         {(articles.length>0) ? articles
                         .slice(pageNum*articlesPerPage,((pageNum+1)*articlesPerPage))
                         .map((art) => {
                             // console.log(art.data());
                             return (<li key={art.id}>
-                                <div className="type">{art.data().type}</div>
+                                {articleType=="All" && <div className="type">{art.data().type}</div>}
                                 <Link to={'/article/'+art.id}>
                                     <div className="title">
                                         {art.data().title} 
