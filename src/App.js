@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import _ from "lodash";
 
@@ -30,6 +30,16 @@ import ScrollToTop from "./utils/scrollToTop.js";
 
 function App() {
   const [isMenuActive, setIsMenuActive] = useState(false);
+  // Checking window size and setMatches true / false
+  const [matches, setMatches] = useState(
+      window.matchMedia("(min-width: 1000px)").matches
+  )
+  useEffect(() => {
+      window
+      .matchMedia("(min-width: 1000px)")
+      .addEventListener('change', e => setMatches( e.matches ));
+  }, []);
+
   const toggleIsMenuActive = ()=>{
     setIsMenuActive(!isMenuActive);
   }
@@ -101,7 +111,7 @@ function App() {
           <Route path="*" element={<Footer />} />
         </Routes>
       </div>
-      {isMenuActive ? (<Menu setIsMenuActive={setIsMenuActive}/>):null}
+      {isMenuActive ? (<Menu setIsMenuActive={setIsMenuActive} defaultSubMenuOpen={matches}/>):null}
       {isMenuActive ? (<div className="backdrop" onClick={()=>{
         document.querySelector(".Menu").classList.add("small");
         setTimeout(()=>{

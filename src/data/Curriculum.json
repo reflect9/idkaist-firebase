@@ -63,7 +63,8 @@
                         "title_kr": "그래픽디자인",
                         "code": "ID211",
                         "type": "Major Elective",
-                        "description_kr": "조형 능력을 함양하는데 필요한 기초적인 디자인 이론 및 조형언어(Visual language)를 교수하는 과목으로,기본적인 조형 요소, 원리에 관한 강의와 색체를 이용한 다양한 실기를 포함한다. 특히 색채의 시각적, 심리적, 기능적 속성에 대한 폭 넓은 이해를 바탕으로 평면 디자인과 색채를 통한 조형의 미적 감각을 함양한다."
+                        "description_kr": "조형 능력을 함양하는데 필요한 기초적인 디자인 이론 및 조형언어(Visual language)를 교수하는 과목으로,기본적인 조형 요소, 원리에 관한 강의와 색체를 이용한 다양한 실기를 포함한다. 특히 색채의 시각적, 심리적, 기능적 속성에 대한 폭 넓은 이해를 바탕으로 평면 디자인과 색채를 통한 조형의 미적 감각을 함양한다.",
+                        "link":"https://takyeon.notion.site/ID211-Graphic-Design-7161e50870934c6cac7f742f881e169b"
                     }
                 ],
                 "fall": [
@@ -100,7 +101,8 @@
                         "title_kr": "정보 디자인",
                         "code": "ID221",
                         "type": "Major Elective",
-                        "description_kr": "NA"
+                        "description_kr": "NA",
+                        "link":"https://takyeon.notion.site/ID221-Information-Design-a68791dd5e014635bb52a6e1757f238a"
                     }
                 ]
             }
@@ -119,7 +121,8 @@
                         "title_kr": "인터랙티브 제품 디자인",
                         "code": "ID301",
                         "type": "Major Required",
-                        "description_kr": "제품혁신의 기본요소, 생산공정 및 기술, 재료별 특성 및 디자인상의 고려조건 등 제품의 디자인과 관련되는생산측면의 제반사항에 중점을 두어 제품디자인의 실제를 교수하는 과목이다. 이 과목에서는 복합기능을 갖는 제품컨셉트의 창출 또는 기존제품의 디자인 개선 등의 실기를 통하여 대량 생산 시스템에 부합되는 제품의 디자인 능력을 함양하게 된다. (선수과목: ID213)"
+                        "description_kr": "제품혁신의 기본요소, 생산공정 및 기술, 재료별 특성 및 디자인상의 고려조건 등 제품의 디자인과 관련되는생산측면의 제반사항에 중점을 두어 제품디자인의 실제를 교수하는 과목이다. 이 과목에서는 복합기능을 갖는 제품컨셉트의 창출 또는 기존제품의 디자인 개선 등의 실기를 통하여 대량 생산 시스템에 부합되는 제품의 디자인 능력을 함양하게 된다. (선수과목: ID213)",
+                        "link":"https://takyeon.notion.site/ID301-Interactive-Product-Design-7ffaeb1cd8dc4e14bd435817e794251c"
                     },
                     {
                         "title_en": "Design Methods",
@@ -149,7 +152,8 @@
                         "title_kr": "사용자 경험 디자인",
                         "code": "ID304",
                         "type": "Major Required",
-                        "description_kr": "제품의 라이프 사이클, 제품시장의 분류, 소비자의 구매동기 등 제품 디자인과 관련되는 시장연구에 관한 제반사항에 중점을 두어 제품 디자인 실제를 교수하는 과목이다. 이 과목에서는 시장조사를 위한 기본 통계기법, 설문기법, 문화인류학적 접근법, 시나리오 기반 디자인 등을 학습하여 소비자를 만족시킬 수 있도록 하는 능력을 함양하게 된다. (선수과목: ID301)"
+                        "description_kr": "제품의 라이프 사이클, 제품시장의 분류, 소비자의 구매동기 등 제품 디자인과 관련되는 시장연구에 관한 제반사항에 중점을 두어 제품 디자인 실제를 교수하는 과목이다. 이 과목에서는 시장조사를 위한 기본 통계기법, 설문기법, 문화인류학적 접근법, 시나리오 기반 디자인 등을 학습하여 소비자를 만족시킬 수 있도록 하는 능력을 함양하게 된다. (선수과목: ID301)",
+                        "link":"https://takyeon.notion.site/ID304-User-Experience-Design-586c6d55b5874705b92deaa489c936df"
                     },
                     {
                         "title_en": "Human Factors for Design",
@@ -163,7 +167,8 @@
                         "title_kr": "인터페이스 디자인",
                         "code": "ID307",
                         "type": "Major Elective",
-                        "description_kr": "정보가전 기기 디자인 등과 같은 물리적 사용자 인터페이스 디자인에 관한 이론을 연구하여 실제적인 사용자 인터페이스를 디자인하는 과목이다. 이 과목에서는 사용자 중심 디자인의 본질을 이해하고 이에 활용되는 다양한 디자인 방법을 실제 사례와 함께 학습하게 된다. 특히 제품의 사용자 인터페이스의 디자인과 이의 사용 편의성 평가에 중점을 두어 교수하게 된다."
+                        "description_kr": "정보가전 기기 디자인 등과 같은 물리적 사용자 인터페이스 디자인에 관한 이론을 연구하여 실제적인 사용자 인터페이스를 디자인하는 과목이다. 이 과목에서는 사용자 중심 디자인의 본질을 이해하고 이에 활용되는 다양한 디자인 방법을 실제 사례와 함께 학습하게 된다. 특히 제품의 사용자 인터페이스의 디자인과 이의 사용 편의성 평가에 중점을 두어 교수하게 된다.",
+                        "link": "https://takyeon.notion.site/ID307-Interface-Design-538fee8ad33f4c378c292dbe7b049bb6"
                     },
                     {
                         "title_en": "Moving Image Design",
@@ -196,7 +201,8 @@
                         "title_kr": "졸업연구 디자인 스튜디오 I",
                         "code": "ID409",
                         "type": "Major Elective",
-                        "description_kr": "본 과목은 디자인 리서치와 실무를 통합하여 학부과정의 디자인 프로젝트 수행에 필요한 소양을 완성하는과목이다. 본 강좌는 졸업 연구에 필요한 기본 단계를 훈련한다. 아이디어발상(Ideation), 디자인연구(Design Research), 컨셉전개(concept development), 현 디자인 동향분석, 디자인 진행 일정 및 관리 등의디자인 단계 단계별 기법을 체계적으로 학습하여 디자인에 필요한 소양을 함양한다."
+                        "description_kr": "본 과목은 디자인 리서치와 실무를 통합하여 학부과정의 디자인 프로젝트 수행에 필요한 소양을 완성하는과목이다. 본 강좌는 졸업 연구에 필요한 기본 단계를 훈련한다. 아이디어발상(Ideation), 디자인연구(Design Research), 컨셉전개(concept development), 현 디자인 동향분석, 디자인 진행 일정 및 관리 등의디자인 단계 단계별 기법을 체계적으로 학습하여 디자인에 필요한 소양을 함양한다.",
+                        "link":"https://takyeon.notion.site/ID409-Graduation-Design-Studio-1-582e8d66833e409b90a8bda590f05a0a"
                     },
                     {
                         "title_en": "Portfolio & Exhibition Design",
@@ -212,7 +218,8 @@
                         "title_kr": "졸업연구 디자인 스튜디오 II",
                         "code": "ID414",
                         "type": "Major Elective",
-                        "description_kr": "본 교과목은 산업디자인을 전공하는 학생들에게 고급 캡스톤 프로젝트를 경험할 수 있는 기회를 제공한다.교과목을 수강하는 학생들은 전공에서 학습한 다양한 지식과 스킬을 기반으로 신제품 개발을 효과적으로 수행할 수 있는 방법을 익히게 되고 자신들의 혁신적인 아이디어를 현재 또는 근미래 상품화 가능할 정도의디자인 모형으로 구체화하게 된다. 본 수업에서는 피지컬 컴퓨팅, 프로토타이핑, 생산공정, 디자인 소재 등에대한 고급이론을 강의하고 이를 고급 캡스톤 프로젝트 수행에 응용할 수 있는 기회를 제공한다."
+                        "description_kr": "본 교과목은 산업디자인을 전공하는 학생들에게 고급 캡스톤 프로젝트를 경험할 수 있는 기회를 제공한다.교과목을 수강하는 학생들은 전공에서 학습한 다양한 지식과 스킬을 기반으로 신제품 개발을 효과적으로 수행할 수 있는 방법을 익히게 되고 자신들의 혁신적인 아이디어를 현재 또는 근미래 상품화 가능할 정도의디자인 모형으로 구체화하게 된다. 본 수업에서는 피지컬 컴퓨팅, 프로토타이핑, 생산공정, 디자인 소재 등에대한 고급이론을 강의하고 이를 고급 캡스톤 프로젝트 수행에 응용할 수 있는 기회를 제공한다.",
+                        "link":"https://takyeon.notion.site/ID414-Graduation-Design-Studio-2-e8cfbd0f8951409f86020e38d3a250fa"
                     },
                     {
                         "title_en": "Design Entrepreneurship",
@@ -261,7 +268,8 @@
                         "title_en": "User-Centered Design Methodology",
                         "title_kr": "사용자 중심 디자인 방법론",
                         "type": "Major Elective",
-                        "description_kr": ""
+                        "description_kr": "",
+                        "link":"https://takyeon.notion.site/ID508-User-Centered-Design-Methodology-81170def265c47bda31e59a7fc97ceeb"
                     },
                     {
                         "code": "ID966",
@@ -277,14 +285,16 @@
                         "title_kr": "연구방법론",
                         "code": "ID502",
                         "type": "Major Required",
-                        "description_kr": ""
+                        "description_kr": "",
+                        "link":"https://takyeon.notion.site/ID502-Research-Methodology-ad600621e64844e0be1cbd6db00b1b39"
                     },
                     {
                         "title_en": "Media Interaction Design",
                         "title_kr": "미디어 인터랙션 디자인",
                         "code": "ID506",
                         "type": "Major Elective",
-                        "description_kr": ""
+                        "description_kr": "",
+                        "link":"https://takyeon.notion.site/ID506-Media-Interaction-Design-7c6c7c21b0644bb2a6adaf9a8e5f6225"
                     },
                     {
                         "title_en": "Design Issues",

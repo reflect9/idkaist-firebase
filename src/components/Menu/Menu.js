@@ -18,16 +18,16 @@ import "./Menu.scss";
 
 import Labs from "../../data/Labs";
 
-function Menu({ setIsMenuActive }) {
+function Menu({ setIsMenuActive, defaultSubMenuOpen }) {
   const { t, i18n, ready } = useTranslation();
-  const [isEducationOpen, setIsEducationOpen] = useState(false);
-  const [isResearchOpen, setIsResearchOpen] = useState(false);
-  const [isPeopleOpen, setIsPeopleOpen] = useState(false);
+  const [isEducationOpen, setIsEducationOpen] = useState(defaultSubMenuOpen);
+  const [isResearchOpen, setIsResearchOpen] = useState(defaultSubMenuOpen);
+  const [isPeopleOpen, setIsPeopleOpen] = useState(defaultSubMenuOpen);
   const [loginResponse, setLoginResponse] = useState("");
   const changeLanguage = (m) => {
     i18n.changeLanguage(m);
   }
-
+  
   useEffect(()=>{
     document.querySelector(".Menu").classList.remove("small");
   }, []);

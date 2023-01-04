@@ -20,7 +20,11 @@ function Undergraduate() {
                         <th>{t("General." + semester)}</th>
                         <td> {courseData.code}  </td>
                         <td className="expandable"> {i18n.language == "en" ? courseData.title_en : courseData.title_kr} </td>
-                        <td className="rightAlign"><FiArrowUpRight /></td>
+                        <td className="rightAlign">
+                            {courseData.link && 
+                                (<a href={courseData.link} target="_blank"><FiArrowUpRight /></a>)
+                            }
+                        </td>
                     </tr>
                 );
                 // <div className="course description_hidden" key={courseIdx} onClick={(event)=>{event.target.classList.toggle("description_hidden");}}>

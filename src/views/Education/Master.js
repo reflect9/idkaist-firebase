@@ -21,7 +21,11 @@ function Master() {
                         <th key={semester + "_" + courseIdx + "_a"}>{t("General." + semester)}</th>
                         <td key={semester + "_" + courseIdx + "_b"}> {courseData.code}  </td>
                         <td key={semester + "_" + courseIdx + "_c"} className="expandable"> {i18n.language == "en" ? courseData.title_en : courseData.title_kr} </td>
-                        <td key={semester + "_" + courseIdx + "_d"} className="rightAlign"><FiArrowUpRight /></td>
+                        <td key={semester + "_" + courseIdx + "_d"} className="rightAlign">
+                            {courseData.link && 
+                                (<a href={courseData.link} target="_blank"><FiArrowUpRight /></a>)
+                            }
+                        </td>
                     </tr>
                 );
                 rows.push(row);
