@@ -8,7 +8,7 @@ import { VscBook } from "react-icons/vsc";
 import { GrClose } from "react-icons/gr";
 import { BiSearch } from "react-icons/bi";
 import { GrUserAdmin } from "react-icons/gr";
-import { AiFillCaretRight, AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretUp, AiFillCaretDown } from "react-icons/ai";
 
 // import { signInWithPopup, GoogleAuthProvider, auth } from 'firebase/auth';
 import { signInWithPopup, GoogleAuthProvider, signOut, signInWithEmailAndPassword } from "firebase/auth";
@@ -20,7 +20,9 @@ import Labs from "../../data/Labs";
 
 function Menu({ setIsMenuActive }) {
   const { t, i18n, ready } = useTranslation();
+  const [isEducationOpen, setIsEducationOpen] = useState(false);
   const [isResearchOpen, setIsResearchOpen] = useState(false);
+  const [isPeopleOpen, setIsPeopleOpen] = useState(false);
   const [loginResponse, setLoginResponse] = useState("");
   const changeLanguage = (m) => {
     i18n.changeLanguage(m);
@@ -61,46 +63,63 @@ function Menu({ setIsMenuActive }) {
       </div>
       <div className="MenuItems">
         <div className="L1">
-          <Link to="/home">{t("Menu.Home")}</Link>
+          <Link onClick={closeMenu} to="/home">{t("Menu.Home")}</Link>
         </div>
         <div className="L1">
-          <Link to="/ArticleList/All">{t("Menu.ArticleList")}</Link>
+          <Link onClick={closeMenu} to="/ArticleList/All">{t("Menu.ArticleList")}</Link>
         </div>
         <div className="L1">
-          <Link to="/education">{t("Menu.Education")}</Link>
+          <Link onClick={closeMenu} to="/education">{t("Menu.Education")}</Link>
+          {isEducationOpen?
+            <AiFillCaretUp onClick={()=>{setIsEducationOpen(false);}}/>:
+            <AiFillCaretDown onClick={()=>{setIsEducationOpen(true);}}/>
+          }
           <div className="L2">
-            <Link to="/education/Undergraduate">{t("Menu.Undergraduate")}</Link>
-            <Link to="/education/Master">{t("Menu.Master")}</Link>
-            <Link to="/education/PhD">{t("Menu.PhD")}</Link>
-            <Link to="/education/International">{t("Menu.International")}</Link>
+            {isEducationOpen && ( 
+              <div>
+                <Link onClick={closeMenu} to="/education/Undergraduate">{t("Menu.Undergraduate")}</Link>
+                <Link onClick={closeMenu} to="/education/Master">{t("Menu.Master")}</Link>
+                <Link onClick={closeMenu} to="/education/PhD">{t("Menu.PhD")}</Link>
+                <Link onClick={closeMenu} to="/education/International">{t("Menu.International")}</Link>
+              </div>
+            )}
+            
           </div>
         </div>
         <div className="L1">
-          <Link to="/research">{t("Menu.Research")}</Link>
+          <Link onClick={closeMenu} to="/research">{t("Menu.Research")}</Link>
           {isResearchOpen?
-            <AiFillCaretDown onClick={()=>{setIsResearchOpen(false);}}/>:
-            <AiFillCaretRight onClick={()=>{setIsResearchOpen(true);}}/>
+            <AiFillCaretUp onClick={()=>{setIsResearchOpen(false);}}/>:
+            <AiFillCaretDown onClick={()=>{setIsResearchOpen(true);}}/>
           }
           <div className="L2">
             {isResearchOpen && _.map(Labs, (labData,labID)=>{
               return (
-                <Link to={"/research/"+labID} key={v4()}>{labData.lab_long}</Link> 
+                <Link onClick={closeMenu} to={"/research/"+labID} key={v4()}>{labData.lab_long}</Link> 
               );
             })}
           </div>
         </div>
         <div className="L1">
-          <Link to="/people">{t("Menu.People")}</Link>
+          <Link onClick={closeMenu} to="/people">{t("Menu.People")}</Link>
+          {isPeopleOpen?
+            <AiFillCaretUp onClick={()=>{setIsPeopleOpen(false);}}/>:
+            <AiFillCaretDown onClick={()=>{setIsPeopleOpen(true);}}/>
+          }
           <div className="L2">
-            <Link to="/people/All">{t("People.role.All")}</Link>
-            <Link to="/people/Faculty">{t("People.role.Faculty")}</Link>
-            <Link to="/people/OldFaculty">{t("People.role.OldFaculty")}</Link>
-            <Link to="/people/Staff">{t("People.role.Staff")}</Link>
-            <Link to="/people/OtherFaculty">{t("People.role.OtherFaculty")}</Link>
+            {isPeopleOpen && ( 
+              <div>
+                <Link onClick={closeMenu} to="/people/All">{t("People.role.All")}</Link>
+                <Link onClick={closeMenu} to="/people/Faculty">{t("People.role.Faculty")}</Link>
+                <Link onClick={closeMenu} to="/people/OldFaculty">{t("People.role.OldFaculty")}</Link>
+                <Link onClick={closeMenu} to="/people/Staff">{t("People.role.Staff")}</Link>
+                <Link onClick={closeMenu} to="/people/OtherFaculty">{t("People.role.OtherFaculty")}</Link>
+              </div>
+            )}
           </div>
         </div>
         <div className="L1">
-          <Link to="/about">{t("Menu.About")}</Link>
+          <Link onClick={closeMenu} to="/about">{t("Menu.About")}</Link>
         </div>
       </div>
       <div className="AuthUI">

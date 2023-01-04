@@ -139,7 +139,6 @@
                 -moz-user-select: none;
                  user-select: none;
                 .dd-header {
-                    width:100%;
                     padding:8px 8px;
                     position:relative;
                     background:#F7F7F7;
@@ -149,7 +148,7 @@
                     }
                     .dd-header-arrow {
                         position:absolute;
-                        top:15px; right:25px;
+                        top:15px; right:15px;
                         color:red;
                     }
                     cursor:pointer;

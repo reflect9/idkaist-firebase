@@ -42,10 +42,19 @@
                 white-space: break-all;
                 
             }
+            
         }
         p.small {
             font-size:0.9em;
         }
+        .kaist_logo_wrapper_mobile {
+            text-align:left;
+            margin-top:20px;
+            .KAIST_Logo {
+                width:60px;
+            }
+        }
+        
 
         .shortcuts {
             flex:1 0 auto;
@@ -64,6 +73,13 @@
             }
             vertical-align: top;
             max-width: 100%;
+            a {
+                img {
+                    margin-top:40px;
+                    margin-right:40px;
+                    width:100px;
+                }
+            }
             color:#707070;
             .column {
                 display:inline-block;

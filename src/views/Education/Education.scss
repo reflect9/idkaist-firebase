@@ -37,7 +37,7 @@
             -moz-user-select: none;
             user-select: none;
             .dd-header {
-                width: 100%;
+                // width: 100%;
                 padding: 8px 8px;
                 position: relative;
                 background: #F7F7F7;
@@ -50,7 +50,7 @@
                 .dd-header-arrow {
                     position: absolute;
                     top: 15px;
-                    right: 25px;
+                    right: 15px;
                     color: red;
                 }
 
@@ -345,11 +345,11 @@
             font-size: 11px;
         }
 
-        // width:100%;
+        width:100%;
         margin: 16px auto;
         font-weight:400;
         border-collapse: collapse;
-        table-layout:fixed;
+        table-layout:auto;
 
         thead {
 
@@ -359,6 +359,7 @@
                 font-size: 0.9em;
                 font-weight: 400;
                 color: #888;
+                // width:100px;
             }
 
             td.rightAlign {
@@ -381,6 +382,7 @@
                 vertical-align: top;
                 font-size: 1.2em;
                 font-weight: 400;
+                // width:100px;
                 // word-wrap:break-word;
                 // width:200px;
             }

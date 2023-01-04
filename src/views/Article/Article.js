@@ -24,7 +24,7 @@ function Article() {
 
     if (art) {
         return (
-            <div className="Article">
+            <div className="Article stretching">
                 <div className="PageContentWrapper">
                     <div className="dropdownUI">
                         <div className="dd-header"  onClick={()=>{setIsDropdownOpen(!isDropdownOpen);}}>

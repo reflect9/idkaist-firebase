@@ -9,7 +9,7 @@ import Undergraduate from './Undergraduate.js';
 import Master from './Master.js';
 import PhD from './PhD.js';
 import International from './International.js';
-import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
+import { AiOutlineUp, AiOutlineDown } from "react-icons/ai";
 
 function Education({course}) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -43,7 +43,7 @@ function Education({course}) {
                   {course}
               </div>
               <div className="dd-header-arrow">
-                  {isDropdownOpen?<AiOutlineDown/>:<AiOutlineRight/>}
+                  {isDropdownOpen?<AiOutlineUp/>:<AiOutlineDown/>}
               </div>
           </div>
           {isDropdownOpen

@@ -8,6 +8,7 @@ import Home from './views/Home/Home.js';
 import Education from './views/Education/Education.js';
 import About from './views/About/About.js';
 import Research from './views/Research/Research.js';
+import Lab from './views/Lab/Lab.js';
 import People from './views/People/People.js';
 import Article from './views/Article/Article.js';
 import ArticleList from './views/Article/ArticleList.js';
@@ -63,7 +64,7 @@ function App() {
           <Route path="/research" element={<Research />} />
           {_.map(Labs, (labData,labID)=>{
             return (
-              <Route path={"/research/"+labID} element={<Research labID={labID}/>} />
+              <Route path={"/research/"+labID} element={<Lab labID={labID}/>} />
             );
           })}
 

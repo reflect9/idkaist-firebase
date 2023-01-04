@@ -1,112 +1,188 @@
 .LabList {
-    position:relative;
-    margin:20px auto 10px;
-    padding:0px 0 0px 0;
-    max-width:1200px;
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
+    position: relative;
+    margin: 20px auto 10px;
+    padding: 0px 0 0px 0;
+    max-width: 1200px;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+
+    
+    /* Standard */
     // transition: margin 1s;
-    .leftArrow, .rightArrow { display:none; }
+    .leftArrow,
+    .rightArrow {
+        display: none;
+    }
+
     ul {
         list-style-type: none;
-        margin:10px; padding:10px;
-        display:flex;
-        flex-direction: row;
-        flex-wrap:wrap;
-        justify-content: flex-start;
+        margin: 10px;
+        padding: 10px;
+        display: grid;
+        @media only screen and (min-width:1000px) {  grid-template-columns: repeat(auto-fill, 180px);}
+        @media only screen and (max-width:999px) {  grid-template-columns: repeat(auto-fill, 140px); }
+        justify-content: space-around;
+        gap:30px;
     }
+
     li {
         list-style-type: none;
-        @media only screen and (min-width:1000px) { height:200px; width:200px; margin:10px;}
-        @media only screen and (max-width:999px) { height:25vw; width:25vw; margin:4px;}
+        @media only screen and (min-width:1000px) {  
+            height: 180px;
+            width: 180px;}
+        @media only screen and (max-width:999px) {  
+            height: 140px;
+            width: 140px;
+        }
+        
         vertical-align: middle;
         transition: transform 0.2s;
+
         .title {
-            font-size:14px;
+            font-size: 14px;
         }
-        .thumbnail{
-            display:flex;
+
+        .thumbnail {
+            display: flex;
             align-items: center;
             justify-content: center;
-            height:100%; width:100%;
-            overflow:hidden;
+            height: 100%;
+            width: 100%;
+            overflow: show;
+            position:relative;
             img {
-                max-width:80%;
-                max-height:50%;
+                max-width: 80%;
+                max-height: 50%;
+            }
+            label {
+                position:absolute;
+                @media only screen and (min-width:1000px) {
+                    bottom:20px;
+                    font-size:14px; 
+                    font-weight:600;
+                }
+                @media only screen and (max-width:1000px) {
+                    bottom:10px;
+                    font-size:11px; 
+                    font-weight:500;
+                }
+                font-family: "Work sans", "Noto Sans kr", sans-serif;
+                color:#aaa;
+                
+                line-height:1em;
+                text-align:center;
             }
         }
     }
 }
 
 .LabList.small {
-    position:fixed;
-    bottom:0; left:0; right:0;
-    width:100%; max-width:none;
-    background:#222;
-    margin:0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: none;
+    background: #222;
+    margin: 0;
     // padding-top:10px;
-    width:100%;
+    width: 100%;
+
     // .scrollX {
     //     display:block;
     // }
-    .leftArrow, .rightArrow {
-        display:block;
-        position:absolute; 
-        @media only screen and (min-width:1000px) { top:30%;}
-        @media only screen and (max-width:999px) { top:20%;}
+    .leftArrow,
+    .rightArrow {
+        display: block;
+        position: absolute;
+
+        @media only screen and (min-width:1000px) {
+            top: 30%;
+        }
+
+        @media only screen and (max-width:999px) {
+            top: 20%;
+        }
+
         padding:25px;
         font-size:25px;
         color:white;
         border-radius: 100%;
-        text-align:center; 
+        text-align:center;
         z-index:5;
     }
+
     .leftArrow {
-        left:0; 
+        left: 0;
     }
+
     .rightArrow {
-        right:0;
+        right: 0;
     }
+
     ul {
-        display:block;
+        display: block;
         // position:absolute;
-        left:30px; right:30px; top:0; bottom:0;
+        left: 30px;
+        right: 30px;
+        top: 0;
+        bottom: 0;
         white-space: nowrap;
-        overflow-x:scroll;
+        overflow-x: scroll;
         text-align: center;
-        margin:0; padding:0 40px;
+        margin: 0;
+        padding: 0 40px;
     }
+
     ul::before {
-        content:"";
-        width:30px; height:30px;
-        background:red;
+        content: "";
+        width: 30px;
+        height: 30px;
+        background: red;
     }
+
     li {
-        display:inline-block;
-        @media only screen and (min-width:1000px) { height:150px; width:150px;}
-        @media only screen and (max-width:999px) { height:90px; width:90px;}
-        
-        
-        margin:0; padding:15px;
-        .thumbnail{
-            display:flex;
+        display: inline-block;
+
+        @media only screen and (min-width:1000px) {
+            height: 150px;
+            width: 150px;
+        }
+
+        @media only screen and (max-width:999px) {
+            height: 90px;
+            width: 90px;
+        }
+
+
+        margin:0;
+        padding:15px;
+
+        .thumbnail {
+            display: flex;
             align-items: center;
             justify-content: center;
-            height:100%; width:100%;
-            overflow:hidden;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+
             img {
-                max-width:80%;
-                max-height:50%;
-                filter:invert(0.865) grayscale(1);
+                max-width: 80%;
+                max-height: 50%;
+                filter: invert(0.865) grayscale(1);
             }
         }
     }
+
     li.active {
         // border:1px solid #ddd;
         // border-radius:16px;
         // box-shadow:0 0 10px 0 rgba(0,0,0,0.2);
-        border-bottom:3px solid red;
+        border-bottom: 3px solid red;
     }
 }

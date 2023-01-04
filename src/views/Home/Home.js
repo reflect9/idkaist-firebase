@@ -7,13 +7,14 @@ import Menu from '../../components/Menu/Menu.js';
 import PageHeader from '../../components/Page/PageHeader.js';
 import FeaturedItem from '../../components/FeaturedItem/FeaturedItem.js';
 import formatDate from '../../utils/FormatDate';
-import RetrieveArticles from '../../data/firestore/retrieveArticles';
+import { RetrieveArticles, RetrieveArticlesWithinDatetime } from '../../data/firestore/retrieveArticles';
 import "./Home.scss";
 
 
 let Home = ({ }) => {
 	const [featuredArticles, setFeaturedArticles] = useState([]);
 	const [banners, setBanners] = useState([]);
+	const [notices, setNotices] = useState([]);
 	const [articles, setArticles] = useState([]);
 	// 한/영 변환 모듈 초기화
 	const { t, i18n, ready } = useTranslation();
@@ -26,7 +27,6 @@ let Home = ({ }) => {
 
 	// 페이지 오픈할 때 한 번만, article들 가져오기 
 	useEffect(() => {
-		console.log("Featured Article retrieval");
 		RetrieveArticles(["Award", "News", "Event"], true, 5, (docs) => {
 			setFeaturedArticles(docs.map(d => {
 				let articleData = d.data();
@@ -34,7 +34,6 @@ let Home = ({ }) => {
 				return articleData;
 			}));
 		});
-		console.log("Banner retrieval");
 		RetrieveArticles(["Banner"], false, 500, (docs) => {
 			setBanners(docs.map(d => {
 				let articleData = d.data();
@@ -42,7 +41,13 @@ let Home = ({ }) => {
 				return articleData;
 			}))
 		});
-		console.log("Non-featured article retrieval");
+		RetrieveArticlesWithinDatetime(["Notice"], false, 10, new Date(), null, (docs) => {
+			setNotices(docs.map(d => {
+				let articleData = d.data();
+				articleData.id = d.id;
+				return articleData;
+			}));
+		});
 		RetrieveArticles(["Award", "News", "Event"], false, 500, (docs) => {
 			setArticles(docs.map(d => {
 				let articleData = d.data();
@@ -90,20 +95,15 @@ let Home = ({ }) => {
 				{/* <img /> */}
 				{/* <img src={ require('/assets/works/work'+i+".png")}/> */}
 				<div className="thumbnailImage">
-					<img src={article.coverImage}/>
+					<Link to={"/article/"+article.id}><img src={article.coverImage}/></Link>
 				</div>
 				<div className="info">
-					<div className="kind">
-						<Link to={"/articleList/"+article.type}>{article.type}</Link>
-					</div>
+					<div className="kind"><Link to={"/articleList/"+article.type}>{article.type}</Link></div>
 					<div className="title">
-						<Link to={"/article/"+article.id}>
-							<span className="highlight">{article.title}</span>
-						</Link>
+						<Link to={"/article/"+article.id}><span className="highlight">{article.title}</span></Link>
 					</div>
 					<div className="description">
-						<span className="highlight">{article.text}
-						</span>
+						<span className="highlight">{article.text}</span>
 					</div>
 					<a class="read_more" href={"/article/"+article.id}>{t("General.read_more")}</a>
 				</div>
@@ -203,12 +203,28 @@ let Home = ({ }) => {
 							<ul className="shortcuts">
 								<li><Link to='/education/Master'>{t("Shortcuts.Graduate_Program")}</Link></li>
 								<li><Link to='/research'>{t("Shortcuts.Research Labs")}</Link></li>
-								<li><Link to='/'>{t("Shortcuts.Notice")}</Link></li>
+								<li><Link to='/articleList/Notice'>{t("Shortcuts.Notice")}</Link></li>
 							</ul>
 							<div className="upcoming">
 								<label>{t("Home.Upcoming")}</label>
-								<div className="event_title">Apply for the ID graduate program by April 9th</div>
-								<a className="learn_more">{t("General.learn_more")}</a>
+								{(notices && notices.length>0)?(
+									<div>
+										<div className="event_title">
+											<Link to={"/article/"+notices.at(-1).id}>{notices.at(-1).title}</Link>
+										</div>
+										<div className="event_date">
+											{notices.at(-1).datetime?formatDate(notices.at(-1).datetime):""}
+											{notices.at(-1).datetimeEnd?(" - "+formatDate(notices.at(-1).datetimeEnd)):""}
+										</div>
+									</div>
+								):(
+									<div>
+										<div className="event_title">NA</div>
+									</div>
+								)}
+								{(notices && notices.length>0)?(
+									<Link to={"/article/"+notices.at(-1).id} className="learn_more">{t("General.learn_more")}</Link>
+								):null}
 							</div>
 						</div>
 					</div>
@@ -231,9 +247,22 @@ let Home = ({ }) => {
 				<div className="rightHalf">
 					<div className="contentArea">
 						{/* 공지사항 (날짜포함) */}
-						<div className="events">
+						<div className="notices">
 							<label>NOTICE</label>
-							<div className="event_item">
+							{notices.map(notice=>{
+								return (<div className="event_item">
+									<div className="date">
+										{notice.datetime?formatDate(notice.datetime):""}
+										{notice.datetimeEnd?(" - "+formatDate(notice.datetimeEnd)):""}
+									</div>
+									<div className="title"><Link to={"/article/"+notice.id}>{notice.title}</Link></div>
+									<div className="description">
+										{notice.text}
+									</div>
+								</div>);
+							})}
+
+							{/* <div className="event_item">
 								<div className="date">2022.7.1 - 7.12</div>
 								<div className="title">2023학년 봄학기 대학원과정 신입생 모집</div>
 							</div>
@@ -255,7 +284,7 @@ let Home = ({ }) => {
 							<div className="event_item">
 								<div className="date">2022.8.12</div>
 								<div className="title">2023학년 신입생 제출서류 목록 및 오리엔테이션</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 

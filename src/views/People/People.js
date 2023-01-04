@@ -7,7 +7,7 @@ import PageHeader from '../../components/Page/PageHeader.js';
 import PeopleData from "../../data/People.json";
 import LabData from "../../data/Labs.json";
 import { MdHome } from "react-icons/md";
-import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
+import { AiOutlineUp, AiOutlineDown } from "react-icons/ai";
 
 import { useTranslation } from 'react-i18next';
 import "./People.scss";
@@ -59,7 +59,7 @@ function People({filter}) {
                 {t("People.role."+filter)}
               </div>
               <div className="dd-header-arrow">
-                  {isDropdownOpen?<AiOutlineDown/>:<AiOutlineRight/>}
+                  {isDropdownOpen?<AiOutlineUp/>:<AiOutlineDown/>}
               </div>
           </div>
           {isDropdownOpen
@@ -73,9 +73,15 @@ function People({filter}) {
       </div>
       <div className="tabNav">
           <ul>
-            <li className={filter == "All" ? 'active' : null} > <Link to="/people/All" onClick={()=>{document.querySelector(".App").scrollTo(0,0);}}>{t("People.role.All")}</Link> </li>
+            <Link to="/people/All" onClick={()=>{document.querySelector(".App").scrollTo(0,0);}}>
+              <li className={filter == "All" ? 'active' : null} > {t("People.role.All")}</li>
+            </Link> 
             {roles.map(r => (
-              <li className={filter == r ? 'active' : null}>  <Link to={"/people/"+r} onClick={()=>{document.querySelector(".App").scrollTo(0,0);}}>{t("People.role."+r)}</Link> </li>
+              <Link to={"/people/"+r} onClick={()=>{document.querySelector(".App").scrollTo(0,0);}}>
+                <li className={filter == r ? 'active' : null} >  
+                  {t("People.role."+r)}
+                </li>
+              </Link> 
             ))}
           </ul>
       </div>

@@ -11,7 +11,7 @@ import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
 import { auth } from "../../data/firestore/auth";
 // import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc } from "firebase/firestore";
 
-import RetrieveArticles from "../../data/firestore/retrieveArticles";
+import { RetrieveArticles } from "../../data/firestore/retrieveArticles";
 import "./ArticleList.scss";
 
 const ArticleList = () => {

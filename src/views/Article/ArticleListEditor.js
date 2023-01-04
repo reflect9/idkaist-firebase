@@ -11,7 +11,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 
-import RetrieveArticles from "../../data/firestore/retrieveArticles";
+import { RetrieveArticles } from "../../data/firestore/retrieveArticles";
 import UpdateArticle from "../../data/firestore/updateArticle";
 import {auth} from "../../data/firestore/auth";
 import "./ArticleList.scss";

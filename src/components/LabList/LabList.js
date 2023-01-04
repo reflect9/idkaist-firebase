@@ -8,7 +8,7 @@ import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
 import Labs from "../../data/Labs";
 
-function LabList({ currentLab }) {
+function LabList({ currentLab}) {
     const { t } = useTranslation();
     const listBox = useRef(null);
     const Labs_LI = _.map(Labs, (labData, labCode) => {
@@ -18,6 +18,7 @@ function LabList({ currentLab }) {
                 <div className="thumbnail">
                     <img src={img} />
                 </div>
+                
             </Link>
         </li>
     });

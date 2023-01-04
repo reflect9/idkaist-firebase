@@ -1,0 +1,362 @@
+.Lab {
+    margin: 0px auto;
+    max-width: inherit;
+    
+    .PageContentWrapper {
+        position:relative;
+        margin: 0 auto;
+        padding:0;
+        @media only screen and (min-width:1000px) { 
+            padding-bottom:220px;
+        }
+        @media only screen and (max-width:999px) { 
+            padding-bottom:40px;
+        }
+        max-width: 1200px;
+        line-height: 1.5em;
+        font-size: 16px;
+        color: #707070;
+        font-weight:400;
+
+        @media only screen and (min-width:1000px) { 
+            .dropdownUI { display:none; }
+        }
+        @media only screen and (max-width:999px) { 
+            .dropdownUI {
+                position: relative;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 18px;
+                -moz-user-select: none;
+                user-select: none;
+                .dd-header {
+                    // width: 100%;
+                    padding: 8px 8px;
+                    position: relative;
+                    background: #F7F7F7;
+    
+                    .dd-header-title {
+                        padding: 6px 18px;
+                        color: black;
+                    }
+    
+                    .dd-header-arrow {
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                        color: red;
+                    }
+                    cursor:pointer;
+                }
+    
+                ul.dd-list {
+                    position: absolute;
+                    z-index: 100;
+                    left: 0px;
+                    right: 0px;
+                    background: #222;
+                    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+                    border-top:1px solid #ccc;
+                    // border-bottom:1px solid #ccc;
+                    margin: 0px;
+                    padding: 8px 0;
+                    list-style-type: none;
+                    display:flex;
+                    flex-direction: row;
+                    flex-wrap:wrap;
+                    justify-content: space-around;
+                    li {
+                        flex:0 0 100px;
+                        width:90px; height:90px;
+                        margin:0 0 10px; padding:15px;
+                        a {
+                            text-decoration: none;
+                            color: black;
+                        }
+                        a:hover {
+                            color: #F40019;
+                        }
+                        .thumbnail{
+                            position:relative;
+                            display:flex;
+                            align-items: center;
+                            justify-content: center;
+                            height:100%; width:100%;
+                            overflow:hidden;
+                            img {
+                                max-width:100%;
+                                max-height:60%;
+                                filter:invert(0.865) grayscale(1);
+                                // border:1px solid rgba(255,255,255,1);
+                            }
+                            img:hover {
+                                filter:none;
+                            }
+                            label {
+                                position:absolute;
+                                bottom:0px;
+                                font-family: "Work sans", "Noto Sans kr", sans-serif;
+                                font-size:12px; 
+                                color:#ccc;
+                                font-weight:500;
+                                line-height:1em;
+                                text-align:center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .PageContent{
+            padding:32px 24px 0;
+            h2 {
+                margin-top: 0px;
+                color:#444;
+                font-size: 32px;
+                font-weight: 300;
+            }
+        }
+
+    // display: flex; flex-direction: row;  gap:38px;
+        .LabInfo {
+            // border:1px solid #eee;
+            // border-radius:8px;    
+            // flex:1 1 55%;
+            // .topBar {
+            //     display:block; 
+            //     width:20%;  height:2px; background: #F40019;
+            //     margin-bottom:21px;
+            // }
+            @media only screen and (min-width:1000px) { padding: 36px 24px 0px; }
+            @media only screen and (max-width:999px) { padding: 24px 24px 0px; }
+    
+            
+            @media only screen and (min-width:1000px) { display:flex;  flex-direction: row; }
+            @media only screen and (max-width:999px) { display:block; }
+            .leftPanel {
+                @media only screen and (min-width:1000px) { flex:1 0;}
+                @media only screen and (max-width:999px) {
+                    margin-bottom:32px;
+                }
+            }
+            .rightPanel {
+                @media only screen and (min-width:1000px) {     
+                    flex:0 0 400px;
+                    width:400px;
+                    font-size:16px;
+                    padding:0px 0px 16px 32px;
+                }
+                @media only screen and (max-width:999px) {
+                    font-size:14px;
+                    padding:0px 0px 8px 16px;
+                }
+                
+                border-left: 2px solid #F40019;
+                label {
+                    font-weight:700;
+                    font-size:0.8em;
+                    text-transform: uppercase;
+                }
+            }
+            .LabLogo {
+                img {
+                    max-width:120px; max-height: 50px;
+                    margin: 30px 0;
+                }
+            }
+            .LabTitle {
+                font-weight: 700;
+                font-size: 1.8em;
+                margin-right: 40px;
+                line-height:1.2em;
+                color:#333;
+            }
+            .LabTitleShort {
+                margin-top:12px;
+                font-size:21px; font-weight:600;
+                color:#707070;
+            }
+            .LabPI {
+                margin-top:4px;
+                font-size:21px; font-weight:500;
+                color: #000;
+                
+            }
+            .email {
+                font-size:0.8em;
+                margin-bottom:1.5em;
+            }
+
+            .description {
+                margin-top:20px;
+                margin-right:40px;
+                line-height: 1.5em;
+                font-size: 0.9em;
+                color: #707070;
+                font-weight:400;
+            }
+
+            h4 {
+                font-family: 'Work Sans' sans-serif;
+                text-transform: uppercase;
+                font-size:0.8em;
+                margin-top:4px; margin-bottom:4px;
+            }
+            .LabKeywords {
+                ul {
+                    margin:0; padding:0;
+                    margin-bottom:32px;
+                }
+                li {
+                    list-style-type: none; margin:0;
+                    display:inline-block; 
+                    margin-right:8px; margin-bottom:8px;
+                    padding:2px 8px;
+                    border:1.5px solid #bbb;
+                    border-radius:6px;
+                    font-size:1em;
+                    color:#000;
+                    font-weight:500;
+                }
+            }
+
+            .LabLink {
+                a { 
+                    color:#F40019; 
+                    text-decoration: none;
+                    font-size:1em;
+                } 
+                a:hover {
+            text-decoration:underline;
+            text-underline-offset: 0.25em;
+                }
+                // a:visited { color:#F40019; } 
+            }
+
+            
+            .profAndProjects {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+
+                .profInfo {
+                    position: relative;
+                    flex: 0 1 250px;
+                    width: 250px;
+
+                    img {
+                        width: 100%;
+                        vertical-align: top;
+                        ;
+                    }
+
+                    .profDescription {
+                        margin-top: 10px;
+                        text-align: left;
+                        color: #333;
+                    }
+                }
+
+                
+            }
+        }
+
+        .projects {
+            @media only screen and (min-width:1000px) { 
+                margin-top: 32px;
+                display:flex;
+                flex-direction: row;
+                flex-wrap:wrap;
+                padding:0 24px;
+                gap:30px;
+                .projectImage {
+                    flex:0 0 30%;
+                    width:30%;
+                    aspect-ratio: 4/3;
+                    object-fit: cover;
+                }
+            }
+            @media only screen and (max-width:999px) { 
+                margin-top:24px;
+                .projectImage {
+                    width:100%;
+                    aspect-ratio: 4/3;
+                    object-fit: cover;
+                    margin-top:12px;
+                }
+            }
+            
+            // .hidden-flex-item {
+            //     content: "";
+            //     flex: 2 0 30%;
+            //     visibility: hidden;
+            // }
+            // ul {
+            //     display: block;
+            //     margin: 0;
+            //     padding: 0;
+            //     width: 100%;
+
+            //     li {
+            //         display: inline-block;
+            //         box-sizing: border-box;
+            //         height: 200px;
+            //         width: 200px;
+            //         margin-right: 10px;
+            //         margin-bottom: 10px;
+            //         background: #eee;
+            //         list-style-type: none;
+            //         padding: 10px;
+            //     }
+            // }
+        }
+
+        .imagePopup {
+            position:fixed;
+            top:0; bottom:0; right:0; left:0;
+            z-index:10000;
+            background: rgba(0,0,0,0.7);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            .changeImageButton {
+                font-size:32px; color:white;
+                cursor:pointer;
+                transition: transform 0.5s;
+            }
+            .closeButton {
+                position:absolute;
+                top:3%; left:50%;
+                font-size:40px;
+                color:rgba(255,255,255,0.8);
+                cursor:pointer;
+            }
+            .leftArrow {
+                position:absolute;
+                left:7%; top:50%;
+            }
+            .leftArrow:hover {
+                transform:translateX(-10px);
+            }
+            .rightArrow {
+                position:absolute;
+                right:7%; top:50%;
+            }
+            .rightArrow:hover {
+                transform:translateX(10px);
+            }
+            .largeImageContainer {
+                flex:0 0 auto;
+                height:80%; width:80%;
+                text-align: center;
+                img {
+                    width:100%; height:100%;
+                    object-fit:contain;
+                }
+                iframe {
+                    width:100%; height:100%;
+                }
+            }
+        }
+    }
+}
