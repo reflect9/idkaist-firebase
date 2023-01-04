@@ -93,20 +93,20 @@
                 z-index: 100;
                 left: 0px;
                 right: 0px;
-                background: #fff;
+                background: #222;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
                 margin: 0px;
-                padding: 8px 0;
+                padding: 16px 0;
                 list-style-type: none;
-    
+
                 li {
-                    padding: 6px 24px;
-    
+                    padding: 12px 24px;
+
                     a {
                         text-decoration: none;
-                        color: black;
+                        color: white;
                     }
-    
+
                     a:hover {
                         color: #F40019;
                     }

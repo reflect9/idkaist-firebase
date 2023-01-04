@@ -253,23 +253,24 @@
                     cursor:pointer;
                 }
                 ul.dd-list {
-                    position:absolute; z-index:100;
-                    left:0px; right:0px;
-                    background:#fff;
-                    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.08);
-                    margin:0px; padding:8px 0; list-style-type: none;
-                    a{
-                        text-decoration: none;      
-                        color:black;
+                    position: absolute;
+                    z-index: 100;
+                    left: 0px;
+                    right: 0px;
+                    background: #222;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+                    margin: 0px;
+                    padding: 16px 0;
+                    list-style-type: none;
+                    a {
+                        text-decoration: none;
+                        color: white;
                         li {
-                            padding:6px 24px;
-                        }   
+                            padding: 12px 24px;    
+                        }
                     }
                     a:hover {
-                        color:#F40019;
-                        li {
-                            background:#eee;
-                        }
+                        color: #F40019;
                     }
                 }
             }

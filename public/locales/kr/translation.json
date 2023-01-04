@@ -35,6 +35,9 @@
     "Upcoming": "다음 이벤트"
   },
   "Education": {
+    "select_program":"프로그램을 선택해주세요",
+    "program_overview":"개요",
+    "roadmap":"수업",
     "Undergraduate": {
       "summary": "디자인 실무에 필요한 디자이너의 기본적인 자질을 습득합니다. 조형 원리 및 시각언어를 비롯하여 디자인의 역사와 현황을 이해하고 여러 가지 표현 능력을 함양하며 현대 산업시스템에 대한 이해를 바탕으로 마케팅과 생산에 중점을 둔 제품디자인 및 디지털미디어 디자인 프로젝트를 수행하여 다양한 제품에 있어서 창의적 문제해결 능력과 디자인 실무를 위한 능력을 기릅니다.",
       "graduationResearch": "졸업 전시",
@@ -63,7 +66,7 @@
   },
   "CurriculumHandbook": "Industrial design education has originally started with the practice for primarily dealing with theaesthetic shaping of mass-produced products, and now has developed into the exploration ofthe intrinsic desires and values of human beings. It includes activities to creatively propose andrefine the concept of new products and services that can not only satisfy them but also influencethe society. KAIST Industrial Design Department, for the first time in Korea, has introduceddesign education that integrates science and technology with aesthetics and human-centereddesign thinking. In the era of the 4th Industrial Revolution, we are carrying out education andresearch to foster design practitioners who understand and can deal with state-of-the-arttechnology and business possibilities for their designs, and design researchers who can leadcreative innovation and provide inspiration to design community through which they can offernew design paradigm. \n The undergraduate course focuses on educating entrepreneurial designers who can identify newhuman-centered problems, find creative solutions, and embody them in aestheticallyconsiderable business possibilities. To this end, we focus on the high-tech knowledge and skilleducation that enables integrated design thinking and outcomes, education on human and socialunderstanding methods for fundamental human value-based design beyond merely usability,and knowledge and practical skills training for innovative commercialization of design ideas.Through the postgraduate courses, we pursue to educate design researchers who can producethe world's first and best design and/or research achievements, ultimately providing a newdesign paradigm and leading education. The design and research achievements of thisdepartment have not stopped at the traditional design research paradigm, but have continuedto propose and lead new design research topics. In particular, the research activities of thisdepartment in HCI (Human-Computer Interaction), UX (User Experience), and interactive mediadesign have shown remarkable results globally. It also leads the fields of design-led start-up andsocial innovation through design. \n ID KAIST curriculum book summarizes how these visions are integrated into our curriculum indetail. It first overviews our education goals and principles, and the courses for undergraduateand postgraduate programs are provided. We include the explanation of the course’s objective,teaching methods, and student examples for every course. We hope that this curriculum booknot only helps readers capture the ID KAIST education vision, but also helps both our currentand prospective students understand the overall flow of the curriculum with each course’spurpose for their learning at ID KAIST.",
   "Research": {
-    "title": "연구 분야",
+    "title": "연구실 소개",
     "overview": "카이스트 산업디자인학과는 첨단 기술과 인간에 대한 깊은 이해를 통해 혁신적인 사용자 경험을 만들어내고 실생활에 적용하는 전문 디자이너와 연구자들의 모임입니다. 우리는 익숙한 문제를 해결하는 것에 그치지 않고, 새로운 문제를 발견하거나 기존의 문제를 재해석하는 과정에서 다양한 분야에 기여합니다.",
     "LabList": {
       "scrollMessage": "좌/우로 스크롤하시면 더 많은 랩을 보실 수 있습니다"
@@ -73,6 +76,7 @@
     "homepage": "웹사이트"
   },
   "People": {
+    "select_filter":"선택해주세요",
     "role": {
       "All": "모든 구성원",
       "Faculty": "교수",
@@ -99,6 +103,7 @@
     "Address": "대전시 유성구 대학로291 N25동 산업디자인학과"
   },
   "ArticleList": {
+    "select_filter":"분류를 선택해주세요",
     "Type": {
       "All": "전체",
       "Award": "수상",

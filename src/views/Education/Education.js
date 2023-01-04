@@ -40,7 +40,7 @@ function Education({course}) {
       <div className="dropdownUI">
           <div className="dd-header" onClick={()=>{setIsDropdownOpen(!isDropdownOpen);}}>
               <div className="dd-header-title" >
-                  {course}
+                {isDropdownOpen? t("Education.select_program"):t("Menu."+course)}
               </div>
               <div className="dd-header-arrow">
                   {isDropdownOpen?<AiOutlineUp/>:<AiOutlineDown/>}

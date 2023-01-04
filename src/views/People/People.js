@@ -56,7 +56,7 @@ function People({filter}) {
       <div className="dropdownUI">
           <div className="dd-header" onClick={()=>{setIsDropdownOpen(!isDropdownOpen);}}>
               <div className="dd-header-title" >
-                {t("People.role."+filter)}
+                {isDropdownOpen? t("People.select_filter"):t("People.role."+filter)}
               </div>
               <div className="dd-header-arrow">
                   {isDropdownOpen?<AiOutlineUp/>:<AiOutlineDown/>}

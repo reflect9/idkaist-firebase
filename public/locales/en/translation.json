@@ -35,6 +35,9 @@
         "Upcoming": "Upcoming"
       },
     "Education": {
+        "select_program":"Select Program",
+        "program_overview":"Overview",
+        "roadmap":"Courses",
         "Undergraduate": {
             "summary": "In the undergraduate course, students acquire the basic qualities of designers necessary for design practice. Students learn the history and the present state of design, including formative principles and visual language. They also cultivate various expression abilities. Based on understanding modern industrial systems, students can carry out product design and digital media design projects focusing on marketing and production. Students develop creative problem-solving abilities and design practical skills through completing various products.",
             "graduationResearch": "Graduation Research",
@@ -63,7 +66,7 @@
     },
     "CurriculumHandbook": "Industrial design education has originally started with the practice for primarily dealing with theaesthetic shaping of mass-produced products, and now has developed into the exploration ofthe intrinsic desires and values of human beings. It includes activities to creatively propose andrefine the concept of new products and services that can not only satisfy them but also influencethe society. KAIST Industrial Design Department, for the first time in Korea, has introduceddesign education that integrates science and technology with aesthetics and human-centereddesign thinking. In the era of the 4th Industrial Revolution, we are carrying out education andresearch to foster design practitioners who understand and can deal with state-of-the-arttechnology and business possibilities for their designs, and design researchers who can leadcreative innovation and provide inspiration to design community through which they can offernew design paradigm. \n The undergraduate course focuses on educating entrepreneurial designers who can identify newhuman-centered problems, find creative solutions, and embody them in aestheticallyconsiderable business possibilities. To this end, we focus on the high-tech knowledge and skilleducation that enables integrated design thinking and outcomes, education on human and socialunderstanding methods for fundamental human value-based design beyond merely usability,and knowledge and practical skills training for innovative commercialization of design ideas.Through the postgraduate courses, we pursue to educate design researchers who can producethe world's first and best design and/or research achievements, ultimately providing a newdesign paradigm and leading education. The design and research achievements of thisdepartment have not stopped at the traditional design research paradigm, but have continuedto propose and lead new design research topics. In particular, the research activities of thisdepartment in HCI (Human-Computer Interaction), UX (User Experience), and interactive mediadesign have shown remarkable results globally. It also leads the fields of design-led start-up andsocial innovation through design. \n ID KAIST curriculum book summarizes how these visions are integrated into our curriculum indetail. It first overviews our education goals and principles, and the courses for undergraduateand postgraduate programs are provided. We include the explanation of the course’s objective,teaching methods, and student examples for every course. We hope that this curriculum booknot only helps readers capture the ID KAIST education vision, but also helps both our currentand prospective students understand the overall flow of the curriculum with each course’spurpose for their learning at ID KAIST.",
     "Research": {
-        "title": "Research @ ID KAIST",
+        "title": "Research Labs & Creative Work",
         "overview": "We are leading design professionals and researchers who create new user experiences through their understanding of cutting-edge technology and the ability to identify user needs and initiate business innovation. They contribute in diverse areas through mindsets and methods that allow them to view problems, (re)frame them, and deal with ambiguity in systematic ways. Research Labs are grouped by three areas: Human-Centered Design, New Technology Convergence, and Business Innovation.",
         "LabList": {
             "scrollMessage": "SCROLL TO SEE MORE LABS"
@@ -73,6 +76,7 @@
         "homepage": "Website"
     },
     "People": {
+        "select_filter":"Select Filter",
         "role": {
             "All": "All",
             "Faculty": "Faculty",
@@ -105,6 +109,7 @@
         "Address": "Bldg. N25, 291 Daehak-ro, Yuseong-gu, Daejeon 34141, Republic of Korea"
     },
     "ArticleList": {
+        "select_filter":"Select Type of Article",
         "Type":{
             "All":"All",
             "Award":"Award",

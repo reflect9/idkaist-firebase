@@ -57,7 +57,7 @@ const ArticleList = () => {
                 <div className="dropdownUI">
                     <div className="dd-header"  onClick={()=>{setIsDropdownOpen(!isDropdownOpen);}}>
                         <div className="dd-header-title">
-                            {articleType}
+                            {isDropdownOpen?t("ArticleList.select_filter"):t("ArticleList.Type."+articleType)}
                         </div>
                         <div className="dd-header-arrow">
                             {isDropdownOpen?<AiOutlineDown/>:<AiOutlineRight/>}
@@ -76,7 +76,7 @@ const ArticleList = () => {
                 </div>
                 <div className="articleContainer">
                     <div className="topbar">
-                        <h2>{articleType}
+                        <h2>{t("ArticleList.Type."+articleType)}
                             {(auth && auth.currentUser)? <Link to={"/ArticleListEditor/"+articleType}>Admin Mode</Link> :""}
                         </h2>
                         <div className="searchUI">
@@ -92,7 +92,11 @@ const ArticleList = () => {
                         .map((art) => {
                             // console.log(art.data());
                             return (<li key={art.id}>
-                                {articleType=="All" && <div className="type">{art.data().type}</div>}
+                                {articleType=="All" && 
+                                    <div className="type">
+                                        {t("ArticleList.Type."+art.data().type)}
+                                    </div>
+                                }
                                 <Link to={'/article/'+art.id}>
                                     <div className="title">
                                         {art.data().title} 

@@ -100,10 +100,11 @@ function Master() {
     return (
         <div className="EducationContent">
             <div className="section_summary">
+                <h2>{t("Education.program_overview")}</h2>
                 {t("Education.Master.summary")}
             </div>
             <div className="section_content">
-                <h2>Course Overview</h2>
+                <h2>{t("Education.roadmap")}</h2>
                 {curriculumTable}
             </div>
             <div className="section_content">
