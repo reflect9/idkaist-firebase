@@ -35,7 +35,10 @@ function Education({course}) {
   return (
     <div className="Education stretching">
       <div className="coverImage">
-        <img src="/images/department/students_prototyping.png" />
+        {course=="Undergraduate"&& (<img src="/images/department/students_prototyping.png" />)}
+        {course=="Master"&& (<img src="/images/department/lab_next.jpg" />)}
+        {course=="PhD"&& (<img src="/images/department/deck1.jpg" />)}
+        {course=="International"&& (<img src="/images/department/photo-room.jpg" />)}
       </div>
       <div className="dropdownUI">
           <div className="dd-header" onClick={()=>{setIsDropdownOpen(!isDropdownOpen);}}>

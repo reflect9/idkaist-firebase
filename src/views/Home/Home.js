@@ -179,7 +179,11 @@ let Home = ({ }) => {
 								</Link>
 								
 							</div>
-							<div className="item_image"><img src={f.coverImage} /></div>
+							<div className="item_image">
+								<Link to={"/article/" + f.id}>
+									<img src={f.coverImage} />
+								</Link>
+							</div>
 						</div>
 					</div>);
 			}) : " "

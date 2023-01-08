@@ -280,6 +280,9 @@
         "lab_thumbnail":"movelab.png",
         "lab_logo":"movelab.png",
         "lab_works":[
+            { "type":"imageThumbnail", "thumbnail":"/images/labs/hyunjoonpark/image1.jpg", "original": "/images/labs/hyunjoonpark/image_original.jpg"},
+            { "type":"imageThumbnail", "thumbnail":"/images/labs/hyunjoonpark/image2.jpg", "original": "/images/labs/hyunjoonpark/image_original.jpg"},
+            { "type":"imageThumbnail", "thumbnail":"/images/labs/hyunjoonpark/image3.jpg", "original": "/images/labs/hyunjoonpark/image_original.jpg"}
         ],
         "email": "hyunjoon.park@kaist.ac.kr",
         "phone": "+82-42-350-4513",

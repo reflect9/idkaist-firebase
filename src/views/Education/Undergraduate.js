@@ -93,11 +93,11 @@ function Undergraduate() {
     return (
         <div className="EducationContent">
             <div className="section_summary">
-                <h2>Course Overview</h2>
+                {/* <h2>Course Overview</h2> */}
                 {t("Education.Undergraduate.summary")}
             </div>
             <div className="section_content">
-                <h2>Explore the ID roadmap</h2>
+                <h2>{t("Education.roadmap")}</h2>
 
                 {curriculumTable}
 

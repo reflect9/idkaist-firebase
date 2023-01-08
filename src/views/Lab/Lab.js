@@ -40,22 +40,36 @@ function Lab({ labID }) {
     });
 
     //
-    let projectImages, projectImagesEl;
+    let projectImagesThumbnail; // 클릭하기 전 썸네일 이미지 tag리스트 
+    let projectImagesPopup; // 클릭하면 팝업으로 나오는 이미지 tag리스트
     if (LabData.lab_works) {
-        projectImagesEl = LabData.lab_works.map((pi, pii) => {
+        projectImagesThumbnail = LabData.lab_works.map((pi, pii) => {
             let tag;
             if (pi.type == "image") {
                 tag = (<img className="projectImage" key={pii} onClick={() => { setImageNum(pii); }} src={pi.source} />);
-            } else if (pi.type = "YouTube") {
+            } else if (pi.type == "YouTube") {
                 tag = (<iframe width="1080" className="projectImage" key={pii} src={pi.source + "?vq=hd1080"} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>);
+            } else if (pi.type == "imageThumbnail") {
+                tag = (<img className="projectImage" key={pii} onClick={() => { setImageNum(pii); }} src={pi.thumbnail} />);
+            }
+            return tag;
+        });
+        projectImagesPopup = LabData.lab_works.map((pi, pii) => {
+            let tag;
+            if (pi.type == "image") {
+                tag = (<img className="projectImage" key={pii} onClick={() => { setImageNum(pii); }} src={pi.source} />);
+            } else if (pi.type == "YouTube") {
+                tag = (<iframe width="1080" className="projectImage" key={pii} src={pi.source + "?vq=hd1080"} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>);
+            } else if (pi.type == "imageThumbnail") {
+                tag = (<img className="projectImage" key={pii} onClick={() => { setImageNum(pii); }} src={pi.original} />);
             }
             return tag;
         });
     } else {
-        projectImagesEl = [
-        ];
+        projectImagesThumbnail = [ ];
+        projectImagesPopup = [];
     }
-    // projectImagesEl.push(
+    // projectImagesThumbnail.push(
     //     <div className="hidden-flex-item"></div>
     // )
 
@@ -124,19 +138,19 @@ function Lab({ labID }) {
 
                 </div>
                 <div className="projects">
-                    {projectImagesEl}
+                    {projectImagesThumbnail}
                 </div>
                 {(typeof imageNum !== "undefined") && (imageNum != null) ? (
                     <div className="imagePopup unselectable">
                         <div className="leftArrow changeImageButton" onClick={() => {
                             let newImageNum = imageNum - 1;
-                            if (newImageNum < 0) newImageNum = projectImagesEl.length - 1;
+                            if (newImageNum < 0) newImageNum = projectImagesThumbnail.length - 1;
                             setImageNum(newImageNum);
                             return false;
                         }}><MdArrowBackIos /></div>
                         <div className="rightArrow changeImageButton" onClick={() => {
                             let newImageNum = imageNum + 1;
-                            if (newImageNum == projectImagesEl.length) newImageNum = 0;
+                            if (newImageNum == projectImagesThumbnail.length) newImageNum = 0;
                             setImageNum(newImageNum);
                             return false;
                         }}><MdArrowForwardIos /></div>
@@ -144,7 +158,7 @@ function Lab({ labID }) {
                             <AiOutlineCloseCircle />
                         </div>
                         <div className="largeImageContainer" onClick={() => { setImageNum(null); }}>
-                            {projectImagesEl[imageNum]}
+                            {projectImagesPopup[imageNum]}
                         </div>
                         {/* {<img src={projectImages[imageNum]} onClick={()=>{setImageNum(null);}}/>} */}
                     </div>

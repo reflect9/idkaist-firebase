@@ -11,7 +11,7 @@ function PhD() {
     return (
         <div className="EducationContent">
             <div className="section_summary">
-                <h2>Course Overview</h2>
+                {/* <h2>Course Overview</h2> */}
                 {t("Education.PhD.summary")}
             </div>
             <div className="section_content">

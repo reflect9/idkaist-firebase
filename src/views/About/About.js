@@ -54,9 +54,12 @@ function About() {
         </div>
         <div className="rightHalf">
           <div className="contentArea">
-            <img src="images/department/KAlounge_03.jpg" />
-            <img src="images/department/Image 160.jpg" />
-            <img src="images/department/open kaist 1.jpg" />
+          <div className="YouTubeWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OgYwCuguSV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <img src="images/department/KAlounge_03.jpg" />
+          <img src="images/department/Image 160.jpg" />
+          <img src="images/department/open kaist 1.jpg" />
           </div>
           
         </div>
@@ -116,7 +119,7 @@ function About() {
             </div>
             <div className="badge badge_black shadow-box">
             <div className="title content">$5M</div>
-              <div className="description">Research Grants Awarded in 202</div>
+              <div className="description">Research Grants Awarded in 2021</div>
             </div>
             <div className="badge badge_red shadow-box">
               <div className="title content">57</div>
