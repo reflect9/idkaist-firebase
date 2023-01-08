@@ -21,9 +21,18 @@ import Labs from "../../data/Labs";
 function Menu({ setIsMenuActive, defaultSubMenuOpen }) {
   const { t, i18n, ready } = useTranslation();
   const [isEducationOpen, setIsEducationOpen] = useState(defaultSubMenuOpen);
-  const [isResearchOpen, setIsResearchOpen] = useState(defaultSubMenuOpen);
+  const [isResearchOpen, setIsResearchOpen] = useState(false);
   const [isPeopleOpen, setIsPeopleOpen] = useState(defaultSubMenuOpen);
   const [loginResponse, setLoginResponse] = useState("");
+  // Checking window size and setMatches true / false
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 1000px)").matches
+  )
+  useEffect(() => {
+      window
+      .matchMedia("(min-width: 1000px)")
+      .addEventListener('change', e => setMatches( e.matches ));
+  }, []);
   const changeLanguage = (m) => {
     i18n.changeLanguage(m);
   }
@@ -70,9 +79,11 @@ function Menu({ setIsMenuActive, defaultSubMenuOpen }) {
         </div>
         <div className="L1">
           <Link onClick={closeMenu} to="/education">{t("Menu.Education")}</Link>
-          {isEducationOpen?
-            <AiFillCaretUp onClick={()=>{setIsEducationOpen(false);}}/>:
-            <AiFillCaretDown onClick={()=>{setIsEducationOpen(true);}}/>
+          {!matches && 
+            (isEducationOpen ?
+              <AiFillCaretUp onClick={()=>{setIsEducationOpen(false);}}/>:
+              <AiFillCaretDown onClick={()=>{setIsEducationOpen(true);}}/>
+            )
           }
           <div className="L2">
             {isEducationOpen && ( 
@@ -83,7 +94,6 @@ function Menu({ setIsMenuActive, defaultSubMenuOpen }) {
                 <Link onClick={closeMenu} to="/education/International">{t("Menu.International")}</Link>
               </div>
             )}
-            
           </div>
         </div>
         <div className="L1">
@@ -102,10 +112,10 @@ function Menu({ setIsMenuActive, defaultSubMenuOpen }) {
         </div>
         <div className="L1">
           <Link onClick={closeMenu} to="/people">{t("Menu.People")}</Link>
-          {isPeopleOpen?
+          {!matches &&(isPeopleOpen?
             <AiFillCaretUp onClick={()=>{setIsPeopleOpen(false);}}/>:
             <AiFillCaretDown onClick={()=>{setIsPeopleOpen(true);}}/>
-          }
+          )}
           <div className="L2">
             {isPeopleOpen && ( 
               <div>

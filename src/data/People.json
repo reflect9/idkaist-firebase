@@ -1,4 +1,17 @@
 {
+    "kwangmincho": {
+        "name_kr":"조광민",
+        "name_en":"Kwangmin Cho",
+        "position":"Research Professor",
+        "role":"Faculty",
+        "description_en": "",
+        "lab":"",
+        "lab_url":"",
+        "email":"kmcho629@kaist.ac.kr",
+        "phone": "",
+        "office":"N25 #222",
+        "thumbnail": "kwangmin.jpg"
+    },
     "kyungwonchung": {
         "name_kr":"정경원",
         "name_en":"Kyung-Won Chung",
