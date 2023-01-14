@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
 import formatDate from '../../utils/FormatDate';
-import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
+import { AiOutlineUp, AiOutlineDown } from "react-icons/ai";
 
 import { checkAdmin, auth } from "../../data/firestore/auth";
 import FetchArticle from "../../data/firestore/fetchArticle";
@@ -32,7 +32,7 @@ function Article() {
                                 {art.type}
                             </div>
                             <div className="dd-header-arrow">
-                                {isDropdownOpen?<AiOutlineDown/>:<AiOutlineRight/>}
+                                {isDropdownOpen?<AiOutlineUp/>:<AiOutlineDown/>}
                             </div>
                         </div>
                         {isDropdownOpen

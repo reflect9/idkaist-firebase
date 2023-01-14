@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import formatDate from '../../utils/FormatDate';
 import { BiSearch } from "react-icons/bi";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
+import { AiOutlineUp, AiOutlineDown } from "react-icons/ai";
 
 import { auth } from "../../data/firestore/auth";
 // import { getFirestore, collection, addDoc, getDocs, doc, deleteDoc } from "firebase/firestore";
@@ -60,7 +60,7 @@ const ArticleList = () => {
                             {isDropdownOpen?t("ArticleList.select_filter"):t("ArticleList.Type."+articleType)}
                         </div>
                         <div className="dd-header-arrow">
-                            {isDropdownOpen?<AiOutlineDown/>:<AiOutlineRight/>}
+                            {isDropdownOpen?<AiOutlineUp/>:<AiOutlineDown/>}
                         </div>
                     </div>
                     {isDropdownOpen

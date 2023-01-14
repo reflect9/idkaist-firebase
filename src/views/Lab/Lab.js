@@ -45,8 +45,12 @@ function Lab({ labID }) {
     if (LabData.lab_works) {
         projectImagesThumbnail = LabData.lab_works.map((pi, pii) => {
             let tag;
+            let style=null;
+            if(pi["object-fit"]) {
+                style={ 'object-fit': pi["object-fit"]};
+            }
             if (pi.type == "image") {
-                tag = (<img className="projectImage" key={pii} onClick={() => { setImageNum(pii); }} src={pi.source} />);
+                tag = (<img className="projectImage" style={style} key={pii} onClick={() => { setImageNum(pii); }} src={pi.source} />);
             } else if (pi.type == "YouTube") {
                 tag = (<iframe width="1080" className="projectImage" key={pii} src={pi.source + "?vq=hd1080"} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>);
             } else if (pi.type == "imageThumbnail") {

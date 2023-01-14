@@ -11,8 +11,6 @@ import { GrUserAdmin } from "react-icons/gr";
 import { AiFillCaretUp, AiFillCaretDown } from "react-icons/ai";
 
 // import { signInWithPopup, GoogleAuthProvider, auth } from 'firebase/auth';
-import { signInWithPopup, GoogleAuthProvider, signOut, signInWithEmailAndPassword } from "firebase/auth";
-import { auth, provider } from '../../data/firestore/auth';
 
 import "./Menu.scss";
 
@@ -23,7 +21,7 @@ function Menu({ setIsMenuActive, defaultSubMenuOpen }) {
   const [isEducationOpen, setIsEducationOpen] = useState(defaultSubMenuOpen);
   const [isResearchOpen, setIsResearchOpen] = useState(false);
   const [isPeopleOpen, setIsPeopleOpen] = useState(defaultSubMenuOpen);
-  const [loginResponse, setLoginResponse] = useState("");
+  
   // Checking window size and setMatches true / false
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 1000px)").matches
@@ -131,50 +129,6 @@ function Menu({ setIsMenuActive, defaultSubMenuOpen }) {
         <div className="L1">
           <Link onClick={closeMenu} to="/about">{t("Menu.About")}</Link>
         </div>
-      </div>
-      <div className="AuthUI">
-        <label>Admin Login</label>
-          {(auth && auth.currentUser) ? (
-          <p>
-            <span>{auth.currentUser.email}</span>
-            <button className="signOutLink" onClick={()=>{
-              signOut(auth).then(()=>{
-                closeMenu();
-              });
-            }}>Sign Out</button>
-          </p>
-          ) 
-            : (<div className="auth">
-              <p>Email: <input type="text" id="email"></input></p>
-              <p>Password: <input type="password" id="password"></input></p>
-              <p>
-              <button className="authEmail" onClick={()=>{
-                const email = document.querySelector("#email").value;
-                const password = document.querySelector("#password").value;
-                signInWithEmailAndPassword(auth, email, password)
-                .then((userCredential)=>{
-                  setLoginResponse(userCredential.toString());
-                }).catch((err)=>{
-                  setLoginResponse(err.toString());
-                });
-              }}> 
-                via Email
-              </button>
-              <span className="login_response">{loginResponse}</span>
-              </p>
-              <p>
-                <button className="authGoogle" onClick={()=>{
-                  signInWithPopup(auth, provider)
-                  .then((result) => {
-                      // This gives you a Google Access Token. You can use it to access the Google API.
-                      const credential = GoogleAuthProvider.credentialFromResult(result);
-                      closeMenu();
-                  });
-                }}>Sign In via Google</button>
-              </p>
-              
-            </div>
-            )}
       </div>
     </div>
   );

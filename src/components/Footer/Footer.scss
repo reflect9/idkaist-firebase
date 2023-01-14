@@ -48,10 +48,19 @@
             font-size:0.9em;
         }
         .kaist_logo_wrapper_mobile {
+            display:block;
             text-align:right; 
             margin-top:20px;
+            height:80px;
+            .other_logo {
+                opacity:0.6;
+                height:30px;
+                margin-right:14px;
+                vertical-align: middle;
+            }
             .KAIST_Logo {
-                width:60px;
+                width:80px;
+                vertical-align: middle;
             }
         }
         
@@ -87,9 +96,10 @@
                 text-align:left;
                 margin-top:10px;
                 width:100px;
-                @media only screen and (max-width:500px) { margin-left:20px; }
-                @media only screen and (min-width:500px) { margin-left:20px; }
-                @media only screen and (min-width:1000px) { margin-left:40px; }
+                // @media only screen and (max-width:500px) { margin-left:12px; }
+                // @media only screen and (min-width:500px) { margin-left:16px; }
+                @media only screen and (min-width:1000px) { margin-left:16px; }
+                @media only screen and (min-width:1400px) { margin-left:32px; }
                 .L1 {
                     display:block;
                     box-sizing: border-box;
@@ -101,8 +111,9 @@
                 .L2 {
                     display:block;
                     font-weight:400;
-                    padding-bottom:2px;
+                    padding:4px 0 4px 0;
                     text-decoration:none;
+                    font-size:0.8em;
                     color:inherit;
                 }
                 .L1:hover {color:#333;}
@@ -116,54 +127,44 @@
     .FooterContent_2 {
         margin:auto;
         // max-width:1200px;
-        box-sizing:border-box;
-        @media only screen and (max-width:500px) { padding:20px;}
-        @media only screen and (min-width:500px) { padding:30px 40px;}
-        @media only screen and (min-width:1000px) { padding:40px;}
-        
-        overflow:hidden;
+        @media only screen and (max-width:500px) { padding:0 20px;}
+        @media only screen and (min-width:500px) { padding:0 40px;}
+        @media only screen and (min-width:1000px) { padding:0 40px;}
+        height:160px;
         color:#555;
         display:flex;
         flex-direction:row;
-        gap:40px;
         font-size:13px;
-        display:flex;
-        flex-direction:row;
-        gap:40px;
     
-        .department_info {
-            @media only screen and (min-width:999px) { }
-            @media only screen and (max-width:999px) { }
-            position:relative;
-            padding-left:54px; padding-top:16px;
-            
-            svg {
-                display:block;
-                position:absolute;
-                top:0; left:0; 
-            }
-            p{
-                display:block;
-                font-size:1em;
-                line-height:1.3em;
-                margin:0 0 6px 0;
-                
-            }
-        }
         .copyright {
             flex:1 1 auto;
             font-size:0.9em;
+            margin-top:40px;
         }
-        a {
+        .logos {
             flex:0 0 auto;
             text-align:right;
-            img {
+            margin-top:25px;
+            text-align:right;
+            img.other_logo {
                 display:inline-block;
-                @media only screen and (max-width:500px) { margin-right:0px; height:24px; }
-                @media only screen and (min-width:500px) { margin-right:0px; height:24px; }
-                @media only screen and (min-width:1000px) { margin-right:40px; height:30px; }
+                opacity:0.6;
+                vertical-align: middle;
+                @media only screen and (min-width:1000px) { margin-right:20px; height:40px; }
+                cursor:pointer;
+            }
+            img.KAIST_Logo {
+                display:inline-block;
+                vertical-align: middle;
+                @media only screen and (min-width:1000px) { margin-right:0px; height:30px; }
+                cursor:pointer;
             }
         }
+    }
+    a.admin_login {
+        display:inline-block;
+        margin-right:12px;
+        text-decoration: underline;
     }
     
     

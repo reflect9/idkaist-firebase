@@ -30,6 +30,7 @@ import ScrollToTop from "./utils/scrollToTop.js";
 
 function App() {
   const [isMenuActive, setIsMenuActive] = useState(false);
+  const [isLoginActive, setIsLoginActive] = useState(false);
   // Checking window size and setMatches true / false
   const [matches, setMatches] = useState(
       window.matchMedia("(min-width: 1000px)").matches
@@ -101,22 +102,29 @@ function App() {
 
           <Route path="/uploadS3" element={<UploadImageS3/>} />
 
-          <Route path="/login" element={<LogIn/>} />
+          {/* <Route path="/login" element={<LogIn/>} /> */}
         </Routes>
 
         {/* Routes for rendering footer (or skip for some pages) */}
         <Routes>
-          <Route path="/research" element={<Footer />} />
+          <Route path="/research" element={<Footer setIsLoginActive={setIsLoginActive} />} />
           <Route path="/research/*" element={<div/>} />
-          <Route path="*" element={<Footer />} />
+          <Route path="*" element={<Footer  setIsLoginActive={setIsLoginActive}/>} />
         </Routes>
       </div>
+
       {isMenuActive ? (<Menu setIsMenuActive={setIsMenuActive} defaultSubMenuOpen={matches}/>):null}
       {isMenuActive ? (<div className="backdrop" onClick={()=>{
         document.querySelector(".Menu").classList.add("small");
         setTimeout(()=>{
           setIsMenuActive(false);
         },300);
+      }}></div>): null}
+
+      {isLoginActive ? <LogIn setIsLoginActive={setIsLoginActive}/>:null
+      } 
+      {isLoginActive ? (<div className="backdrop" onClick={()=>{
+        setIsLoginActive(false);
       }}></div>): null}
     </Router>
   );
