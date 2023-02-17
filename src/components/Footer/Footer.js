@@ -32,7 +32,7 @@ function Footer({ setIsLoginActive }) {
             .addEventListener('change', e => setMatches(e.matches));
     }, []);
 
-    if (matches) {
+    if (matches) { // 폭 1000px 이상의 경우 footer를 두 줄로. 
         return (<div className="Footer" >
             <div className="FooterSection">
                 <div className="FooterContent_1" >
@@ -99,7 +99,7 @@ function Footer({ setIsLoginActive }) {
             </div>
         </div>);
     }
-    else {
+    else { // 폭 1000px 미만의 경우 footer를 한 줄로. 
         return (<div className="Footer" >
             <div className="FooterSection">
                 <div className="FooterContent_1" >
