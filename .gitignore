@@ -10,6 +10,7 @@
 
 # production
 /build
+idKAISThompage.PEM
 
 # misc
 .DS_Store
