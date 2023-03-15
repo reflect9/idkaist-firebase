@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bfa2df3c.css",
+    "main.js": "/static/js/main.ac975a41.js",
+    "static/js/787.8fc0ff42.chunk.js": "/static/js/787.8fc0ff42.chunk.js",
+    "static/media/dxd.png": "/static/media/dxd.bf6eee2fd1bdfe915226.png",
+    "static/media/next.png": "/static/media/next.cf8f49c5747ae2771cf6.png",
+    "static/media/makinteract.png": "/static/media/makinteract.52a575dc69ed6cdd69d7.png",
+    "static/media/ael.png": "/static/media/ael.f6a665a2b4cc1f2e36bf.png",
+    "static/media/wonderlab.png": "/static/media/wonderlab.8ca2a879500159552472.png",
+    "static/media/designize.png": "/static/media/designize.4fc9e5cd7401a0cc1cf6.png",
+    "static/media/movelab.png": "/static/media/movelab.70f6f18dcba94c389100.png",
+    "static/media/cidl.png": "/static/media/cidl.888aa4635baa6cc88c0b.png",
+    "static/media/asc.png": "/static/media/asc.904ea1189e307636c078.png",
+    "static/media/logo-kaist_gray.png": "/static/media/logo-kaist_gray.ec5f7cf52bf653612b3f.png",
+    "static/media/idkaist.svg": "/static/media/idkaist.46efd62abf44794d389a2780d5c61c08.svg",
+    "static/media/color.svg": "/static/media/color.9099890e1b96e9ed14a7.svg",
+    "static/media/idkaist-notext.svg": "/static/media/idkaist-notext.e8e792d2a2cd1a2f810e49a18d453099.svg",
+    "index.html": "/index.html",
+    "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
+    "main.bfa2df3c.css.map": "/static/css/main.bfa2df3c.css.map",
+    "main.ac975a41.js.map": "/static/js/main.ac975a41.js.map",
+    "787.8fc0ff42.chunk.js.map": "/static/js/787.8fc0ff42.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfa2df3c.css",
+    "static/js/main.ac975a41.js"
+  ]
+}

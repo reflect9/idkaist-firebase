@@ -1,0 +1,118 @@
+{
+  "General": {
+    "spring": "봄",
+    "summer": "여름",
+    "fall": "가을",
+    "winter": "겨울",
+    "read_more": "더보기",
+    "learn_more": "더보기"
+  },
+  "Locale": {
+    "Kr": "KR",
+    "En": "EN"
+  },
+  "Shortcuts": {
+    "Courses": "수업",
+    "Research Labs": "연구실",
+    "Notice": "공지사항",
+    "Events": "이벤트",
+    "Graduate_Program": "대학원 과정"
+  },
+  "Menu": {
+    "Home": "홈",
+    "ArticleList": "모든 게시물",
+    "Highlights": "하이라이트",
+    "Education": "교육",
+    "Undergraduate": "학사",
+    "Master": "석사",
+    "PhD": "박사",
+    "International": "국제교환학생",
+    "Research": "연구",
+    "People": "구성원",
+    "About": "정보"
+  },
+  "Home": {
+    "Upcoming": "다음 이벤트"
+  },
+  "Education": {
+    "select_program":"프로그램을 선택해주세요",
+    "program_overview":"개요",
+    "roadmap":"수업",
+    "Undergraduate": {
+      "summary": "디자인 실무에 필요한 디자이너의 기본적인 자질을 습득합니다. 조형 원리 및 시각언어를 비롯하여 디자인의 역사와 현황을 이해하고 여러 가지 표현 능력을 함양하며 현대 산업시스템에 대한 이해를 바탕으로 마케팅과 생산에 중점을 둔 제품디자인 및 디지털미디어 디자인 프로젝트를 수행하여 다양한 제품에 있어서 창의적 문제해결 능력과 디자인 실무를 위한 능력을 기릅니다.",
+      "graduationResearch": "졸업 전시",
+      "graduationResearchDescription": "심화전공 및 2015년도 이전 이수요건을 적용 받는 산업디자인학과 주전공자는 졸업연구과 병행하는 졸업연구 디자인 스튜디오 I, II가 필수과목임으로 URP-B로 졸업연구 학점을 신청할 수 없습니다.",
+      "URP-B": "2016년도 이후 이수요건을 적용 받는 산업디자인학과 주전공자는 (심화전공 제외), 졸업연구 3학점은 URP-B롤 대체될 수 있으니 매학기 URP-B 신청시기를 참고하여 신청하시기 바랍니다.",
+      "graduationRequirements": "졸업 요건",
+      "graduationRequirementsReadThis": "졸업요건에 관해서는 본 링크를 참고해 주십시요",
+      "Admission": "카이스트 학부과정은 무학과로 운영됩니다. 입학한 후 첫 해가 지나는 시점에 학생들은 전공을 선택하게 됩니다. 2016년 부터 카이스트의 모든 학부과정 학생들은 복수전공이나 심화전공 중 하나를 택하도록 되어 있습니다. 따라서 산업디자인학과 학생들은 산업디자인을 심화전공으로 선택하거나, 부전공 혹은 복수전공의 일부로 선택할 수 있습니다. 매년 830명 가량의 학생이 학부과정에 진입하고, 4월에 다음 년도 입시요강이 공표됩니다. 더 자세한 정보는 <1>카이스트 공식 페이지</1>를 참고하시기 바랍니다."
+    },
+    "Master": {
+      "summary": "석사과정에서는 디자인학 및 관련 분야에 대한 학문적 탐색을 통하여 디자인 연구의 기초 능력을 학습합니다. 다양한 산학 연구를 통해 디자인 프로젝트의 수행 및 관리 능력을 심화시키고 고급 이론과 실제적인 응용에 관한 개별적 연구를 수행하여 디자인 연구를 실무에 적용 할 수 있는 자질을 습득하게 됩니다.",
+      "thesisRequirementTitle": "석사 졸업 요건",
+      "thesisRequirementContent": "졸업을 위하여 논문지도교수의 승인을 받은 논문연구 제안을 근거로 개별적인 연구를 거친 석사학위 논문이 요구됩니다. 연구 내용은 산업디자인 및 관련 지식체계의 형성에 기여할 수 있는 것이어야 하며, 논문은 프로젝트의 연구추진 과정에서 개발된 디자인 지식을 중심으로 하는 디자인 개발 논문, 또는 산업디자인을 위한 새로운 이론과 긴밀한 관련을 갖고 있는 지식체계를 형성하는 디자인 연구 논문으로 구성될 수 있습니다.",
+      "admissionTitle": "입학 안내",
+      "admissionContent": "산업디자인학, 산업미술학, 정보디자인, 멀티미디어 등 디자인 관련학과 및 건축학, 기계설계학, 산업공학, 경영과학 등 인접전공 관련학과 졸업생은 누구나 지원 가능합니다. 석/박사과정 신입생은 국비장학생, 과학기술원장학생, 일반장학생으로 나누어 선발합니다. 전형방법은 1차 서류심사(TOEFL, TOEIC, TEPS 등 영어 성적 포함), 2차 전형시 면접대상자는 면접 시 디자인 포트폴리오를 지참하고, 프레젠테이션 매체를 준비하여 발표토록 합니다. (파워포인트 파일 또는 컴퓨터 등)",
+      "applicationTitle": "지원 서류"
+    },
+    "PhD": {
+      "summary": "박사과정에서는 심도 깊은 디자인 연구를 통해 디자인학자로서의 자질을 키웁니다. 디지털 미디어 및 컨텐츠 디자인, 인공환경시스템 디자인, 인간중심 인터랙션 디자인, 창의적 디자인, 디자인 전략 등에 대한 고급 이론을 습득하고 이를 바탕으로 심화된 디자인 연구를 수행함으로써 디자인학문의 지식체계를 형성하는데 기여 할 수 있는 연구자의 자질을 습득합니다.",
+      "thesisRequirementTitle": "박사 학위 요건",
+      "thesisRequirementContent": "졸업을 위하여 논문지도교수의 승인을 받은 논문연구 제안을 근거로 개별적인 연구를 거친 박사학위 논문이 요구됩니다. 논문은 디자인의 실무 또는 디자인 학문의 연구문제를 제시하고 연구 프로젝트를 통하여 해결함으로써, 산업디자인 및 관련 분야에 있어 새로운 지식 체계의 형성에 기여할 수 있는 내용으로 구성되어야 합니다.",
+      "admissionTitle": "입학 안내",
+      "admissionContent": "디자인 관련 및 인접 전공학과 졸업생은 누구나 지원 가능합니다. 지원 자격은 석사과정 평균성적 B0이상인 자로서 본 학과의 박사과정 지도예정교수나 학과장 또는 전공책임교수의 입학추천을 받아야 합니다. 전형방법은 1차 서류심사(TOEFL, TOEIC, TEPS등 영어성적 포함), 2차 면접으로 이루어집니다.",
+      "applicationTitle": "지원 서류"
+    }
+  },
+  "CurriculumHandbook": "Industrial design education has originally started with the practice for primarily dealing with theaesthetic shaping of mass-produced products, and now has developed into the exploration ofthe intrinsic desires and values of human beings. It includes activities to creatively propose andrefine the concept of new products and services that can not only satisfy them but also influencethe society. KAIST Industrial Design Department, for the first time in Korea, has introduceddesign education that integrates science and technology with aesthetics and human-centereddesign thinking. In the era of the 4th Industrial Revolution, we are carrying out education andresearch to foster design practitioners who understand and can deal with state-of-the-arttechnology and business possibilities for their designs, and design researchers who can leadcreative innovation and provide inspiration to design community through which they can offernew design paradigm. \n The undergraduate course focuses on educating entrepreneurial designers who can identify newhuman-centered problems, find creative solutions, and embody them in aestheticallyconsiderable business possibilities. To this end, we focus on the high-tech knowledge and skilleducation that enables integrated design thinking and outcomes, education on human and socialunderstanding methods for fundamental human value-based design beyond merely usability,and knowledge and practical skills training for innovative commercialization of design ideas.Through the postgraduate courses, we pursue to educate design researchers who can producethe world's first and best design and/or research achievements, ultimately providing a newdesign paradigm and leading education. The design and research achievements of thisdepartment have not stopped at the traditional design research paradigm, but have continuedto propose and lead new design research topics. In particular, the research activities of thisdepartment in HCI (Human-Computer Interaction), UX (User Experience), and interactive mediadesign have shown remarkable results globally. It also leads the fields of design-led start-up andsocial innovation through design. \n ID KAIST curriculum book summarizes how these visions are integrated into our curriculum indetail. It first overviews our education goals and principles, and the courses for undergraduateand postgraduate programs are provided. We include the explanation of the course’s objective,teaching methods, and student examples for every course. We hope that this curriculum booknot only helps readers capture the ID KAIST education vision, but also helps both our currentand prospective students understand the overall flow of the curriculum with each course’spurpose for their learning at ID KAIST.",
+  "Research": {
+    "title": "연구실 소개",
+    "overview": "카이스트 산업디자인학과는 첨단 기술과 인간에 대한 깊은 이해를 통해 혁신적인 사용자 경험을 만들어내고 실생활에 적용하는 전문 디자이너와 연구자들의 모임입니다. 우리는 익숙한 문제를 해결하는 것에 그치지 않고, 새로운 문제를 발견하거나 기존의 문제를 재해석하는 과정에서 다양한 분야에 기여합니다.",
+    "LabList": {
+      "scrollMessage": "좌/우로 스크롤하시면 더 많은 랩을 보실 수 있습니다"
+    },
+    "principal_investigator": "지도교수",
+    "research_areas": "연구 분야",
+    "homepage": "웹사이트"
+  },
+  "People": {
+    "select_filter":"선택해주세요",
+    "role": {
+      "All": "모든 구성원",
+      "Faculty": "교수",
+      "OldFaculty": "명예교수",
+      "Staff": "행정팀",
+      "OtherFaculty": "연구/겸직/겸임교수"
+    },
+    "position": {
+      "Professor": "교수",
+      "Associate Professor": "부교수",
+      "Assistant Professor": "조교수",
+      "Research Professor": "연구교수",
+      "Emeritus Professor": "명예교수",
+      "Adjunct Professor": "겸임교수",
+      "Administrative Staff": "행정담당",
+      "Department Coordinator": "학과행정",
+      "BK Staff": "BK 행정",
+      "Engineer": "기술담당",
+      "Technician": "기술담당"
+    }
+  },
+  "About": {
+    "title":"학과 소개",
+    "Mission": "한국과학기술원 산업디자인학과(ID KAIST)는 1986년에 공과대학내 디자인학과로서는 한국 최초로 설립되었습니다. 1991년에는 석사과정을, 그리고 2002년에는 박사과정을 시작하였습니다. 초창기에는 전통적인 제품디자인에 기반하였으나 점차 인터페이스와 인터랙션 디자인, 사용자 경험 및 시스템 디자인까지 그 영역을 확장하였고, 현재는 시스템과 사회, 그리고 산업 전반에 걸친 혁신적 디자인을 추구합니다. 2000년대 중반 박사과정이 자리를 잡은 이후에는 독창적인 연구 결과를 국제 학회에서 꾸준히 발표하여, 오늘날 인간-컴퓨터 상호작용, 인터랙션, 사용자 경험 디자인 분야를 선도하는 연구중심대학으로 국제적 명성을 획득하였습니다. \n  ID KAIST의 교육 목표는 실무 디자이너와 디자인 연구자를 육성하여 산업 뿐 아니라 사회 전반의 문제를 해결하는데 있습니다. 이를 위해서 혁신과 융합 그리고 심미안을 개발하는 교육 프로그램을 보유하고 있으며, 이를 통해 학생들은 사람과 기술, 비지니스, 그리고 사회 현상에 대한 통찰력을 키우게 됩니다. \n 4차 산업혁명에 대응하여 디자인 실무와 연구 교육을 혁신하기 위해 ID KAIST는 2016년 Design 3.0 포럼을 개최하였습니다. 미래-지향, 인간-중심 연구와 교육을 통해 ID KAIST는 우리 사회 전반에 걸쳐 꾸준히 긍정적인 영향을 미치고자 합니다.",
+    "Address": "대전시 유성구 대학로291 N25동 산업디자인학과"
+  },
+  "ArticleList": {
+    "select_filter":"분류를 선택해주세요",
+    "Type": {
+      "All": "전체",
+      "Award": "수상",
+      "Event": "행사",
+      "News": "뉴스",
+      "Notice": "공지",
+      "Banner": "배너"
+    },
+    "NoArticleMsg": "로딩중... 혹은 해당 타입의 아티클이 아직 없습니다"
+  }
+}
