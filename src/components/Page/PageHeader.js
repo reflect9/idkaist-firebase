@@ -23,16 +23,16 @@ let PageHeader = ({ toggleIsMenuActive, Section }) => {
         <div className="Wrapper">
             <div className="PageHeader">
                 <div className="HeaderLeft">
-                    <Link key={v4()} to='/home'><Idkaist /></Link>
+                    <Link key={v4()} onClick={()=>{document.querySelector(".App").scrollTo(0,0);}} to='/home'><Idkaist /></Link>
                 </div>
                 <div className="HeaderCenter">
-                    <Link key={v4()} className={Section == "Education" ? "sectionLink active" : "sectionLink"} to='/education'>
+                    <Link key={v4()} onClick={()=>{document.querySelector(".App").scrollTo(0,0);}} className={Section == "Education" ? "sectionLink active" : "sectionLink"} to='/education'>
                         <div className={i18n.language=="kr"?"wide-space":""}>{t("Menu.Education")}</div></Link>
-                    <Link key={v4()} className={Section == "Research" ? "sectionLink active" : "sectionLink"} to='/research'>
+                    <Link key={v4()} onClick={()=>{document.querySelector(".App").scrollTo(0,0);}} className={Section == "Research" ? "sectionLink active" : "sectionLink"} to='/research'>
                         <div className={i18n.language=="kr"?"wide-space":""}>{t("Menu.Research")}</div></Link>
-                    <Link key={v4()} className={Section == "People" ? "sectionLink active" : "sectionLink"} to='/people'>
+                    <Link key={v4()} onClick={()=>{document.querySelector(".App").scrollTo(0,0);}} className={Section == "People" ? "sectionLink active" : "sectionLink"} to='/people'>
                         <div className={i18n.language=="kr"?"wide-space":""}>{t("Menu.People")}</div></Link>
-                    <Link key={v4()} className={Section == "About" ? "sectionLink active" : "sectionLink"} to='/about'>
+                    <Link key={v4()} onClick={()=>{document.querySelector(".App").scrollTo(0,0);}} className={Section == "About" ? "sectionLink active" : "sectionLink"} to='/about'>
                         <div className={i18n.language=="kr"?"wide-space":""}>{t("Menu.About")}</div></Link>
                     {/* <form>
                         <input type="search" placeholder="Search..."/>

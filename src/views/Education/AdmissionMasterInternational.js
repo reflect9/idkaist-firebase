@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./AdmissionMaster.scss";
+import "./AdmissionAndFAQ.scss";
 
 function AdmissionMasterInternational(){
     return (

@@ -50,22 +50,22 @@ function Lab({ labID }) {
                 style={ 'object-fit': pi["object-fit"]};
             }
             if (pi.type == "image") {
-                tag = (<img className="projectImage" style={style} key={pii} onClick={() => { setImageNum(pii); }} src={pi.source} />);
+                tag = (<img className="projectImage" style={style} key={labID+"_"+pii} onClick={() => { setImageNum(pii); }} src={pi.source} />);
             } else if (pi.type == "YouTube") {
-                tag = (<iframe width="1080" className="projectImage" key={pii} src={pi.source + "?vq=hd1080"} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>);
+                tag = (<iframe width="1080" className="projectImage" key={labID+"_"+pii} src={pi.source + "?vq=hd1080"} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>);
             } else if (pi.type == "imageThumbnail") {
-                tag = (<img className="projectImage" key={pii} onClick={() => { setImageNum(pii); }} src={pi.thumbnail} />);
+                tag = (<img className="projectImage" key={labID+"_"+pii} onClick={() => { setImageNum(pii); }} src={pi.thumbnail} />);
             }
             return tag;
         });
         projectImagesPopup = LabData.lab_works.map((pi, pii) => {
             let tag;
             if (pi.type == "image") {
-                tag = (<img className="projectImage" key={pii} onClick={() => { setImageNum(pii); }} src={pi.source} />);
+                tag = (<img className="projectImage" key={labID+"_"+pii} onClick={() => { setImageNum(pii); }} src={pi.source} />);
             } else if (pi.type == "YouTube") {
-                tag = (<iframe width="1080" className="projectImage" key={pii} src={pi.source + "?vq=hd1080"} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>);
+                tag = (<iframe width="1080" className="projectImage" key={labID+"_"+pii} src={pi.source + "?vq=hd1080"} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>);
             } else if (pi.type == "imageThumbnail") {
-                tag = (<img className="projectImage" key={pii} onClick={() => { setImageNum(pii); }} src={pi.original} />);
+                tag = (<img className="projectImage" key={labID+"_"+pii} onClick={() => { setImageNum(pii); }} src={pi.original} />);
             }
             return tag;
         });

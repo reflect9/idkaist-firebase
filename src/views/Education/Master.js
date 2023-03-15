@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { useTranslation } from "react-i18next";
 import AdmissionMasterInternational from "./AdmissionMasterInternational.js";
 import AdmissionMasterKorean from "./AdmissionMasterKorean.js";
+import FAQGraduateInternational from "./FAQGraduateInternational.js";
+import FAQGraduateKorean from "./FAQGraduateKorean.js";
 import Curriculum from "../../data/Curriculum";
 import "./Education.scss";
 import { FiArrowUpRight } from 'react-icons/fi';
@@ -106,6 +108,9 @@ function Master() {
             <div className="section_content">
                 <h2>{t("Education.roadmap")}</h2>
                 {curriculumTable}
+            </div>
+            <div className="section_content">
+                {(i18n.language=="en")?<FAQGraduateInternational/>:<FAQGraduateKorean/>}
             </div>
             <div className="section_content">
                 {(i18n.language=="en")?<AdmissionMasterInternational/>:<AdmissionMasterKorean/>}

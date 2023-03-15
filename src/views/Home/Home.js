@@ -34,7 +34,7 @@ let Home = ({ }) => {
 				return articleData;
 			}));
 		});
-		RetrieveArticles(["Banner"], false, 500, (docs) => {
+		RetrieveArticles(["Banner"], false, 1, (docs) => {
 			setBanners(docs.map(d => {
 				let articleData = d.data();
 				articleData.id = d.id;
@@ -192,7 +192,9 @@ let Home = ({ }) => {
 	}
 
 	const bannerEl = banners.map(banner => {
-		return (<img src={banner.coverImage} />);
+		return (<Link to={"/article/" + banner.id}>
+			<img src={banner.coverImage} />
+		</Link>);
 	});
 
 	return (

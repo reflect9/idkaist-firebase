@@ -1,5 +1,6 @@
 @media only screen and (min-width:1000px) {  
     .ArticleList {
+        margin-top:75px;
         .PageContentWrapper {
             display:flex;
             flex-direction: row;
@@ -223,6 +224,7 @@
 }
 @media only screen and (max-width:999px) {  
     .ArticleList {
+        margin-top:75px;
         .PageContentWrapper {
             position:relative;
             width:100%;

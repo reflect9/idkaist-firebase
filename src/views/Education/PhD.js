@@ -2,6 +2,8 @@ import _ from "lodash";
 import React, { Component } from 'react';
 import { useTranslation } from "react-i18next";
 import Curriculum from "../../data/Curriculum";
+import FAQGraduateInternational from "./FAQGraduateInternational.js";
+import FAQGraduateKorean from "./FAQGraduateKorean.js";
 import "./Education.scss";
 
 
@@ -20,9 +22,8 @@ function PhD() {
                     {t("Education.PhD.thesisRequirementContent")}
                 </div>
             </div>
-            <h2>Admission</h2>
             <div className="section_content">
-              TBD (currently available information is same as MSC admission)
+                {(i18n.language=="en")?<FAQGraduateInternational/>:<FAQGraduateKorean/>}
             </div>
         </div>
     );

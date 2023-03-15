@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./AdmissionMaster.scss";
+import "./AdmissionAndFAQ.scss";
 import { useTranslation, Trans } from "react-i18next";
 
 function AdmissionMasterKorean(){

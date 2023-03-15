@@ -26,7 +26,7 @@ import './i18n';  // For Language support
 // import logo from './logo.svg';
 import './App.scss';
 
-import ScrollToTop from "./utils/scrollToTop.js";
+// import ScrollToTop from "./utils/scrollToTop.js";
 
 function App() {
   const [isMenuActive, setIsMenuActive] = useState(false);
@@ -46,7 +46,7 @@ function App() {
   }
   return (
     <Router>
-      <ScrollToTop/>
+      {/* <ScrollToTop/> */}
       <div className="App">
         <Routes>
           <Route path="/" element={<PageHeader toggleIsMenuActive={toggleIsMenuActive} Section="" />} />

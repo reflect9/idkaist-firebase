@@ -40,6 +40,7 @@ function Menu({ setIsMenuActive, defaultSubMenuOpen }) {
   }, []);
   const closeMenu = ()=> {
     console.log("close!");
+    document.querySelector(".App").scrollTo(0,0);
     document.querySelector(".Menu").classList.add("small");
     setTimeout(()=>{
       setIsMenuActive(false);
