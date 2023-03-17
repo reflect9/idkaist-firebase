@@ -10,7 +10,7 @@ function FAQGraduateInternational(){
             <p>KAIST is a research-oriented university, meaning that graduate students at IDKAIST are both students and researchers. They take classes as well as work full time at their lab performing research with the help of their advisors and colleagues. Initially, academics make up a greater portion, but research for their own dissertations and industrial/government projects will gradually take up a greater part of their learning at IDKAST.</p>
             
         <h3>Q2. What courses do graduate students at IDKAIST take?</h3>
-            <p>Please check the <a href="https://bulletin.kaist.ac.kr/html/en/?year=2022&id=kr20221235&file=C">bulletin board</a></p>
+            <p>Please check the <a href="https://bulletin.kaist.ac.kr/html/en/?year=2022&id=en20221235&file=C">bulletin board</a></p>
 
         <h3>Q3. What are the labs at IDKAIST and what kind of research do graduate students at each lab perform?</h3>
             <p>Learning at a research focused graduate program takes place not just in class but also in the process of performing research for contract projects and dissertations. A wide range of unique research traversing the boundaries of science and design is being conducted at our labs. There are currently 14 labs led by 14 professors at IDKAIST.</p>
