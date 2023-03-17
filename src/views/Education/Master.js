@@ -113,7 +113,7 @@ function Master() {
                 {(i18n.language=="en")?<FAQGraduateInternational/>:<FAQGraduateKorean/>}
             </div>
             <div className="section_content">
-                {(i18n.language=="en")?<AdmissionMasterInternational/>:<AdmissionMasterKorean/>}
+                {(i18n.language=="en")?<AdmissionMasterInternational/>:<div/>}
             </div>
         </div>
     );
