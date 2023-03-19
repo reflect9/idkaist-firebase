@@ -144,6 +144,5 @@ Switched to a new branch 'my_fix'
 
 # KCloud 사용법
 1. SecuwaySSL U V2.0으로 KCloud VPN접속하기 
-2. SSH통해서 Ubuntu server접속: `ssh -i idKAISThompage.PEM ubuntu@172.10.19.215 -p 22` 
-3. `/var/www/html`에다가 build폴더 카피
-4. nginx의 sited-enabled수정
+2. `/var/www/html`에다가 build폴더 카피;  `scp -i idKAISThompage.PEM -r build ubuntu@172.10.19.215:/var/www/html`
+3. (위 방식을 사용하지 않고 직접 수정하려면) SSH를 통해서 Ubuntu server 접속할 수도 있음 `ssh -i idKAISThompage.PEM ubuntu@172.10.19.215 -p 22` 
