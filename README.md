@@ -142,7 +142,9 @@ Switched to a new branch 'my_fix'
 
 
 
-# KCloud 사용법
-1. SecuwaySSL U V2.0으로 KCloud VPN접속하기 
-2. `/var/www/html`에다가 build폴더 카피;  `scp -i idKAISThompage.PEM -r build ubuntu@172.10.19.215:/var/www/html`
+# Deploy하기 (KCloud)
+1. 먼저 `npm run build`를 해서, build폴더에 deploy가능한 코드를 생성한다. 
+2. SecuwaySSL U V2.0으로 KCloud VPN접속한다. (https://applyvpn.kaist.ac.kr/ 참고)
+3. 서버에 SSH접속을 하려면 PEM화일이 필요하다. 관리자에게 요청해서 받고, 화일이름은 `idKAISThomepage.PEM`으로 하여 프로젝트의 root에 저장한다. 
+4. SCP를 이용해서 `/var/www/html`에다가 build폴더를 카피한다. OSX에서는 오른쪽 커멘드를 terminal에 입력할 수 있음. `scp -i idKAISThompage.PEM -r build ubuntu@172.10.19.215:/var/www/html`
 3. (위 방식을 사용하지 않고 직접 수정하려면) SSH를 통해서 Ubuntu server 접속할 수도 있음 `ssh -i idKAISThompage.PEM ubuntu@172.10.19.215 -p 22` 
