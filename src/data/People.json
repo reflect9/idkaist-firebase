@@ -184,6 +184,19 @@
         "office":"",
         "thumbnail": "yws.jpeg"
     },
+    "yumijung": {
+        "name_kr":"정유미",
+        "name_en":"Yumi Jung",
+        "position":"Administrative Staff",
+        "role":"Staff",
+        "description_en": "",
+        "lab":"",
+        "lab_url":"",
+        "email":"ymjung1@kaist.ac.kr",
+        "phone": "+82-42-350-4575",
+        "office":"",
+        "thumbnail": "jung_yumi.jpg"
+    },
     "seungyongjeong": {
         "name_kr":"정승용",
         "name_en":"Seungyong Jeong",
