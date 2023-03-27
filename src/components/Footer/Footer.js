@@ -9,6 +9,7 @@ import { checkAdmin, auth } from "../../data/firestore/auth";
 import "./Footer.scss";
 
 import KAISTLogo from '../../assets/logo-kaist.png';
+import BK21Logo from '../../assets/bk21.png';
 import facebook_logo_black from "./facebook-logo-black.png";
 import instagram_logo_black from "./instagram-logo-black.png";
 import twitter_logo_black from "./twitter-logo-black.png";
@@ -87,7 +88,8 @@ function Footer({ setIsLoginActive }) {
                         © IDKAIST. All Rights Reserved
                     </div>
                     <div className="logos">
-                    <a href="https://www.facebook.com/id.kaist" target="_blank"><img src={facebook_logo_black} className="other_logo"/></a>
+                        <a href="https://idbk.kaist.ac.kr/" target="_blank"><img src={BK21Logo} className="bk21_logo"/></a>
+                        <a href="https://www.facebook.com/id.kaist" target="_blank"><img src={facebook_logo_black} className="other_logo"/></a>
                         <a href="https://www.instagram.com/idkaist_student/" target="_blank"><img src={instagram_logo_black} className="other_logo"/></a>
                         {/* <a><img src={twitter_logo_black} className="other_logo"/></a> */}
                         <a href="https://www.youtube.com/@kaist6669" target="_blank"><img src={youtube_logo_black} className="other_logo"/></a>
@@ -121,6 +123,7 @@ function Footer({ setIsLoginActive }) {
                         </p>
                     </div>
                     <div className="kaist_logo_wrapper_mobile">
+                        <a href="https://idbk.kaist.ac.kr/" target="_blank"><img src={BK21Logo} className="bk21_logo"/></a>
                         <a href="https://www.facebook.com/id.kaist" target="_blank"><img src={facebook_logo_black} className="other_logo"/></a>
                         <a href="https://www.instagram.com/idkaist_student/" target="_blank"><img src={instagram_logo_black} className="other_logo"/></a>
                         {/* <a><img src={twitter_logo_black} className="other_logo"/></a> */}

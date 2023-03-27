@@ -130,6 +130,9 @@ function Menu({ setIsMenuActive, defaultSubMenuOpen }) {
         <div className="L1">
           <Link onClick={closeMenu} to="/about">{t("Menu.About")}</Link>
         </div>
+        <div className="L1">
+          <a onClick={closeMenu} target="_blank" href="https://idbk.kaist.ac.kr/">{t("Menu.BK21")}</a>
+        </div>
       </div>
     </div>
   );
