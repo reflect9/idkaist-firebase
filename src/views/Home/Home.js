@@ -12,7 +12,7 @@ import "./Home.scss";
 
 
 let Home = ({ }) => {
-	const [featuredArticles, setFeaturedArticles] = useState([]);
+	// const [featuredArticles, setFeaturedArticles] = useState([]); // isFeatured는 더 이상 쓰지 않음 
 	const [banners, setBanners] = useState([]);
 	const [notices, setNotices] = useState([]);
 	const [articles, setArticles] = useState([]);
@@ -27,13 +27,14 @@ let Home = ({ }) => {
 
 	// 페이지 오픈할 때 한 번만, article들 가져오기 
 	useEffect(() => {
-		RetrieveArticles(["Award", "News", "Event"], true, 5, (docs) => {
-			setFeaturedArticles(docs.map(d => {
-				let articleData = d.data();
-				articleData.id = d.id;
-				return articleData;
-			}));
-		});
+		//// DEPRECATED. featuredArticle 더 이상 사용하지 않음
+		// RetrieveArticles(["Award", "News", "Event"], true, 5, (docs) => {
+		// 	setFeaturedArticles(docs.map(d => {
+		// 		let articleData = d.data();
+		// 		articleData.id = d.id;
+		// 		return articleData;
+		// 	}));
+		// });
 		RetrieveArticles(["Banner"], false, 1, (docs) => {
 			setBanners(docs.map(d => {
 				let articleData = d.data();
@@ -48,7 +49,7 @@ let Home = ({ }) => {
 				return articleData;
 			}));
 		});
-		RetrieveArticles(["Award", "News", "Event"], false, 500, (docs) => {
+		RetrieveArticles(["Award", "News", "Event"], null, 30, (docs) => {
 			setArticles(docs.map(d => {
 				let articleData = d.data();
 				articleData.id = d.id;
@@ -89,72 +90,58 @@ let Home = ({ }) => {
 	// 	}
 	// 	return items;
 	// }
-	const RenderArticles = (articles) => {
-		return articles.map((article, articleIndex)=>{
-			return (<li key={"li" + articleIndex}>
-				{/* <img /> */}
-				{/* <img src={ require('/assets/works/work'+i+".png")}/> */}
-				<div className="thumbnailImage">
-					<Link to={"/article/"+article.id}><img src={article.coverImage}/></Link>
-				</div>
-				<div className="info">
-					<div className="kind"><Link to={"/articleList/"+article.type}>{article.type}</Link></div>
-					<div className="title">
-						<Link to={"/article/"+article.id}><span className="highlight">{article.title}</span></Link>
-					</div>
-					<div className="description">
-						<span className="highlight">{article.text}</span>
-					</div>
-					<a class="read_more" href={"/article/"+article.id}>{t("General.read_more")}</a>
-				</div>
-			</li>);
-		});
-	}
+	
 
-	const RenderFeaturedItemsEl = (articles) => {
-		console.log("# total articles:" + articles.length);
-		const featuredArticles = articles.filter(art => {
-			return art.featured;
-		});
-		console.log("# featured articles:" + featuredArticles.length);
-		let mainFeature, semiFeatures;
-		if (featuredArticles.length > 0) {
-			mainFeature = featuredArticles[0];
+	const RenderTopItemsEl = (articles) => {
+		// console.log("# total articles:" + articles.length);
+		// const latestArticles = articles.filter(art => {
+		// 	return art.featured;
+		// });
+		const latestArticles = articles.slice(0,5);
+		console.log("# featured articles:" + latestArticles.length);
+		let topArticle, semiTopArticles;
+		if (latestArticles.length > 0) {
+			topArticle = latestArticles[0];
+			topArticle.plainText = topArticle.text.replace( /(<([^>]+)>)/ig, '');
+			topArticle.plainText = topArticle.plainText.replace(/[*#]/ig, '');
+			topArticle.plainText = topArticle.plainText.replace(/\[.*\]/ig, '');
+			// topArticle.plainText = topArticle.plainText.replace(/\(.*\)/ig, '');
+			topArticle.plainText = topArticle.plainText.replace(/https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)/, '');
+			// topArticle.plainText = topArticle.text
 		}
-		if (featuredArticles.length > 1) {
-			semiFeatures = featuredArticles.slice(1);
+		if (latestArticles.length > 1) {
+			semiTopArticles = latestArticles.slice(1);
 		}
-
 		return (<div className="featured_items">
-			{mainFeature ? (
+			{topArticle ? (
 				<div className="main_feature">
 					<div className="item_image">
-						<Link to={"/article/" + mainFeature.id}>
-							<img src={mainFeature.coverImage} />
+						<Link to={"/article/" + topArticle.id}>
+							<img src={topArticle.coverImage} />
 						</Link>
 					</div>
 					<div className="item_details">
 						<div className="kind_datetime">
 							<div className="item_kind">
-								<Link to={"/articleList/" + mainFeature.type}>
-									{mainFeature.type}
+								<Link to={"/articleList/" + topArticle.type}>
+									{topArticle.type}
 								</Link>
 								<div className="item_datetime">
-									{formatDate(mainFeature.datetime)}
+									{formatDate(topArticle.datetime)}
 								</div>
 							</div>
 						</div>
 						
 						<div className="item_title">
-							<Link to={"/article/" + mainFeature.id}>
-								{mainFeature.title}
+							<Link to={"/article/" + topArticle.id}>
+								{topArticle.title}
 							</Link>
 						</div>
 						<div className="item_desc">
-							{mainFeature.text}
+							{topArticle.plainText}
 						</div>
 						
-						<a className="read_more" href={"/article/" + mainFeature.id}>{t("General.read_more")}</a>
+						<a className="read_more" href={"/article/" + topArticle.id}>{t("General.read_more")}</a>
 					</div>
 				</div>
 
@@ -163,7 +150,7 @@ let Home = ({ }) => {
 			)}
 
 			{/* 작은 아이템들 */}
-			{semiFeatures ? semiFeatures.map(f => {
+			{semiTopArticles ? semiTopArticles.map(f => {
 				return (
 					<div className="semi_featured" key={f.id}>
 						<div className="semi_featured_content">
@@ -196,6 +183,34 @@ let Home = ({ }) => {
 			<img src={banner.coverImage} />
 		</Link>);
 	});
+
+	const RenderBottomArticles = (articles) => {
+		const olderArticles = articles.slice(5);
+		return olderArticles.map((article, articleIndex)=>{
+			let plainText = article.text.replace( /(<([^>]+)>)/ig, '');
+			plainText = plainText.replace(/[*#]/ig, '');
+			plainText = plainText.replace(/\[.*\]/, '');
+			// plainText = plainText.replace(/\(.*\)/, '');
+			plainText = plainText.replace(/https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)/, '');
+			return (<li key={"li" + articleIndex}>
+				{/* <img /> */}
+				{/* <img src={ require('/assets/works/work'+i+".png")}/> */}
+				<div className="thumbnailImage">
+					<Link to={"/article/"+article.id}><img src={article.coverImage}/></Link>
+				</div>
+				<div className="info">
+					<div className="kind"><Link to={"/articleList/"+article.type}>{article.type}</Link></div>
+					<div className="title">
+						<Link to={"/article/"+article.id}><span className="highlight">{article.title}</span></Link>
+					</div>
+					<div className="description">
+						<span className="highlight">{plainText}</span>
+					</div>
+					<a class="read_more" href={"/article/"+article.id}>{t("General.read_more")}</a>
+				</div>
+			</li>);
+		});
+	}
 
 	return (
 		<div className="Home">
@@ -237,7 +252,7 @@ let Home = ({ }) => {
 				</div> {/* END OF sticky_half */}
 				<div className="rightHalf">
 					<div className="contentArea">
-						{RenderFeaturedItemsEl(featuredArticles)}
+						{RenderTopItemsEl(articles)}
 					</div>
 				</div>
 			</div>
@@ -254,7 +269,7 @@ let Home = ({ }) => {
 					<div className="contentArea">
 						{/* 공지사항 (날짜포함) */}
 						<div className="notices">
-							<label>NOTICE</label>
+							{(notices.length>0) ? <label>NOTICE</label>:<label/>}
 							{notices.map(notice=>{
 								return (<div className="event_item">
 									<div className="date">
@@ -304,7 +319,7 @@ let Home = ({ }) => {
 				<div className="Highlights">
 					<div className="Grid">
 						<ul>
-							{RenderArticles(articles)}
+							{RenderBottomArticles(articles)}
 						</ul>
 					</div>
 				</div>

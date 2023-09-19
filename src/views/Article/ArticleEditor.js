@@ -165,7 +165,7 @@ function ArticleEditor() {
                 </div>
 
                 
-                <label>Is Featured? (Featured는 Home의 첫 페이지에 표시; Notice나 Banner는 해당사항 없음)</label> 
+                <label>Is Featured? (이 변수는 현재 사용되고 있지 않음)</label> 
                 <input type="checkbox" onChange={(event)=>{
                     setIsFeatured(event.target.checked);
                 }} checked={isFeatured}></input>

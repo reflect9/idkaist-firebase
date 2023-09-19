@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
 import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
 import formatDate from '../../utils/FormatDate';
@@ -74,7 +75,7 @@ function Article() {
                             />
                         </div>
                         <div className="content">
-                            <ReactMarkdown>
+                            <ReactMarkdown rehypePlugins={[rehypeRaw]}>
                                 {art.text}
                             </ReactMarkdown>
                         </div>

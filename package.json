@@ -25,6 +25,7 @@
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
     "react-uuid": "^2.0.0",
+    "rehype-raw": "^6.1.1",
     "sass": "^1.56.2",
     "unsplash-js": "^7.0.15",
     "web-vitals": "^2.1.4"

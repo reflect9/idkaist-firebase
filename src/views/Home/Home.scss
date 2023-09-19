@@ -258,6 +258,7 @@
         .rightHalf {
             background: #fff;
             flex: 1 1 50%;
+            @media only screen and (min-width:1000px) { padding-top: 75px; }
             text-align: left;
 
             .contentArea {
@@ -293,7 +294,7 @@
                             @media only screen and (max-width:500px) { padding: 16px; }
                             @media only screen and (min-width:500px) { padding: 20px; }
                             @media only screen and (min-width:1000px) { padding: 28px; }
-                            max-width: 950px;
+                            // max-width: 950px;
                             box-sizing: border-box;
                             .kind_datetime {
                                 @media only screen and (max-width:500px) { font-size: 12px; }
@@ -331,6 +332,7 @@
                                 font-size: 14px;
                                 color: #707070;
                                 max-height: 120px;
+                                word-break:break-all;
                                 // Below: Modern way of clamping text
                                 overflow: hidden;
                                 text-overflow: ellipsis;
