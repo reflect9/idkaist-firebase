@@ -2,6 +2,7 @@ import React, { Component, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import _ from 'lodash';
 
 import Menu from '../../components/Menu/Menu.js';
 import PageHeader from '../../components/Page/PageHeader.js';
@@ -49,12 +50,17 @@ let Home = ({ }) => {
 				return articleData;
 			}));
 		});
-		RetrieveArticles(["Award", "News", "Event"], null, 30, (docs) => {
-			setArticles(docs.map(d => {
+		RetrieveArticles(["Award", "News", "Event"], null, 40, (docs) => {
+			let newArticles = docs.map(d => {
 				let articleData = d.data();
 				articleData.id = d.id;
 				return articleData;
-			}))
+			});
+			newArticles = _.filter(newArticles, (article) => {
+				return article.isVisible;
+			}).slice(0, 30);
+			// console.log(newArticles);
+			setArticles(newArticles);
 		});
 
 	}, []);

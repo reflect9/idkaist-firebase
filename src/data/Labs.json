@@ -123,17 +123,17 @@
         "img_large": "hjs-large.png"
     },
     "andreabianchi": {
-        "name_kr": "안드레이 비앙키",
+        "name_kr": "안드레아 비앙키",
         "name_en": "Andrea Bianchi",
         "position": "Associate Professor",
         "role": "Faculty",
-        "description_en": "MAKinteract (MAKE + interaction) is a research lab specializing in Hardware UX, in the field of Human-Computer Interaction (HCI), and working at the intersection of design and engineering. Rooted in user-centered experience design, and with deep understanding and expertise in various engineering fields (computing, mechanical engineering, fabrication, electronics), we explore emerging technologies in the areas of personal hardware, such as novel tools for electronics, fabrication, metaverse, and haptic augmentation.",
-        "lab": "MAKinteract",
-        "lab_long": "MAKinteract Lab",
+        "description_en": "Make Lab is a research lab working in the field of Human-Computer Interaction (HCI), with the objective of creating novel computationally augmented physical interactions, and working at the intersection of design and engineering. Rooted in user-centered experience design, and with deep understanding and expertise in various engineering fields (computing, mechanical engineering, fabrication, electronics), we explore emerging technologies in the areas of personal hardware, such as novel tools for electronics, digital fabrication, Mixed Reality interfaces, and haptic augmentation.",
+        "lab": "Make Lab",
+        "lab_long": "Make Lab",
         "lab_keywords": ["Human-Computer Interaction", "Digital Fabrication", "Mixed Reality", "Human Augmentation", "UX Hardware", "Physical Computing"],
-        "lab_url": "http://makinteract.com/",
+        "lab_url": "http://make.kaist.ac.kr/",
         "lab_thumbnail":"8f9bdfd947ad97d2c85112462068b814.png",
-        "lab_logo":"makinteract.png",
+        "lab_logo":"make_lab_logo.png",
         "lab_works":[
             { "type":"YouTube", "source":"https://www.youtube.com/embed/FaTROXhY3-A" },
             { "type":"image", "source": "/images/labs/andreabianchi/aeroplane.jpg"},
@@ -259,10 +259,10 @@
         "lab_works":[
             { "type":"YouTube", "source":"https://www.youtube.com/embed/EOy8W6r-2wU" },
             { "type":"YouTube", "source":"https://www.youtube.com/embed/aFS30Df_hMg" },
-            { "type":"image", "source":"/images/labs/takyeonlee/skully-sub-hero.jpg" },
-            { "type":"image", "source":"/images/labs/takyeonlee/korail.png" }
-
-            
+            { "type":"image", "source":"/images/labs/takyeonlee/skully.d92b7372.png" },
+            { "type":"image", "source":"/images/labs/takyeonlee/korail.png" },
+            { "type":"image", "source":"/images/labs/takyeonlee/fush.e0f7e180.png" },
+            { "type":"image", "source":"/images/labs/takyeonlee/iitp.793ec7eb.png" }
         ],
         "email": "takyeonlee@kaist.ac.kr",
         "phone": "+82-42-350-4528",
@@ -327,14 +327,14 @@
         "name_en": "Yiyun Kang",
         "position": "Assistant Professor",
         "role": "Faculty",
-        "description_en": "Experience Design (ED) Lab conducts research and practice located at the intersection of art and technology. The lab explores multi-sensorial, tech-aided environments in extended realities to investigate immersive storytelling. Through experience design research, we aim to develop innovative content that promotes informative and affective communication.",
-        "description_kr":"경험 디자인(ED) 연구소는 예술과 기술의 교차점에 위치합니다. 본 연구소는 확장되는 다차원에서 생성되는 복합 감각적 경험과, 그로 인해 가능해지는 몰입형 스토리텔링 탐구를 목표로 하며, 이를 위한 기술 환경을 연구합니다. 이를 통해 정보전달, 비판적 인지와 사고, 감성적 반향이 융합적으로 이루어지는 혁신적인 콘텐츠 디자인 및 개발을 추구합니다.",
-        "lab": "ED Lab",
-        "lab_long": "Experience Design Lab ",
+        "description_en": "EXperience design (EX) Lab conducts research and practice located at the intersection of art and technology. The lab explores multi-sensorial, tech-aided environments in extended realities to investigate immersive storytelling. Through experience design research, we aim to develop innovative content that promotes informative and affective communication.",
+        "description_kr":"경험 디자인(EX) 연구소는 예술과 기술의 교차점에 위치합니다. 본 연구소는 확장되는 다차원에서 생성되는 복합 감각적 경험과, 그로 인해 가능해지는 몰입형 스토리텔링 탐구를 목표로 하며, 이를 위한 기술 환경을 연구합니다. 이를 통해 정보전달, 비판적 인지와 사고, 감성적 반향이 융합적으로 이루어지는 혁신적인 콘텐츠 디자인 및 개발을 추구합니다.",
+        "lab": "EX Lab",
+        "lab_long": "EXperience design Lab ",
         "lab_keywords": ["Experience Design", "Immersive Storytelling", "Art and Technology", "Extended Reality", "Creativity", "Criticality", "Communication"],
         "lab_url": "http://www.yiyunkang.com",
-        "lab_thumbnail":"ed.png",
-        "lab_logo":"ed.png",
+        "lab_thumbnail":"ex.png",
+        "lab_logo":"ex.png",
         "lab_works":[
             { "type":"image", "source":"/images/labs/yiyunkang/FINITE, 5 channel projection mapping, spatialised audio, 2021.JPG" },
             { "type":"image", "source": "/images/labs/yiyunkang/INFINITE, kinetic projection mapping, data visualisation, immersive sound, 2022.JPG"},
